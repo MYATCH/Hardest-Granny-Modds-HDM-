@@ -32,7 +32,9 @@ Whether you're looking for extreme difficulty, new mechanics, or unique gameplay
 
 <p align="center">
 
-<a href="#">
+<a href="./HGM.pdf">
+
+  
 <img src="https://img.shields.io/badge/DOWNLOAD-COMING_SOON-7B2CBF?style=for-the-badge&logo=github&logoColor=white">
 </a>
 
@@ -49,7 +51,7 @@ The download link will become available after the first official release.
 
 <p align="center">
 
-<a href="Hardest_Granny_Mods.pdf">
+<a href="HGM.pdf">
 <img src="https://img.shields.io/badge/📄_OPEN_DOCUMENT-6A0DAD?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
 
 </a>
