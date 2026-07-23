@@ -45,6 +45,19 @@ The download link will become available after the first official release.
 ⭐ Stay tuned!
 
 ---
+## 📄 Documentation
+
+<p align="center">
+
+<a href="Hardest_Granny_Mods.pdf">
+<img src="https://img.shields.io/badge/📄_OPEN_DOCUMENT-6A0DAD?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
+
+</a>
+
+</p>
+
+---
+
 
 ## ❤️ Credits
 
