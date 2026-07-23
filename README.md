@@ -29,15 +29,20 @@ Whether you're looking for extreme difficulty, new mechanics, or unique gameplay
 
 ## 📥 Downloads
 
-Downloads will be available soon.
 
-Stay tuned!
+<p align="center">
 
----
+<a href="#">
+<img src="https://img.shields.io/badge/DOWNLOAD-COMING_SOON-7B2CBF?style=for-the-badge&logo=github&logoColor=white">
+</a>
 
-## 📸 Screenshots
+</p>
 
-Coming soon...
+>  The first public release is currently in development.
+
+The download link will become available after the first official release.
+
+⭐ Stay tuned!
 
 ---
 
