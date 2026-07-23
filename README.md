@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="banner.png" width="100%">
+</p>
 # Hardest-Granny-Modds-HDM-
 # Hardest Granny Mods (HDM)
 
