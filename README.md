@@ -51,7 +51,7 @@ The download link will become available after the first official release.
 
 <p align="center">
 
-<a href="HGM.pdf">
+<a href="HGM1.pdf">
 <img src="https://img.shields.io/badge/📄_OPEN_DOCUMENT-6A0DAD?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
 
 </a>
