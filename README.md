@@ -1,29 +1,24 @@
 <p align="center">
   <img src="banner.png" width="100%">
 </p>
-# Hardest-Granny-Modds-HDM-
-# Hardest Granny Mods (HDM)
+# Hardest-Granny-Modds-HDM
 
-The ultimate collection of the hardest and most challenging Granny mods.
+List of the most difficult modifications for Granny 
 
 ---
 
 ## 🎮 About
 
-Hardest Granny Mods (HDM) is a project dedicated to collecting and preserving the most difficult Granny mods ever created.
+Hardest Granny Mods (HDM) - List the most hardest Modifications for Granny.
 
-Whether you're looking for extreme difficulty, new mechanics, or unique gameplay experiences, this collection is made for true Granny veterans.
-
+This is the first public List for Hardest Modifications for Granny 
 ---
 
 ## ✨ Features
 
-- 📦 Large collection of Granny mods
-- 🔥 Extreme difficulty levels
-- 🎨 Improved textures and visuals
-- ⚙️ Custom gameplay mechanics
+- 📦 (Almost) All modifications for Granny 
+- 🔥 Extremly high difficulty
 - 📱 Mobile-friendly downloads
-- 🔄 Regular updates
 
 ---
 
@@ -44,7 +39,7 @@ Whether you're looking for extreme difficulty, new mechanics, or unique gameplay
 
 The download link will become available after the first official release.
 
-⭐ Stay tuned!
+⭐ Wait for the release!
 
 ---
 ## 📄 Documentation
