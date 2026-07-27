@@ -68,6 +68,12 @@ Special thanks to every mod creator who keeps the Granny community alive.
 
 If you enjoy this project, don't forget to leave a ⭐ on this repository!
 
+___
+
+## 🫪 Plans
+
+___
+
 <p align="center">
   <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
     <img src="https://img.shields.io/badge/Plans-Click%20Here-blue?style=for-the-badge&logo=github" alt="Plans">
