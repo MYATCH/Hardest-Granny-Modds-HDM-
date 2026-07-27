@@ -42,7 +42,7 @@ The download link will become available after the first official release.
 ⭐ Wait for the release!
 
 ---
-## 📄 Documentation
+## 📄 Original Document
 
 <p align="center">
 
