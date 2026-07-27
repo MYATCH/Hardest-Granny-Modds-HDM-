@@ -81,331 +81,384 @@ __________________________________________
 evidence have been partially or completely lost.
 (Deleted videos, Broken download links, Mods 
 that once existed but are no longer available).
-__________________________________________           
-•🟢Main List🟢•
-__________________________________________
+_________________________________________
 
-Placement:          Granny :       Name of mod:    Device:
-        1                         1           Prime mod Plus.    Every
+              The List 
 
+_________________________________________
 
-                     Verified by:          Author:
 
-                       GGGamer         Boris Lub
+# 🟢 Main List
 
- Status: Verified, Memory
-______________________________________________
-            
-Placement:        Granny :        Name of mod:    Device:
-      2 (1)            Mod pack      Unnerfed Prime     Every
+---
+
+## 🥇 #1 — Prime Mod Plus
 
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 1 |
+| 📦 Mod | Prime Mod Plus |
+| 📱 Device | Every |
+| 👤 Author | Boris Lub |
+| ✅ Verified by | GGGamer |
+| 📌 Status | Verified, Memory |
+
+---
+
+## 🥈 #2 — Unnerfed Prime
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 1 (Mod Pack) |
+| 📦 Mod | Unnerfed Prime |
+| 📱 Device | Every |
+| 👤 Author | Boris Lub |
+| ✅ Verified by | GGGamer |
+| 📌 Status | Verified |
+
+---
+
+## 🥉 #3 — Death Mod
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 2 |
+| 📦 Mod | Death Mod |
+| 💻 Device | PC |
+| 👤 Author | DesperadaChannel |
+| ✅ Verified by | GGGammer |
+| 📌 Status | Verified |
+
+---
+## #4 — Nerfed Prime
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 1 (Mod Pack) |
+| 📦 Mod | Nerfed Prime |
+| 📱 Device | Every |
+| 👤 Author | Boris Lub |
+| ✅ Verified by | KirillSof, REKVIN |
+| 📌 Status | Verified |
+
+---
+
+## #5 — Death Challenge
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 1 |
+| 📦 Mod | Death Challenge |
+| 📱 Device | Every |
+| 👤 Author | Boris Lub |
+| ✅ Verified by | Xenofly |
+| 📌 Status | Verified |
+
+---
+
+## #6 — SuperFast
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 1 |
+| 📦 Mod | SuperFast |
+| 📱 Device | Every |
+| 👤 Author | RDO209K |
+| ✅ Verified by | RDO209K |
+| 📌 Status | Verified |
+
+---
+
+## #7 — Super Speed Challenge on Impossible Difficulty
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 1 |
+| 📦 Mod | Super Speed Challenge on Impossible Difficulty |
+| 💻 Device | PC |
+| 👤 Author | Candy_Yu_522 |
+| ✅ Verified by | Хатет (Hatet) |
+| 📌 Status | Verified |
+
+---
+
+## #8 — Insane Mod
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 3 |
+| 📦 Mod | Insane Mod |
+| 📱 Device | Mobile |
+| 👤 Author | Desperada Channel *(Partially Confirmed)* |
+| ✅ Verified by | Enormous Gamer |
+| 📌 Status | Verified |
+
+---
+
+## #9 — Rainy Season Extreme Difficulty
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 3 |
+| 📦 Mod | Rainy Season Extreme Difficulty |
+| 💻 Device | PC |
+| 👤 Author | Desperada Channel |
+| ✅ Verified by | Dem Ro |
+| 📌 Status | Verified |
+
+---
+
+## #10 — Furious
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 1 |
+| 📦 Mod | Furious |
+| 📱 Device | Every |
+| 👤 Author | Boris Lub |
+| ✅ Verified by | Dem Ro |
+| 📌 Status | Verified |
+
+---
+
+## #11 — Cruel Mod
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 1 (Mod Pack) |
+| 📦 Mod | Cruel Mod |
+| 📱 Device | Every |
+| 👤 Author | Boris Lub |
+| ✅ Verified by | Dem Ro |
+| 📌 Status | Verified |
+
+---
+
+## #12 — Madness (1.7)
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 1 |
+| 📦 Mod | Madness (1.7) |
+| 📱 Device | Mobile |
+| 👤 Author | LGP |
+| ✅ Verified by | A_S_S_I_S_T_A_N_T *(Unconfirmed Verifier)* |
+| 📌 Status | Verified |
+
+---
+## #13 — Hell Mode
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 2 |
+| 📦 Mod | Hell Mode |
+| 💻 Device | PC |
+| 👤 Author | gabzin1 & LeozimGranny *(Needs Confirmation)* |
+| ✅ Verified by | Enpicqness |
+| 📌 Status | Verified, Partially Lost Media, Needs Confirmation |
+
+---
+
+## #14 — Impossible Difficulty
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 3 |
+| 📦 Mod | Impossible Difficulty |
+| 💻 Device | PC |
+| 👤 Author | OmGi |
+| ✅ Verified by | GroukSawn *(Needs Confirmation)* |
+| 📌 Status | Verified, Needs Confirmation about Verifier |
+
+---
+
+## #15 — Impossible Difficulty
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 1 (Rewamp) |
+| 📦 Mod | Impossible Difficulty (Only) |
+| 💻 Device | PC |
+| 👤 Author | OmGi |
+| ✅ Verified by | Vividplays |
+| 📌 Status | Verified |
+
+---
+
+## #16 — Enhanced Impossible Difficulty
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny |
+| 📦 Mod | Enhanced Impossible Difficulty |
+| 💻 Device | PC |
+| 👤 Author | OmGi |
+| ✅ Verified by | Sly_Player *(Unconfirmed)* |
+| 📌 Status | Verified • Unconfirmed Verifier |
+
+---
+
+## #17 — Hollow Difficulty
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny Legacy |
+| 📦 Mod | Hollow Difficulty |
+| 📱 Device | Every |
+| 👤 Author | OmGi |
+| ✅ Verified by | Wearzix *(First Known Verifier)* |
+| 📌 Status | Verified • First Known Verifier |
+
+---
+
+## #18 — Granny's Curse (Extreme Difficulty)
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 1 |
+| 📦 Mod | Granny's Curse (Extreme Difficulty) |
+| 📱 Device | Every |
+| 👤 Author | Unknown |
+| ✅ Verified by | Unknown |
+| 📌 Status | Verified • Memory • Unconfirmed Placement |
+
+---
+
+## #19 — Extreme Difficulty (D.V)
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 3 (1.0) |
+| 📦 Mod | Extreme Difficulty (D.V) |
+| 📱 Device | Every |
+| 👤 Author | Developer |
+| ✅ Verified by | TheNeptoonLP *(First Known Public Completion)* |
+| 📌 Status | Verified |
+
+---
+
+## #20 — Crazy Difficulty
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 1 |
+| 📦 Mod | Crazy Difficulty |
+| 📱 Device | Every |
+| 👤 Author | Yandu17 |
+| ✅ Verified by | Dem Ro *(First Known Public Verifier)* |
+| 📌 Status | Verified • Needs More Information About Verifier |
+
+---
+
+## #21 — Wild Mod
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 1 |
+| 📦 Mod | Wild Mod |
+| 📱 Device | Every |
+| 👤 Author | A18 |
+| ✅ Verified by | A18 *(Unconfirmed)* |
+| 📌 Status | Verified • Lost Media • Unconfirmed Verifier |
+
+---
+
+## #22 — Extreme Difficulty
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 2 |
+| 📦 Mod | Extreme Difficulty |
+| 🥽 Device | VR |
+| 👤 Author | Gogozooom |
+| ✅ Verified by | TOPSY *(First Known Verifier)* |
+| 📌 Status | Verified • First Verifier Unconfirmed |
+
+---
+
+## #23 — Extreme Difficulty (D.V)
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 3 |
+| 📦 Mod | Extreme Difficulty (D.V) |
+| 📱 Device | Every |
+| 👤 Author | Developer |
+| ✅ Verified by | TheNeptoonLP *(First Known Public Completion)* |
+| 📌 Status | Verified |
+
+---
+
+## #24 — Impossible Difficulty
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 1 (Legacy) |
+| 📦 Mod | Impossible Difficulty |
+| 📱 Device | Every |
+| 👤 Author | OmGi |
+| ✅ Verified by | ZaY |
+| 📌 Status | Verified |
+
+---
+
+## #25 — Extreme Difficulty (D.V)
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 2 |
+| 📦 Mod | Extreme Difficulty (D.V) |
+| 📱 Device | Every |
+| 👤 Author | Developer |
+| ✅ Verified by | ZaY |
+| 📌 Status | Verified |
+
+---
+
+# 🟡 Extended List
+
+---
+
+## #26 — Extreme Difficulty
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 1 |
+| 📦 Mod | Extreme Difficulty |
+| 🥽 Device | VR |
+| 👤 Author | Gogozooom |
+| ✅ Verified by | Unknown |
+| 📌 Status | Verified • Unknown Verifier |
+
+---
+
+## #27 — Extreme Difficulty
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny 1 |
+| 📦 Mod | Extreme Difficulty |
+| 📱 Device | Every |
+| 👤 Author | Developer |
+| ✅ Verified by | Furious FPV *(Mobile)* / ZaY *(PC)* |
+| 📌 Status | Verified • Platform Dependent (Mobile and PC have Separate Early Verifiers) |
+
+---
+
+## #28 — Extreme Difficulty
+
+| Information | Value |
+|-------------|-------|
+| 🎮 Game | Granny Legacy |
+| 📦 Mod | Extreme Difficulty |
+| 📱 Device | Every |
+| 👤 Author | OmGi |
+| ✅ Verified by | Unknown |
+| 📌 Status | Verified • Unknown Verifier |
+
+---
 
-                     Verified by:         Author:
 
-                       GGGamer        Boris Lub 
 
-Status: Verified 
-______________________________________________
-
-Placement:          Granny :        Name of mod:    Device:
-        3                       (2).              Death Mod             PC
-
-
-                 Verified by:                       Author:                 
-
-                GGGammer      ‪        DesperadaChannel‬
-
- Status: Verified 
-______________________________________________
-
-Placement:        Granny :        Name of mod:    Device:
-      4 (1)           (Mod pack)        Nerfed Prime      Every
-
-                   Verified by:               Author:
-
-              KirillSof,REKVIN         Boris Lub
-
-Status: Verified 
-______________________________________________
-
-Placement:          Granny :        Name of mod:    Device:
-        5                        (1).          Death Challenge    Every
-
-                      Verified by:           Author:
-   
-                         Xenofly.           Boris Lub 
-
-Status: Verified 
-______________________________________________
-
-Placement:          Granny :        Name of mod:    Device:
-        6                        (1)                 SuperFast        Every   
-
-                 Verified by:              Author:
-
-                  RDO209K              RDO209K
-
-Status: Verified 
-______________________________________________
-
-Placement:                  Granny :                  Device:
-        7                                (1)                            PC
-
-                                 Name of mod:
-    Super Speed Challenge on Impossible Difficulty 
-
-                      Verified by:             Author:
-
-                         Хатет.         Candy_Yu_522
-                         [Hatet]
-
-Status: Verified 
-______________________________________________
-
-Placement:          Granny :        Name of mod:    Device:
-        8                        (3)               Insane Mod       Mobile 
- 
-
-                  Verified by:                       Author:
-
-            Enormous Gamer.       (Partially confirmed)
-                                                  Desperada Channel
-
-Status: Verified 
-______________________________________________
-
-    Placement:                  Granny :                  Device:
-            9                                (3)                            PC
-
-                                 Name of mod:
-                  Rainy Season Extreme Difficulty
-
-                     Verified by:              Author :
- 
-                      Dem Ro         Desperada Channel
-
-Status: Verified 
-______________________________________________
-
-Placement:          Granny :        Name of mod:    Device:
-     10/11                    (1)                   Furious           Every 
-
-                          Verified by:       Author:
-
-                             Dem Ro       Boris Lub 
-
-Verified: Status 
-______________________________________________
-
-Placement:          Granny :        Name of mod:    Device:
-     11/10              (Mod pack)          Cruel Mod       Every
-
-                         Verified by:        Author:
-
-                           Dem Ro           Boris Lub
-
-Status: Verified 
-______________________________________________
-
-Placement:          Granny :        Name of mod:    Device:
-       12                       (1)              Madness (1.7)    Mobile
-
-                 Verified by:                    Author:
-
-          A_S_S_I_S_T_A_N_T             LGP
-
-          (Unconfirmed verifer)
-
-Status: Verified
-______________________________________________
-
-Placement:          Granny :        Name of mod:    Device:
-       13                       (2).              Hell Mode             PC
-
-
-            Verified by:                        Author:
-
-            Enpicqness        gabzin1 & LeozimGranny                  
-                                                  (needs confirmation)
-
-Status: Verified, Partially Lost Media, Needs Confirmation
-______________________________________________
-
-Placement:          Granny :        Name of mod:    Device:
-      14                        (3)       Impossible Difficulty   PC
-
-                        Verified by:                           Author:
-
-     (Needs Confirmation) GroukSawn.         OmGi
-
-Status: Verified, Needs Confirmation about verifier 
-______________________________________________
-
-Placement:          Granny :              Name of mod:     
-       15                (1), Rewamp.    Impossible Difficulty        
-                                                                          (only)
-
-Device:                     Verified by:                    Author:
-
-   PC.                         Vividplays.                     OmGi
-
-Status: Verified
-______________________________________________
-
-Placement:          Granny :        Name of mod:    Device:
-       16                Enhanced  Impossible Difficulty.  PC
-
-
-                    Verified by:                     Author:
- 
-                    Sly_Player                       OmGi
-                       
-              (Unсonfirmed) 
-
-Status: Verified, Unconfirmed verifer
-__________________________________________
-
-Placement:          Granny :        Name of mod:    Device:
-       17                   Legacy       Hollow Difficulty    Every 
-
-                   Verified by:                   Author:
-
-                     Wearzix.                       OmGi
-  
-          (First known verifier)            
-
-Status: Verified, First known verifier
-______________________________________________
-
-Placement:          Granny :        Name of mod:    Device:
-       18.                      (1).           Granny’s Curse    Every
-                                               (Extreme Difficulty)
-
-                         Verified by:      Author:
-
-                         
-
-Status: Verified, Memory, Unconfirmed Placement 
-______________________________________________
-
-Placement:              Granny :            Name of mod:   
-
-      19                       (3) (1.0)       Extreme Difficulty (D.V)
-
-                    Verified by:                 Author:
-
-          TheNeptoonLP           Developer
-
-(First known public completion)
-
-Status: Verified 
-______________________________________________
-
-Placement      Granny :    Name of mod:    Device   
-       20                  (1)        Crazy Difficulty     Every 
-
-                 Verified by:                       Author.       
-                    DemRo                          Yandu17
-  
-  (First known public verifier).        
-
-Status: Verified, Needs more information about verifier
-______________________________________________
-
-Placement:        Granny :       Name of mod:    Device:
-       21                     (1)                 Wild Mod         Every 
-
-
-               Verified by:                Author:
-       (UnConfirmed)  A18.            A18
-
-Status: Verified, Lost Media, Unconfirmed verifer 
-______________________________________________
-
-Placement:          Granny :        Name of mod:    Device:
-       22                      (2)           Extreme Difficulty     VR
-
-                      Verified by:           Author: 
-
-                         TOPSY          Gogozooom
-
-             (First Known verifier)
-
- Status: Verified,First verifier unconfirmed
-______________________________________________
-
-Placement:              Granny :             Name of mod:    
-        23                          (3)          Extreme Difficulty (D.V)
-
-    Verified by:                       Author:
-
-        TheNeptoonLP                  Developer 
-
-(First known public completion)
-
-Status: Verified
-______________________________________________
-
-Placement:        Granny :       Name of mod:      Device:
-       24                 Legacy  Impossible Difficulty   Every 
-
-                  Verified by:                        Author:
-
-                        ZaY                                OmGi
-
-Status: Verified
-______________________________________________
-     
-Placement:          Granny :        Name of mod:    
-       25                      (2)        Extreme Difficulty (D.V)
-
-                  Verified by:                   Author:
-
-                        ZaY                        Developer 
-
-Status: Verified 
-
-______________________________________________
-
-🟡Extended List🟡
-______________________________________________
-
-Placement:          Granny :        Name of mod:    Device:
-        26                      (1)          Extreme Difficulty     VR
-
-                   Verified by:                 Author:
-
-                    Unknown               Gogozooom
-
-Status:Verified, Unknown verifer
-______________________________________________
-
-Placement:          Granny :       Name of mod:    Device:
-       27                       (1)        Extreme Difficulty    Every 
-
-                Verified by:                             Author:
-
-Furious FPV (Mobile) / ZaY (PC)        Developer 
-
-Status: Verified, Platform dependent (Mobile and PC have separate early verifiers)
-______________________________________________
-
-Placement:         Granny :        Name of mod:    Device:
-       28                 (Legacy)    Extreme Difficulty   Every 
-
-                Verified by:                      Author:
-
-                 Unknown                         OmGi
-
-Status: Verified , Unknown verifer
-______________________________________________
-
-Placement:          Granny :        Name of mod:    Device:
-
-
-                    Verified by:              Author:
-
-
-Status:
 
 
