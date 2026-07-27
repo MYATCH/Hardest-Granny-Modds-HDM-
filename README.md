@@ -82,7 +82,9 @@ ___
 
 __________________________________________
 🟢 Main List:  fully confirmed mods.
+
 🟡 Extended List:  complex mods outside the main list.
+
 🔴 Lost Media:  mods for which walkthroughs or 
 evidence have been partially or completely lost.
 (Deleted videos, Broken download links, Mods 
