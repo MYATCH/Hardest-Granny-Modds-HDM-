@@ -21,4 +21,10 @@ Welcome to list of the Hardest Granny Modds ever
   <img src="https://img.shields.io/badge/Plans-Coming%20Soon-303030?style=for-the-badge" alt="Plans — Coming Soon">
 </a>
 
+<div align="center">
 
+<a href="https://github.com/MYATCH/Hardest-Granny-Modds-HDM-/blob/main/HGM3.pdf">
+  <img src="https://img.shields.io/badge/Original%20PDF%20Document-303030?style=for-the-badge" alt="Original PDF Document">
+</a>
+
+</div>
