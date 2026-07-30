@@ -6,6 +6,7 @@ Welcome to list of the Hardest Granny Modds ever
   <img src="https://img.shields.io/badge/List-303030?style=for-the-badge" alt="List">
 </a>
 
+
 </div>
 
 <div align="center">
@@ -21,16 +22,3 @@ Welcome to list of the Hardest Granny Modds ever
 </a>
 
 
-<div align="center">
-
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-  <img src="https://img.shields.io/badge/Download-Coming%20Soon-303030?style=for-the-badge" alt="Download — Coming Soon">
-</a>
-
-<br><br>
-
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-  <img src="https://img.shields.io/badge/Plans-Coming%20Soon-303030?style=for-the-badge" alt="Plans — Coming Soon">
-</a>
-
-</div>
