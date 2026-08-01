@@ -32,3 +32,4 @@ Welcome to list of the Hardest Granny Modds ever
 <a href="ranking.html" class="button">
     🏆 Community Ranking
 </a>
+
