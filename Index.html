@@ -1,1 +1,345 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HDM Community Ranking</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 25px;
+        background: #181a1f;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .description {
+        text-align: center;
+        color: #aaa;
+        margin-bottom: 30px;
+    }
+
+    #ranking {
+        max-width: 850px;
+        margin: auto;
+    }
+
+    .slot {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        min-height: 80px;
+        margin-bottom: 10px;
+        padding: 10px;
+
+        background: #24272e;
+        border: 1px solid #343841;
+        border-radius: 12px;
+
+        transition: 0.15s;
+    }
+
+    .slot.over {
+        border: 2px dashed #777;
+        background: #292d35;
+    }
+
+    .position {
+        width: 55px;
+        min-width: 55px;
+
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+
+        color: #aaa;
+    }
+
+    .card {
+        flex: 1;
+
+        padding: 18px;
+
+        background: #30343c;
+        border-radius: 10px;
+
+        cursor: grab;
+        user-select: none;
+        touch-action: none;
+
+        font-weight: bold;
+
+        transition: 0.15s;
+    }
+
+    .card:hover {
+        background: #383d47;
+    }
+
+    .card:active {
+        cursor: grabbing;
+    }
+
+    .dragging {
+        opacity: 0.45;
+        transform: scale(0.98);
+    }
+
+    @media (max-width: 600px) {
+        body {
+            padding: 12px;
+        }
+
+        .slot {
+            min-height: 70px;
+            gap: 8px;
+        }
+
+        .position {
+            width: 42px;
+            min-width: 42px;
+            font-size: 18px;
+        }
+
+        .card {
+            padding: 14px;
+            font-size: 14px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<h1>🏆 HDM Community Ranking</h1>
+
+<p class="description">
+    Drag the modifications to create your own ranking.
+</p>
+
+<div id="ranking"></div>
+
+<script>
+
+const mods = [
+    "Prime Mod Plus",
+    "Unnerfed Prime",
+    "Death Mod",
+    "Nerfed Prime",
+    "Death Challenge",
+    "SuperFast",
+    "Super Speed Challenge on Impossible Difficulty",
+    "Insane Mod",
+    "Rainy Season Extreme Difficulty",
+    "Furious",
+    "Cruel Mod",
+    "Madness (1.7)",
+    "Hell Mode",
+    "Impossible Difficulty",
+    "Impossible Difficulty (Rewamp)",
+    "Enhanced Impossible Difficulty",
+    "Hollow Difficulty",
+    "Granny's Curse",
+    "Extreme Difficulty (D.V)",
+    "Crazy Difficulty",
+    "Wild Mod",
+    "Extreme Difficulty",
+    "Extreme Difficulty (D.V)",
+    "Impossible Difficulty",
+    "Extreme Difficulty (D.V)",
+    "Extreme Difficulty",
+    "Extreme Difficulty",
+    "Extreme Difficulty"
+];
+
+const ranking = document.getElementById("ranking");
+
+let draggedCard = null;
+
+function createRanking() {
+
+    ranking.innerHTML = "";
+
+    mods.forEach((mod, index) => {
+
+        const slot = document.createElement("div");
+        slot.className = "slot";
+
+        const position = document.createElement("div");
+        position.className = "position";
+        position.textContent = "#" + (index + 1);
+
+        const card = document.createElement("div");
+        card.className = "card";
+        card.textContent = mod;
+
+        card.draggable = true;
+
+        /*
+         * Desktop drag & drop
+         */
+
+        card.addEventListener("dragstart", function () {
+            draggedCard = card;
+            card.classList.add("dragging");
+        });
+
+        card.addEventListener("dragend", function () {
+            card.classList.remove("dragging");
+            draggedCard = null;
+
+            document.querySelectorAll(".slot").forEach(s => {
+                s.classList.remove("over");
+            });
+        });
+
+        slot.addEventListener("dragover", function (event) {
+            event.preventDefault();
+
+            if (draggedCard && draggedCard.parentElement !== slot) {
+                slot.classList.add("over");
+            }
+        });
+
+        slot.addEventListener("dragleave", function () {
+            slot.classList.remove("over");
+        });
+
+        slot.addEventListener("drop", function (event) {
+            event.preventDefault();
+
+            slot.classList.remove("over");
+
+            if (!draggedCard) return;
+
+            const oldSlot = draggedCard.parentElement;
+
+            if (oldSlot === slot) return;
+
+            const targetCard = slot.querySelector(".card");
+
+            if (targetCard) {
+                oldSlot.appendChild(targetCard);
+            }
+
+            slot.appendChild(draggedCard);
+        });
+
+        /*
+         * Mobile touch support
+         */
+
+        let touchStartY = 0;
+        let touchStartX = 0;
+
+        card.addEventListener("touchstart", function (event) {
+
+            const touch = event.touches[0];
+
+            touchStartY = touch.clientY;
+            touchStartX = touch.clientX;
+
+            draggedCard = card;
+
+            card.classList.add("dragging");
+
+        }, { passive: true });
+
+
+        card.addEventListener("touchmove", function (event) {
+
+            if (!draggedCard) return;
+
+            const touch = event.touches[0];
+
+            const element = document.elementFromPoint(
+                touch.clientX,
+                touch.clientY
+            );
+
+            const targetSlot = element
+                ? element.closest(".slot")
+                : null;
+
+            document.querySelectorAll(".slot").forEach(s => {
+                s.classList.remove("over");
+            });
+
+            if (
+                targetSlot &&
+                targetSlot !== draggedCard.parentElement
+            ) {
+                targetSlot.classList.add("over");
+            }
+
+        }, { passive: true });
+
+
+        card.addEventListener("touchend", function (event) {
+
+            if (!draggedCard) return;
+
+            const touch = event.changedTouches[0];
+
+            const element = document.elementFromPoint(
+                touch.clientX,
+                touch.clientY
+            );
+
+            const targetSlot = element
+                ? element.closest(".slot")
+                : null;
+
+            document.querySelectorAll(".slot").forEach(s => {
+                s.classList.remove("over");
+            });
+
+            if (
+                targetSlot &&
+                targetSlot !== draggedCard.parentElement
+            ) {
+
+                const oldSlot = draggedCard.parentElement;
+
+                const targetCard =
+                    targetSlot.querySelector(".card");
+
+                if (targetCard) {
+                    oldSlot.appendChild(targetCard);
+                }
+
+                targetSlot.appendChild(draggedCard);
+            }
+
+            draggedCard.classList.remove("dragging");
+            draggedCard = null;
+
+        });
+
+
+        slot.appendChild(position);
+        slot.appendChild(card);
+
+        ranking.appendChild(slot);
+    });
+}
+
+createRanking();
+
+</script>
+
+</body>
+</html>
