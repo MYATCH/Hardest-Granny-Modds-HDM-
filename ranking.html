@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HDM Community Ranking</title>
+<title>Community Ranking — Hardest Granny Mods</title>
 
 <style>
     * {
@@ -14,332 +13,375 @@
 
     body {
         margin: 0;
-        padding: 25px;
-        background: #181a1f;
+        padding: 30px 15px 60px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #111318;
         color: white;
-        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
     }
 
     h1 {
         text-align: center;
-        margin: 10px 0;
+        margin-bottom: 8px;
+        font-size: 32px;
     }
 
-    .description {
+    .subtitle {
         text-align: center;
         color: #aaa;
-        margin-bottom: 30px;
+        margin-bottom: 35px;
+        font-size: 15px;
     }
 
-    #ranking {
-        max-width: 850px;
-        margin: auto;
-    }
-
-    .slot {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-
-        min-height: 80px;
-        margin-bottom: 10px;
-        padding: 10px;
-
-        background: #24272e;
-        border: 1px solid #343841;
+    .section-title {
+        margin: 35px 0 15px;
+        padding: 12px 16px;
         border-radius: 12px;
-
-        transition: 0.15s;
-    }
-
-    .slot.over {
-        border: 2px dashed #777;
-        background: #292d35;
-    }
-
-    .position {
-        width: 55px;
-        min-width: 55px;
-
-        text-align: center;
         font-size: 22px;
         font-weight: bold;
-
-        color: #aaa;
     }
 
-    .card {
-        flex: 1;
+    .main-list {
+        background: #173b21;
+        border: 1px solid #2d8a45;
+        color: #65e47c;
+    }
 
+    .extended-list {
+        background: #443a0d;
+        border: 1px solid #a99521;
+        color: #ffe34d;
+    }
+
+    .mod-card {
+        background: #1b1e24;
+        border: 1px solid #30343d;
+        border-radius: 14px;
         padding: 18px;
+        margin-bottom: 12px;
+        transition: 0.15s ease;
+    }
 
-        background: #30343c;
+    .mod-card:hover {
+        transform: translateY(-2px);
+        border-color: #666;
+        background: #20242b;
+    }
+
+    .mod-title {
+        margin: 0 0 10px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .mod-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .tag {
+        display: inline-block;
+        padding: 7px 10px;
+        border-radius: 8px;
+        background: #282c34;
+        color: #ddd;
+        font-size: 14px;
+    }
+
+    .game-tag {
+        background: #202d42;
+        color: #75b7ff;
+    }
+
+    .mod-tag {
+        background: #35252f;
+        color: #ff9cc4;
+    }
+
+    .back-button {
+        display: block;
+        width: fit-content;
+        margin: 0 auto 30px;
+        padding: 12px 20px;
         border-radius: 10px;
-
-        cursor: grab;
-        user-select: none;
-        touch-action: none;
-
+        background: #292d35;
+        color: white;
+        text-decoration: none;
         font-weight: bold;
-
         transition: 0.15s;
     }
 
-    .card:hover {
-        background: #383d47;
+    .back-button:hover {
+        background: #3a3f49;
     }
 
-    .card:active {
-        cursor: grabbing;
-    }
-
-    .dragging {
-        opacity: 0.45;
-        transform: scale(0.98);
-    }
-
-    @media (max-width: 600px) {
-        body {
-            padding: 12px;
-        }
-
-        .slot {
-            min-height: 70px;
-            gap: 8px;
-        }
-
-        .position {
-            width: 42px;
-            min-width: 42px;
-            font-size: 18px;
-        }
-
-        .card {
-            padding: 14px;
-            font-size: 14px;
-        }
+    .note {
+        text-align: center;
+        margin-top: 35px;
+        color: #777;
+        font-size: 13px;
     }
 </style>
 </head>
 
 <body>
 
-<h1>🏆 HDM Community Ranking</h1>
-
-<p class="description">
-    Drag the modifications to create your own ranking.
-</p>
-
-<div id="ranking"></div>
-
-<script>
-
-const mods = [
-    "Prime Mod Plus",
-    "Unnerfed Prime",
-    "Death Mod",
-    "Nerfed Prime",
-    "Death Challenge",
-    "SuperFast",
-    "Super Speed Challenge on Impossible Difficulty",
-    "Insane Mod",
-    "Rainy Season Extreme Difficulty",
-    "Furious",
-    "Cruel Mod",
-    "Madness (1.7)",
-    "Hell Mode",
-    "Impossible Difficulty",
-    "Impossible Difficulty (Rewamp)",
-    "Enhanced Impossible Difficulty",
-    "Hollow Difficulty",
-    "Granny's Curse",
-    "Extreme Difficulty (D.V)",
-    "Crazy Difficulty",
-    "Wild Mod",
-    "Extreme Difficulty",
-    "Extreme Difficulty (D.V)",
-    "Impossible Difficulty",
-    "Extreme Difficulty (D.V)",
-    "Extreme Difficulty",
-    "Extreme Difficulty",
-    "Extreme Difficulty"
-];
-
-const ranking = document.getElementById("ranking");
-
-let draggedCard = null;
-
-function createRanking() {
-
-    ranking.innerHTML = "";
-
-    mods.forEach((mod, index) => {
-
-        const slot = document.createElement("div");
-        slot.className = "slot";
-
-        const position = document.createElement("div");
-        position.className = "position";
-        position.textContent = "#" + (index + 1);
-
-        const card = document.createElement("div");
-        card.className = "card";
-        card.textContent = mod;
-
-        card.draggable = true;
-
-        /*
-         * Desktop drag & drop
-         */
-
-        card.addEventListener("dragstart", function () {
-            draggedCard = card;
-            card.classList.add("dragging");
-        });
-
-        card.addEventListener("dragend", function () {
-            card.classList.remove("dragging");
-            draggedCard = null;
-
-            document.querySelectorAll(".slot").forEach(s => {
-                s.classList.remove("over");
-            });
-        });
-
-        slot.addEventListener("dragover", function (event) {
-            event.preventDefault();
-
-            if (draggedCard && draggedCard.parentElement !== slot) {
-                slot.classList.add("over");
-            }
-        });
-
-        slot.addEventListener("dragleave", function () {
-            slot.classList.remove("over");
-        });
-
-        slot.addEventListener("drop", function (event) {
-            event.preventDefault();
-
-            slot.classList.remove("over");
-
-            if (!draggedCard) return;
-
-            const oldSlot = draggedCard.parentElement;
-
-            if (oldSlot === slot) return;
-
-            const targetCard = slot.querySelector(".card");
-
-            if (targetCard) {
-                oldSlot.appendChild(targetCard);
-            }
-
-            slot.appendChild(draggedCard);
-        });
-
-        /*
-         * Mobile touch support
-         */
-
-        let touchStartY = 0;
-        let touchStartX = 0;
-
-        card.addEventListener("touchstart", function (event) {
-
-            const touch = event.touches[0];
-
-            touchStartY = touch.clientY;
-            touchStartX = touch.clientX;
-
-            draggedCard = card;
-
-            card.classList.add("dragging");
-
-        }, { passive: true });
-
-
-        card.addEventListener("touchmove", function (event) {
-
-            if (!draggedCard) return;
-
-            const touch = event.touches[0];
-
-            const element = document.elementFromPoint(
-                touch.clientX,
-                touch.clientY
-            );
-
-            const targetSlot = element
-                ? element.closest(".slot")
-                : null;
-
-            document.querySelectorAll(".slot").forEach(s => {
-                s.classList.remove("over");
-            });
-
-            if (
-                targetSlot &&
-                targetSlot !== draggedCard.parentElement
-            ) {
-                targetSlot.classList.add("over");
-            }
-
-        }, { passive: true });
-
-
-        card.addEventListener("touchend", function (event) {
-
-            if (!draggedCard) return;
-
-            const touch = event.changedTouches[0];
-
-            const element = document.elementFromPoint(
-                touch.clientX,
-                touch.clientY
-            );
-
-            const targetSlot = element
-                ? element.closest(".slot")
-                : null;
-
-            document.querySelectorAll(".slot").forEach(s => {
-                s.classList.remove("over");
-            });
-
-            if (
-                targetSlot &&
-                targetSlot !== draggedCard.parentElement
-            ) {
-
-                const oldSlot = draggedCard.parentElement;
-
-                const targetCard =
-                    targetSlot.querySelector(".card");
-
-                if (targetCard) {
-                    oldSlot.appendChild(targetCard);
-                }
-
-                targetSlot.appendChild(draggedCard);
-            }
-
-            draggedCard.classList.remove("dragging");
-            draggedCard = null;
-
-        });
-
-
-        slot.appendChild(position);
-        slot.appendChild(card);
-
-        ranking.appendChild(slot);
-    });
-}
-
-createRanking();
-
-</script>
+<div class="container">
+
+    <a href="index.html" class="back-button">
+        ← Back to Main Page
+    </a>
+
+    <h1>🏆 Community Ranking</h1>
+
+    <div class="subtitle">
+        Hardest Granny Mods — Community Tier List
+    </div>
+
+    <!-- MAIN LIST -->
+    <div class="section-title main-list">
+        🟢 Main List
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #1 — Prime Mod Plus</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Prime Mod Plus</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #2 — Unnerfed Prime</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Mod Pack — Unnerfed Prime</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #3 — Death Mod</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny 2</span>
+            <span class="tag mod-tag">📦 Death Mod</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #4 — Nerfed Prime</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Mod Pack — Nerfed Prime</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #5 — Death Challenge</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Death Challenge</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #6 — SuperFast</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 SuperFast</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #7 — Super Speed Challenge on Impossible Difficulty</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Super Speed Challenge on Impossible Difficulty</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #8 — Insane Mod</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Insane Mod</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #9 — Rainy Season Extreme Difficulty</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Rainy Season Extreme Difficulty</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #10 — Furious</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Furious</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #11 — Cruel Mod</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Mod Pack — Cruel Mod</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #12 — Madness (1.7)</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Madness (1.7)</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #13 — Hell Mode</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny 2</span>
+            <span class="tag mod-tag">📦 Hell Mode</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #14 — Impossible Difficulty</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny 3</span>
+            <span class="tag mod-tag">📦 Impossible Difficulty</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #15 — Impossible Difficulty (Rewamp)</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny 1</span>
+            <span class="tag mod-tag">📦 Impossible Difficulty (Rewamp)</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #16 — Enhanced Impossible Difficulty</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Enhanced Impossible Difficulty</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #17 — Hollow Difficulty</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Legacy — Hollow Difficulty</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #18 — Granny's Curse</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Granny's Curse (Extreme Difficulty)</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #19 — Extreme Difficulty (D.V)</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny 3</span>
+            <span class="tag mod-tag">📦 Extreme Difficulty (D.V)</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #20 — Crazy Difficulty</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Crazy Difficulty</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #21 — Wild Mod</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Wild Mod</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #22 — Extreme Difficulty</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny 2</span>
+            <span class="tag mod-tag">📦 Extreme Difficulty</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #23 — Extreme Difficulty (D.V)</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny 3</span>
+            <span class="tag mod-tag">📦 Extreme Difficulty (D.V)</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #24 — Impossible Difficulty</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Legacy — Impossible Difficulty</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #25 — Extreme Difficulty (D.V)</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny 3</span>
+            <span class="tag mod-tag">📦 Extreme Difficulty (D.V)</span>
+        </div>
+    </div>
+
+    <!-- EXTENDED LIST -->
+    <div class="section-title extended-list">
+        🟡 Extended List
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #26 — Extreme Difficulty</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny 2</span>
+            <span class="tag mod-tag">📦 Extreme Difficulty</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #27 — Extreme Difficulty</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Extreme Difficulty</span>
+        </div>
+    </div>
+
+    <div class="mod-card">
+        <h2 class="mod-title">🏅 #28 — Extreme Difficulty</h2>
+        <div class="mod-info">
+            <span class="tag game-tag">🎮 Granny</span>
+            <span class="tag mod-tag">📦 Legacy — Extreme Difficulty</span>
+        </div>
+    </div>
+
+    <div class="note">
+        Community ranking • Hardest Granny Mods HDM
+    </div>
+
+</div>
 
 </body>
 </html>
