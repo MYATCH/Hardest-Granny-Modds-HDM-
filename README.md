@@ -27,11 +27,12 @@ Welcome to list of the Hardest Granny Modds ever
   <img src="https://img.shields.io/badge/Original%20PDF%20Document-303030?style=for-the-badge" alt="Original PDF Document">
 </a>
 
-<a href="Updates.md">
-  <button class="button">U P D A T E S</button>
+
+<a href="https://github.com/MYATCH/Hardest-Granny-Modds-HDM-/blob/main/Updates.md">
+  <img src="https://img.shields.io/badge/Updates-303030?style=for-the-badge" alt="Updates">
 </a>
 
-
+_
 
 </div>
 
