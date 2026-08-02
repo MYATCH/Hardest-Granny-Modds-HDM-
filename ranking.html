@@ -120,9 +120,19 @@ h1 {
     color: #75b7ff;
 }
 
+.version-tag {
+    background: #30352a;
+    color: #b9e86c;
+}
+
 .mod-tag {
     background: #35252f;
     color: #ff9cc4;
+}
+
+.device-tag {
+    background: #2d2940;
+    color: #c3a7ff;
 }
 
 .save-button {
@@ -279,6 +289,7 @@ h1 {
 <h2 class="mod-title">🏅 #14 — Impossible Difficulty</h2>
 <div class="mod-info">
 <span class="tag game-tag">🎮 Granny 3</span>
+<span class="tag version-tag">🕹️ Version 1.0</span>
 <span class="tag mod-tag">📦 Impossible Difficulty</span>
 </div>
 </div>
@@ -319,6 +330,7 @@ h1 {
 <h2 class="mod-title">🏅 #19 — Extreme Difficulty (D.V)</h2>
 <div class="mod-info">
 <span class="tag game-tag">🎮 Granny 3</span>
+<span class="tag version-tag">🕹️ Version 1.0</span>
 <span class="tag mod-tag">📦 Extreme Difficulty (D.V)</span>
 </div>
 </div>
@@ -343,6 +355,7 @@ h1 {
 <h2 class="mod-title">🏅 #22 — Extreme Difficulty</h2>
 <div class="mod-info">
 <span class="tag game-tag">🎮 Granny 2</span>
+<span class="tag device-tag">🥽 VR</span>
 <span class="tag mod-tag">📦 Extreme Difficulty</span>
 </div>
 </div>
@@ -351,6 +364,7 @@ h1 {
 <h2 class="mod-title">🏅 #23 — Extreme Difficulty (D.V)</h2>
 <div class="mod-info">
 <span class="tag game-tag">🎮 Granny 3</span>
+<span class="tag version-tag">🕹️ Version 1.0</span>
 <span class="tag mod-tag">📦 Extreme Difficulty (D.V)</span>
 </div>
 </div>
@@ -367,6 +381,7 @@ h1 {
 <h2 class="mod-title">🏅 #25 — Extreme Difficulty (D.V)</h2>
 <div class="mod-info">
 <span class="tag game-tag">🎮 Granny 3</span>
+<span class="tag version-tag">🕹️ Version 1.0</span>
 <span class="tag mod-tag">📦 Extreme Difficulty (D.V)</span>
 </div>
 </div>
@@ -383,6 +398,7 @@ h1 {
 <h2 class="mod-title">🏅 #26 — Extreme Difficulty</h2>
 <div class="mod-info">
 <span class="tag game-tag">🎮 Granny 2</span>
+<span class="tag device-tag">🥽 VR</span>
 <span class="tag mod-tag">📦 Extreme Difficulty</span>
 </div>
 </div>
@@ -418,7 +434,7 @@ Drag cards to change their positions.
 <script>
 let draggedCard = null;
 
-/* Запоминаем настоящие названия модов ДО любых изменений */
+/* Запоминаем настоящие названия модов */
 document.querySelectorAll(".mod-title").forEach(title => {
     title.dataset.modName = title.textContent
         .replace(/^🏅\s*#\d+\s*—\s*/, "")
@@ -438,6 +454,7 @@ document.querySelectorAll(".mod-card").forEach(card => {
         draggedCard = null;
         updateNumbers();
     });
+
 });
 
 document.querySelectorAll(".tier-list").forEach(list => {
@@ -499,7 +516,7 @@ function getDragAfterElement(container, y) {
     ).element;
 }
 
-/* Исправленная нумерация */
+/* Нумерация */
 function updateNumbers() {
 
     let number = 1;
@@ -551,8 +568,15 @@ function saveRanking() {
             ranking.push({
                 name: title.dataset.modName,
                 game: card.querySelector(".game-tag").textContent,
+                version: card.querySelector(".version-tag")
+                    ? card.querySelector(".version-tag").textContent
+                    : "",
+                device: card.querySelector(".device-tag")
+                    ? card.querySelector(".device-tag").textContent
+                    : "",
                 mod: card.querySelector(".mod-tag").textContent
             });
+
         });
 
     localStorage.setItem(
@@ -563,9 +587,9 @@ function saveRanking() {
     alert("Ranking saved!");
 }
 
-/* Нормализуем номера при загрузке */
+/* Нормализуем номера */
 updateNumbers();
 </script>
 
 </body>
-                                                  </html>
+</html>
