@@ -30,7 +30,7 @@ Welcome to list of the Hardest Granny Modds ever
 <br>
 
 <a href="https://github.com/MYATCH/Hardest-Granny-Modds-HDM-/blob/main/Updates.md">
-  <img src="https://img.shields.io/badge/Updates-303030?style=for-the-badge" alt="Updates">
+  <img src="https://img.shields.io/badge/UPDATES-303030?style=for-the-badge" alt="Updates">
 </a>
 
 _
