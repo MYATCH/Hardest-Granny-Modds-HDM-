@@ -52,3 +52,7 @@ New button: Community list (Tir list)
 
 Version 0.93.5
 New button: Updates
+
+Verison 0.94
+
+New button: Updates , Fix of the tir list 
