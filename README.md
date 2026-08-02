@@ -26,7 +26,8 @@ Welcome to list of the Hardest Granny Modds ever
 <a href="https://github.com/MYATCH/Hardest-Granny-Modds-HDM-/blob/main/HGM3.pdf">
   <img src="https://img.shields.io/badge/Original%20PDF%20Document-303030?style=for-the-badge" alt="Original PDF Document">
 </a>
-_
+
+<br>
 
 <a href="https://github.com/MYATCH/Hardest-Granny-Modds-HDM-/blob/main/Updates.md">
   <img src="https://img.shields.io/badge/Updates-303030?style=for-the-badge" alt="Updates">
