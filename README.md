@@ -27,6 +27,9 @@ Welcome to list of the Hardest Granny Modds ever
   <img src="https://img.shields.io/badge/Original%20PDF%20Document-303030?style=for-the-badge" alt="Original PDF Document">
 </a>
 
+<a href="Updates.md" class="button">📋 Updates</a>
+_
+
 </div>
 
 <a href="ranking.html" class="button">
