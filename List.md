@@ -326,7 +326,7 @@
 
 <div style="background:#24262b;border-radius:12px;padding:20px;margin:15px 0;">
 
-## 🏅 #19 — Extreme Difficulty (D.V)
+## 🏅 #19 — Extreme Difficulty 1.0 (D.V)
 
 | Information | Value |
 |---|---|
@@ -399,11 +399,11 @@
 
 <div style="background:#24262b;border-radius:12px;padding:20px;margin:15px 0;">
 
-## 🏅 #23 — Extreme Difficulty (D.V)
+## 🏅 #23 — Extreme Difficulty 
 
 | Information | Value |
 |---|---|
-| 🎮 Game | Granny 3 |
+| 🎮 Game | Granny 1 VR|
 | 📦 Mod | Extreme Difficulty (D.V) |
 | 👤 Author | Developer |
 | ✅ Verified by | TheNeptoonLP |
@@ -458,7 +458,7 @@
 |---|---|
 | 🎮 Game | Granny 2 |
 | 📦 Mod | Extreme Difficulty |
-| 🥽 Device | VR |
+| 🥽 Device | Every |
 | 👤 Author | Gogozooom |
 | ✅ Verified by | Unknown |
 | 📌 Status | Verified, Unknown verifier |
