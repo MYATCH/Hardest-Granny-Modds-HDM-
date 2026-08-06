@@ -3,10 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>THGM — Top Hardest Granny Mods Ever Verified</title>
 
 <style>
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -145,6 +148,10 @@ h1 {
     font-weight: bold;
 }
 
+.back-button:hover {
+    background: #363b45;
+}
+
 .note {
     text-align: center;
     color: #777;
@@ -162,51 +169,103 @@ h1 {
 </head>
 
 <body>
+
 <div class="container">
 
-<a href="index.html" class="back-button">← Back to Main Page</a>
+<a href="index.html" class="back-button">
+    ← Back to Main Page
+</a>
 
 <h1>🏆 THGM</h1>
-<div class="subtitle">Top Hardest Granny Mods Ever Verified</div>
+
+<div class="subtitle">
+    Top Hardest Granny Mods Ever Verified
+</div>
 
 <div class="description">
     <strong>Community-driven project.</strong><br>
+
     Placements may be updated if new evidence or expert consensus appears.
+
     <hr>
-    I tried to make the most objective list possible of the hardest Granny modifications
-    and include every mod that exists.<br><br>
+
+    I tried to make the most objective list possible of the hardest
+    Granny modifications and include every mod that exists.
+
+    <br><br>
+
     Thanks for using the list!<br>
     — Nachos 🌯
 </div>
 
-<div 
-    
-
 <div class="rules">
+
     <h2>Rules</h2>
+
     <ol>
         <li>Levels MUST be verified legit.</li>
+
         <li>Mod would be placed after a week (and more).</li>
-        <li>Mod must have an Author, real verifier, a verification video on YouTube or RUTube, and a working download link.</li>
-        <li>No custom presets (this rule does not apply to mods in the top 4/5).</li>
+
+        <li>
+            Mod must have an Author, real verifier,
+            a verification video on YouTube or RUTube,
+            and a working download link.
+        </li>
+
+        <li>
+            No custom presets
+            (this rule does not apply to mods in the top 4/5).
+        </li>
+
         <li>No custom seed.</li>
+
         <li>Original video must be without montage.</li>
-        <li>This list uses texture packs that make the game much more difficult.</li>
-        <li>the modification must be mentioned in the mod<li>
+
+        <li>
+            This list uses texture packs that make the game
+            much more difficult.
+        </li>
+
+        <li>
+            The modification must be mentioned in the mod.
+        </li>
     </ol>
+
 </div>
 
 <div class="legend">
+
     <h2>Legend</h2>
-    <div>🟢 <strong>Main List</strong>: fully confirmed mods.</div>
-    <div>🟡 <strong>Extended List</strong>: complex mods outside the main list.</div>
-    <div>🔴 <strong>Lost Media</strong>: mods for which walkthroughs or evidence have been partially or completely lost.</div>
+
+    <div>
+        🟢 <strong>Main List</strong>:
+        fully confirmed mods.
+    </div>
+
+    <div>
+        🟡 <strong>Extended List</strong>:
+        complex mods outside the main list.
+    </div>
+
+    <div>
+        🔴 <strong>Lost Media</strong>:
+        mods for which walkthroughs or evidence have been
+        partially or completely lost.
+    </div>
+
 </div>
 
-<div class="section-title main-list">🟢 Main List</div>
+<div class="section-title main-list">
+    🟢 Main List
+</div>
+
 <div id="mainList"></div>
 
-<div class="section-title extended-list">🟡 Extended List</div>
+<div class="section-title extended-list">
+    🟡 Extended List
+</div>
+
 <div id="extendedList"></div>
 
 <div class="footer">
@@ -217,220 +276,436 @@ h1 {
 </div>
 
 <script>
+
 const mainMods = [
+
     {
-        rank: 1, game: "Granny 1", mod: "Prime Legend (Visitor)", device: "PC",
-        verified: "Grand player", author: "Boris Lub",
+        rank: 1,
+        game: "Granny 1",
+        mod: "Prime Legend (Visitor)",
+        device: "PC",
+        verified: "Grand player",
+        author: "Boris Lub",
         status: "Verified, Memory"
     },
+
     {
-        rank: 2, game: "Granny 1", mod: "Prime Mod Plus", device: "Every",
-        verified: "GGGamer", author: "Boris Lub",
+        rank: 2,
+        game: "Granny 1",
+        mod: "Prime Mod Plus",
+        device: "Every",
+        verified: "GGGamer",
+        author: "Boris Lub",
         status: "Verified, Memory"
     },
+
     {
-        rank: 3, game: "Granny 1", mod: "Unnerfed Prime", device: "Every",
-        verified: "GGGamer", author: "Boris Lub",
+        rank: 3,
+        game: "Granny 1",
+        mod: "Unnerfed Prime",
+        device: "Every",
+        verified: "GGGamer",
+        author: "Boris Lub",
         status: "Verified"
     },
+
     {
-        rank: 4, game: "Granny 1", mod: "Nerfed Prime", device: "Every",
-        verified: "KirillSof, REKVIN", author: "Boris Lub",
+        rank: 4,
+        game: "Granny 1",
+        mod: "Nerfed Prime",
+        device: "Every",
+        verified: "KirillSof, REKVIN",
+        author: "Boris Lub",
         status: "Verified"
     },
+
     {
-        rank: 5, game: "Granny 1", mod: "Light Speed", device: "PC",
-        verified: "Asian Battleship", author: "Xnd79 (Unconfirmed)",
+        rank: 5,
+        game: "Granny 1",
+        mod: "Light Speed",
+        device: "PC",
+        verified: "Asian Battleship",
+        author: "Xnd79 (Unconfirmed)",
         status: "Verified, Unconfirmed Author"
     },
+
     {
-        rank: 6, game: "Granny 2", mod: "Death Mod", device: "PC",
-        verified: "GGGamer", author: "DesperadaChannel",
+        rank: 6,
+        game: "Granny 2",
+        mod: "Death Mod",
+        device: "PC",
+        verified: "GGGamer",
+        author: "DesperadaChannel",
         status: "Verified"
     },
+
     {
-        rank: 7, game: "Granny 1", mod: "Death Challenge", device: "Every",
-        verified: "Xenofly", author: "Boris Lub",
+        rank: 7,
+        game: "Granny 1",
+        mod: "Death Challenge",
+        device: "Every",
+        verified: "Xenofly",
+        author: "Boris Lub",
         status: "Verified, Unconfirmed Placement"
     },
+
     {
-        rank: 8, game: "Granny 1", mod: "SuperFast", device: "Every",
-        verified: "RDO209K", author: "RDO209K",
+        rank: 8,
+        game: "Granny 1",
+        mod: "SuperFast",
+        device: "Every",
+        verified: "RDO209K",
+        author: "RDO209K",
         status: "Verified"
     },
+
     {
-        rank: 9, game: "Granny 1", mod: "Super Speed Challenge (On Impossible Difficulty)", device: "PC",
-        verified: "Хатет", author: "Candy_Yu_522 [Hatet]",
+        rank: 9,
+        game: "Granny 1",
+        mod: "Super Speed Challenge (On Impossible Difficulty)",
+        device: "PC",
+        verified: "Хатет",
+        author: "Candy_Yu_522 [Hatet]",
         status: "Verified"
     },
+
     {
-        rank: 10, game: "Granny 3", mod: "Rainy Season Extreme Difficulty", device: "PC",
-        verified: "Dem Ro", author: "Desperada Channel",
+        rank: 10,
+        game: "Granny 3",
+        mod: "Rainy Season Extreme Difficulty",
+        device: "PC",
+        verified: "Dem Ro",
+        author: "Desperada Channel",
         status: "Verified"
     },
+
     {
-        rank: 11, game: "Granny 2", mod: "Fear Mode", device: "PC",
-        verified: "FUN_Player", author: "Zoderdeluxe",
+        rank: 11,
+        game: "Granny 2",
+        mod: "Fear Mode",
+        device: "PC",
+        verified: "FUN_Player",
+        author: "Zoderdeluxe",
         status: "Verified, Unconfirmed Placement"
     },
+
     {
-        rank: 12, game: "Granny 3", mod: "Insane Mod", device: "Mobile",
-        verified: "Enormous Gamer", author: "Desperada Channel (Partially confirmed)",
+        rank: 12,
+        game: "Granny 3",
+        mod: "Insane Mod",
+        device: "Mobile",
+        verified: "Enormous Gamer",
+        author: "Desperada Channel (Partially confirmed)",
         status: "Verified"
     },
+
     {
-        rank: 13, game: "Granny 1", mod: "Cruel Mod", device: "Every",
-        verified: "Dem Ro", author: "Boris Lub",
+        rank: 13,
+        game: "Granny 1",
+        mod: "Cruel Mod",
+        device: "Every",
+        verified: "Dem Ro",
+        author: "Boris Lub",
         status: "Verified"
     },
+
     {
-        rank: 14, game: "Granny 1", mod: "Madness (1.7)", device: "Mobile",
-        verified: "A_S_S_I_S_T_A_N_T (Unconfirmed verifier)", author: "LGP",
+        rank: 14,
+        game: "Granny 1",
+        mod: "Madness (1.7)",
+        device: "Mobile",
+        verified: "A_S_S_I_S_T_A_N_T (Unconfirmed verifier)",
+        author: "LGP",
         status: "Verified"
     },
+
     {
-        rank: 15, game: "Granny 1", mod: "Furious", device: "Every",
-        verified: "Dem Ro", author: "Boris Lub",
+        rank: 15,
+        game: "Granny 1",
+        mod: "Furious",
+        device: "Every",
+        verified: "Dem Ro",
+        author: "Boris Lub",
         status: "Verified"
     },
+
     {
-        rank: 16, game: "Granny 2", mod: "Hell Mode", device: "PC",
-        verified: "Enpicqness", author: "gabzin1 & LeozimGranny (needs confirmation)",
+        rank: 16,
+        game: "Granny 2",
+        mod: "Hell Mode",
+        device: "PC",
+        verified: "Enpicqness",
+        author: "gabzin1 & LeozimGranny (needs confirmation)",
         status: "Verified, Partially Lost Media, Needs Confirmation"
     },
+
     {
-        rank: 17, game: "Granny 3", mod: "Impossible Difficulty", device: "PC",
-        verified: "GroukSawn (Needs Confirmation)", author: "OmGi",
+        rank: 17,
+        game: "Granny 3",
+        mod: "Impossible Difficulty",
+        device: "PC",
+        verified: "GroukSawn (Needs Confirmation)",
+        author: "OmGi",
         status: "Verified, Needs Confirmation about verifier"
     },
+
     {
-        rank: 18, game: "Granny 1", mod: "Impossible Difficulty (Rewamp)", device: "PC",
-        verified: "Vividplays", author: "OmGi",
+        rank: 18,
+        game: "Granny 1",
+        mod: "Impossible Difficulty (Rewamp)",
+        device: "PC",
+        verified: "Vividplays",
+        author: "OmGi",
         status: "Verified"
     },
+
     {
-        rank: 19, game: "Granny 1", mod: "Enhanced Impossible Difficulty", device: "PC",
-        verified: "Sly_Player", author: "OmGi",
+        rank: 19,
+        game: "Granny 1",
+        mod: "Enhanced Impossible Difficulty",
+        device: "PC",
+        verified: "Sly_Player",
+        author: "OmGi",
         status: "Verified, Unconfirmed verifier"
     },
+
     {
-        rank: 20, game: "Granny 3 (1.0)", mod: "Extreme Difficulty (D.V)", device: "PC",
-        verified: "TheNeptoonLP", author: "Developer",
+        rank: 20,
+        game: "Granny 3 (1.0)",
+        mod: "Extreme Difficulty (D.V)",
+        device: "PC",
+        verified: "TheNeptoonLP",
+        author: "Developer",
         status: "Verified — First known public completion"
     },
+
     {
-        rank: 21, game: "Granny Legacy", mod: "Desperate Death", device: "PC",
-        verified: "Coming Soon!", author: Coming_Soon!,
+        rank: 21,
+        game: "Granny Legacy",
+        mod: "Desperate Death",
+        device: "PC",
+        verified: "Coming Soon!",
+        author: "Coming Soon!",
         status: "Verified, Mod for Mod"
     },
+
     {
-        rank: 22, game: "Granny 1", mod: "Wild Mod", device: "Every",
-        verified: "A18 (UnConfirmed)", author: "A18",
+        rank: 22,
+        game: "Granny 1",
+        mod: "Wild Mod",
+        device: "Every",
+        verified: "A18 (UnConfirmed)",
+        author: "A18",
         status: "Verified, Lost Media, Unconfirmed verifier"
     },
+
     {
-        rank: 23, game: "Granny Legacy", mod: "Hollow Difficulty", device: "Every",
-        verified: "Wearzix (First known verifier)", author: "OmGi",
+        rank: 23,
+        game: "Granny Legacy",
+        mod: "Hollow Difficulty",
+        device: "Every",
+        verified: "Wearzix (First known verifier)",
+        author: "OmGi",
         status: "Verified, First known verifier"
     },
+
     {
-        rank: 24, game: "Granny 1", mod: "Crazy Difficulty", device: "Every",
-        verified: "DemRo (First known public verifier)", author: "Yandu17",
+        rank: 24,
+        game: "Granny 1",
+        mod: "Crazy Difficulty",
+        device: "Every",
+        verified: "DemRo (First known public verifier)",
+        author: "Yandu17",
         status: "Verified, Needs more information about verifier"
     },
+
     {
-        rank: 25, game: "Granny 2", mod: "Granny Chapter 2 Reworked (Extreme Difficulty)", device: "PC",
-        verified: "Coming Soon!", author: "Coming Soon!",
+        rank: 25,
+        game: "Granny 2",
+        mod: "Granny Chapter 2 Reworked (Extreme Difficulty)",
+        device: "PC",
+        verified: "Coming Soon!",
+        author: "Coming Soon!",
         status: "Verified"
     }
+
 ];
+
 
 const extendedMods = [
+
     {
-        rank: 26, game: "Granny 3", mod: "Extreme Difficulty (D.V)", device: "PC",
-        verified: "TheNeptoonLP", author: "Developer",
+        rank: 26,
+        game: "Granny 3",
+        mod: "Extreme Difficulty (D.V)",
+        device: "PC",
+        verified: "TheNeptoonLP",
+        author: "Developer",
         status: "Verified — First known public completion"
     },
+
     {
-        rank: 27, game: "Granny 1", mod: "Granny Insane", device: "Mobile",
-        verified: "Coming Soon!", author: "Coming Soon!",
+        rank: 27,
+        game: "Granny 1",
+        mod: "Granny Insane",
+        device: "Mobile",
+        verified: "Coming Soon!",
+        author: "Coming Soon!",
         status: "Verified"
     },
+
     {
-        rank: 28, game: "Granny Legacy", mod: "Impossible Difficulty", device: "Every",
-        verified: "ZaY", author: "OmGi",
+        rank: 28,
+        game: "Granny Legacy",
+        mod: "Impossible Difficulty",
+        device: "Every",
+        verified: "ZaY",
+        author: "OmGi",
         status: "Verified"
     },
+
     {
-        rank: 29, game: "Granny 2", mod: "Extreme Difficulty", device: "VR",
-        verified: "TOPSY (First Known verifier)", author: "Gogozooom",
+        rank: 29,
+        game: "Granny 2",
+        mod: "Extreme Difficulty",
+        device: "VR",
+        verified: "TOPSY (First Known verifier)",
+        author: "Gogozooom",
         status: "Verified, First verifier unconfirmed"
     },
+
     {
-        rank: 30, game: "Granny 1", mod: "Granny’s Curse (Extreme Difficulty)", device: "Every",
-        verified: "Coming Soon!", author: "Coming Soon!",
+        rank: 30,
+        game: "Granny 1",
+        mod: "Granny’s Curse (Extreme Difficulty)",
+        device: "Every",
+        verified: "Coming Soon!",
+        author: "Coming Soon!",
         status: "Verified, Memory, Unconfirmed Placement"
     },
+
     {
-        rank: 31, game: "Granny 2", mod: "Extreme Difficulty (D.V)", device: "PC",
-        verified: "ZaY", author: "Developer",
+        rank: 31,
+        game: "Granny 2",
+        mod: "Extreme Difficulty (D.V)",
+        device: "PC",
+        verified: "ZaY",
+        author: "Developer",
         status: "Verified"
     },
+
     {
-        rank: 32, game: "Granny 2", mod: "Extreme Difficulty", device: "VR",
-        verified: "Unknown", author: "Gogozooom",
+        rank: 32,
+        game: "Granny 2",
+        mod: "Extreme Difficulty",
+        device: "VR",
+        verified: "Unknown",
+        author: "Gogozooom",
         status: "Verified, Unknown verifier"
     },
+
     {
-        rank: 33, game: "Granny 1", mod: "Extreme Difficulty", device: "Every",
-        verified: "Furious FPV (Mobile) / ZaY (PC)", author: "Developer",
+        rank: 33,
+        game: "Granny 1",
+        mod: "Extreme Difficulty",
+        device: "Every",
+        verified: "Furious FPV (Mobile) / ZaY (PC)",
+        author: "Developer",
         status: "Verified, Platform dependent"
     },
+
     {
-        rank: 34, game: "Granny Legacy", mod: "Extreme Difficulty", device: "Every",
-        verified: "Unknown", author: "OmGi",
+        rank: 34,
+        game: "Granny Legacy",
+        mod: "Extreme Difficulty",
+        device: "Every",
+        verified: "Unknown",
+        author: "OmGi",
         status: "Verified, Unknown verifier"
     },
+
     {
-        rank: 35, game: "Granny 1", mod: "Chill", device: "Every",
-        verified: "Boris Lub", author: "Boris Lub",
+        rank: 35,
+        game: "Granny 1",
+        mod: "Chill",
+        device: "Every",
+        verified: "Boris Lub",
+        author: "Boris Lub",
         status: "Verified, BTW Easiest Mod Ever Created :)"
     }
+
 ];
 
+
 function createCard(item) {
+
     const card = document.createElement("div");
+
     card.className = "mod-card";
 
     card.innerHTML = `
-        <h2 class="mod-title">🏅 #${item.rank} — ${escapeHtml(item.mod)}</h2>
+        <h2 class="mod-title">
+            🏅 #${item.rank} — ${escapeHtml(item.mod)}
+        </h2>
+
         <div class="mod-info">
-            <span class="tag game-tag">🎮 ${escapeHtml(item.game)}</span>
-            <span class="tag mod-tag">📦 ${escapeHtml(item.mod)}</span>
-            <span class="tag meta-tag">💻 ${escapeHtml(item.device)}</span>
-            <span class="tag meta-tag">👤 Author: ${escapeHtml(item.author)}</span>
-            <span class="tag meta-tag">✅ Verified by: ${escapeHtml(item.verified)}</span>
-            <span class="tag status-tag">📌 ${escapeHtml(item.status)}</span>
+
+            <span class="tag game-tag">
+                🎮 ${escapeHtml(item.game)}
+            </span>
+
+            <span class="tag mod-tag">
+                📦 ${escapeHtml(item.mod)}
+            </span>
+
+            <span class="tag meta-tag">
+                💻 ${escapeHtml(item.device)}
+            </span>
+
+            <span class="tag meta-tag">
+                👤 Author: ${escapeHtml(item.author)}
+            </span>
+
+            <span class="tag meta-tag">
+                ✅ Verified by: ${escapeHtml(item.verified)}
+            </span>
+
+            <span class="tag status-tag">
+                📌 ${escapeHtml(item.status)}
+            </span>
+
         </div>
     `;
 
     return card;
 }
 
+
 function escapeHtml(value) {
+
     return String(value)
         .replaceAll("&", "&amp;")
         .replaceAll("<", "&lt;")
         .replaceAll(">", "&gt;")
         .replaceAll('"', "&quot;")
         .replaceAll("'", "&#039;");
+
 }
+
 
 const mainList = document.getElementById("mainList");
 const extendedList = document.getElementById("extendedList");
 
-mainMods.forEach(item => mainList.appendChild(createCard(item)));
-extendedMods.forEach(item => extendedList.appendChild(createCard(item)));
+
+mainMods.forEach(item => {
+    mainList.appendChild(createCard(item));
+});
+
+
+extendedMods.forEach(item => {
+    extendedList.appendChild(createCard(item));
+});
+
 </script>
 
 </body>
