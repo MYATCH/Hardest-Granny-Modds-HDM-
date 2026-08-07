@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THGM — Top Hardest Granny Mods Ever Verified</title>
+<style>
+  :root{
+    --bg: #0d1117;
+    --card-bg: #161b22;
+    --card-border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --green: #2ea043;
+    --green-bg: rgba(46,160,67,0.15);
+    --green-text: #7ee787;
+    --yellow: #d29922;
+    --yellow-bg: rgba(210,153,34,0.15);
+    --yellow-text: #e3b341;
+    --red: #f85149;
+    --red-bg: rgba(248,81,73,0.15);
+    --red-text: #ff7b72;
+    --pink-bg: rgba(219,60,120,0.18);
+    --pink-text: #ff8fc7;
+    --blue-bg: rgba(31,111,235,0.15);
+    --blue-text: #79c0ff;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 { font-size: 1.8rem; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); margin-top: 0; }
+
+  .rules-box, .legend-box {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+
+  .legend-line { margin: 10px 0; font-size: 1.05rem; }
+
+  .section-banner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 24px;
+    border-radius: 16px;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 28px 0 20px;
+    border: 1px solid;
+  }
+
+  .section-banner .dot { font-size: 1.4rem; }
+
+  .section-banner.main {
+    background: rgba(46,160,67,0.12);
+    border-color: rgba(46,160,67,0.4);
+    color: var(--green-text);
+  }
+  .section-banner.extended {
+    background: rgba(210,153,34,0.12);
+    border-color: rgba(210,153,34,0.4);
+    color: var(--yellow-text);
+  }
+  .section-banner.lost {
+    background: rgba(248,81,73,0.12);
+    border-color: rgba(248,81,73,0.4);
+    color: var(--red-text);
+  }
+
+  .mod-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin-bottom: 18px;
+  }
+
+  .mod-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .tag.game     { background: var(--blue-bg);   color: var(--blue-text); }
+  .tag.modname  { background: var(--pink-bg);   color: var(--pink-text); }
+  .tag.platform { background: rgba(255,255,255,0.06); color: var(--text); }
+  .tag.author   { background: var(--green-bg);  color: var(--green-text); }
+  .tag.verifier { background: var(--green-bg);  color: var(--green-text); }
+  .tag.status   { background: rgba(255,166,87,0.15); color: #ffb366; }
+
+  .footer {
+    text-align: center;
+    color: var(--muted);
+    margin-top: 40px;
+    font-size: 0.95rem;
+  }
+
+  .empty-state {
+    text-align: center;
+    color: var(--muted);
+    padding: 20px;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+  <h1>🏆 THGM</h1>
+  <p class="subtitle">Top Hardest Granny Mods Ever Verified</p>
+
+  <div class="rules-box">
+    <h2 style="margin-top:0;">Rules</h2>
+    <ol style="padding-left:20px; line-height:1.8;">
+      <li>Levels MUST be verified legit.</li>
+      <li>Mod would be placed after a week (and more).</li>
+      <li>Mod must have an Author, real verifier, and video must have a link on YouTube or RUTube (send verification video via Discord), and a working download link.</li>
+      <li>No custom presets (this rule doesn't apply to mods in top 4/5).</li>
+      <li>No custom seed.</li>
+      <li>Original video must be without montage.</li>
+      <li>This list uses texture packs that make the game much more difficult.</li>
+    </ol>
+  </div>
+
+  <div class="legend-box">
+    <h2 style="margin-top:0;">Legend</h2>
+    <div class="legend-line">🟢 <strong>Main List</strong>: fully confirmed mods.</div>
+    <div class="legend-line">🟡 <strong>Extended List</strong>: complex mods outside the main list.</div>
+    <div class="legend-line">🔴 <strong>Lost Media</strong>: mods for which walkthroughs or evidence have been partially or completely lost (deleted videos, broken download links, mods that once existed but are no longer available).</div>
+  </div>
+
+  <div id="app"></div>
+
+  <div class="footer">
+    THGM — Top Hardest Granny Mods Ever Verified<br>
+    Community ranking
+  </div>
+
+<script>
+/* =========================================================
+   ДАННЫЕ СПИСКА
+   Просто добавляй новые объекты в массив MODS ниже.
+   category: "main" | "extended" | "lost"
+   place: число места в разделе (для нумерации #1, #2...)
+   ========================================================= */
+const MODS = [
+  // ===== 🟢 MAIN LIST =====
+  { category:"main", place:1,  title:"Prime Legend", game:"Granny 1", modName:"Prime Legend", platform:"PC (Visitor)", author:"Boris Lub", verifier:"Grand player", status:"Verified, Memory" },
+  { category:"main", place:2,  title:"Prime Mod Plus", game:"Granny 1", modName:"Prime Mod Plus", platform:"Every", author:"Boris Lub", verifier:"GGGamer", status:"Verified, Memory" },
+  { category:"main", place:3,  title:"Unnerfed Prime", game:"Granny (Mod pack)", modName:"Unnerfed Prime", platform:"Every", author:"Boris Lub", verifier:"GGGamer", status:"Verified" },
+  { category:"main", place:4,  title:"Fear Mode", game:"Granny 2", modName:"Fear Mode", platform:"PC", author:"Zoderdeluxe", verifier:"FUN_Player", status:"Verified, Unconfirmed Placement (4/5)" },
+  { category:"main", place:5,  title:"Nerfed Prime", game:"Granny (Mod pack)", modName:"Nerfed Prime", platform:"Every", author:"Boris Lub", verifier:"KirillSof, REKVIN", status:"Verified (5/4)" },
+  { category:"main", place:6,  title:"Light Speed", game:"Granny 1", modName:"Light Speed", platform:"PC", author:"Xnd79 (Unconfirmed)", verifier:"Asian Battleship", status:"Verified, Unconfirmed Author" },
+  { category:"main", place:7,  title:"Death Mod", game:"Granny (2)", modName:"Death Mod", platform:"PC", author:"DesperadaChannel", verifier:"GGGammer", status:"Verified" },
+  { category:"main", place:8,  title:"Death Challenge", game:"Granny (1)", modName:"Death Challenge", platform:"Every", author:"Boris Lub", verifier:"Xenofly", status:"Verified, Unconfirmed Placement" },
+  { category:"main", place:9,  title:"SuperFast", game:"Granny (1)", modName:"SuperFast", platform:"Every", author:"RDO209K", verifier:"RDO209K", status:"Verified" },
+  { category:"main", place:10, title:"Madness05 (Absurd Difficulty)", game:"Granny (Mod pack)", modName:"Madness05 (Absurd Difficulty)", platform:"Every", author:"Boris Lub", verifier:"Coming Soon!", status:"Verified, Unconfirmed Placement" },
+  { category:"main", place:11, title:"Super Speed Challenge (Impossible Difficulty)", game:"Granny (1)", modName:"Super Speed Challenge (Impossible Difficulty)", platform:"PC", author:"Candy_Yu_522", verifier:"Хатет [Hatet]", status:"Verified" },
+  { category:"main", place:12, title:"Rainy Season Extreme Difficulty", game:"Granny (3)", modName:"Rainy Season Extreme Difficulty", platform:"PC", author:"Desperada Channel", verifier:"Dem Ro", status:"Verified" },
+  { category:"main", place:13, title:"Insane Mod", game:"Granny (3)", modName:"Insane Mod", platform:"Mobile", author:"Desperada Channel (Partially confirmed)", verifier:"Enormous Gamer", status:"Verified" },
+  { category:"main", place:14, title:"Cruel Mod", game:"Granny (Mod pack)", modName:"Cruel Mod", platform:"Every", author:"Boris Lub", verifier:"Dem Ro", status:"Verified" },
+  { category:"main", place:15, title:"Madness (1.7)", game:"Granny (1)", modName:"Madness (1.7)", platform:"Mobile", author:"LGP", verifier:"A_S_S_I_S_T_A_N_T (Unconfirmed verifier)", status:"Verified, Unconfirmed Verifier" },
+  { category:"main", place:16, title:"Furious", game:"Granny (1)", modName:"Furious", platform:"Every", author:"Boris Lub", verifier:"Dem Ro", status:"Verified" },
+  { category:"main", place:17, title:"Hell Mode", game:"Granny (2)", modName:"Hell Mode", platform:"PC", author:"gabzin1 & LeozimGranny (needs confirmation)", verifier:"Enpicqness", status:"Verified, Partially Lost Media, Needs Confirmation" },
+  { category:"main", place:18, title:"Impossible Difficulty", game:"Granny (3)", modName:"Impossible Difficulty", platform:"PC", author:"OmGi", verifier:"GroukSawn (Needs Confirmation)", status:"Verified, Needs Confirmation about verifier" },
+  { category:"main", place:19, title:"Rewamp — Impossible Difficulty (only)", game:"Granny (1), Rewamp", modName:"Rewamp — Impossible Difficulty (only)", platform:"PC", author:"OmGi", verifier:"Vividplays", status:"Verified" },
+  { category:"main", place:20, title:"Enhanced Impossible Difficulty", game:"Granny (Enhanced)", modName:"Enhanced Impossible Difficulty", platform:"PC", author:"OmGi", verifier:"Sly_Player (Unconfirmed)", status:"Verified, Unconfirmed verifier" },
+  { category:"main", place:21, title:"Extreme Difficulty (D.V)", game:"Granny (3) (1.0)", modName:"Extreme Difficulty (D.V)", platform:"", author:"Developer", verifier:"TheNeptoonLP (First known public completion)", status:"Verified" },
+  { category:"main", place:22, title:"Desperate Death", game:"Granny (Legacy)", modName:"Desperate Death", platform:"PC", author:"", verifier:"Coming Soon!", status:"Verified, Mod for Mod" },
+  { category:"main", place:23, title:"Wild Mod", game:"Granny (1)", modName:"Wild Mod", platform:"Every", author:"A18", verifier:"A18 (Unconfirmed)", status:"Verified, Lost Media, Unconfirmed verifier" },
+  { category:"main", place:24, title:"Hollow Difficulty", game:"Granny (Legacy)", modName:"Hollow Difficulty", platform:"Every", author:"OmGi", verifier:"Wearzix (First known verifier)", status:"Verified, First known verifier" },
+  { category:"main", place:25, title:"Crazy Difficulty", game:"Granny (1)", modName:"Crazy Difficulty", platform:"Every", author:"Yandu17", verifier:"DemRo (First known public verifier)", status:"Verified, Needs more information about verifier" },
+
+  // ===== 🟡 EXTENDED LIST =====
+  { category:"extended", place:26, title:"Granny Chapter 2 Reworked (Extreme Difficulty)", game:"Granny 2", modName:"Granny Chapter 2 Reworked (Extreme Difficulty)", platform:"PC", author:"", verifier:"Coming Soon!", status:"Verified" },
+  { category:"extended", place:27, title:"Extreme Difficulty (D.V)", game:"Granny (3)", modName:"Extreme Difficulty (D.V)", platform:"", author:"Developer", verifier:"TheNeptoonLP (First known public completion)", status:"Verified" },
+  { category:"extended", place:28, title:"Granny Insane", game:"Granny 1", modName:"Granny Insane", platform:"Mobile", author:"", verifier:"Coming Soon!", status:"Verified" },
+  { category:"extended", place:29, title:"Impossible Difficulty", game:"Granny (Legacy)", modName:"Impossible Difficulty", platform:"Every", author:"OmGi", verifier:"ZaY", status:"Verified" },
+  { category:"extended", place:30, title:"Extreme Difficulty", game:"Granny (2)", modName:"Extreme Difficulty", platform:"VR", author:"Gogozooom", verifier:"TOPSY (First known verifier)", status:"Verified, First verifier unconfirmed" },
+  { category:"extended", place:31, title:"Extreme Difficulty (D.V)", game:"Granny (2)", modName:"Extreme Difficulty (D.V)", platform:"", author:"Developer", verifier:"ZaY", status:"Verified" },
+  { category:"extended", place:32, title:"Granny's Curse (Extreme Difficulty)", game:"Granny (1)", modName:"Granny's Curse (Extreme Difficulty)", platform:"Every", author:"", verifier:"Coming Soon!", status:"Verified, Memory, Unconfirmed Placement" },
+  { category:"extended", place:33, title:"Extreme Difficulty", game:"Granny (1)", modName:"Extreme Difficulty", platform:"VR", author:"Gogozooom", verifier:"Unknown", status:"Verified, Unknown verifier" },
+  { category:"extended", place:34, title:"Extreme Difficulty", game:"Granny (1)", modName:"Extreme Difficulty", platform:"Every", author:"Developer", verifier:"Furious FPV (Mobile) / ZaY (PC)", status:"Verified, Platform dependent (Mobile and PC have separate early verifiers)" },
+  { category:"extended", place:35, title:"Extreme Difficulty", game:"Granny (Legacy)", modName:"Extreme Difficulty", platform:"Every", author:"OmGi", verifier:"Unknown", status:"Verified, Unknown verifier" },
+  { category:"extended", place:36, title:"Chill", game:"Granny 1", modName:"Chill", platform:"Every", author:"Boris Lub", verifier:"Boris Lub", status:"Verified, Btw Easiest Mod Ever Created :)" }
+];
+
+const SECTION_LABELS = {
+  main:     { emoji: "🟢", name: "Main List",     cls: "main" },
+  extended: { emoji: "🟡", name: "Extended List", cls: "extended" },
+  lost:     { emoji: "🔴", name: "Lost Media",     cls: "lost" }
+};
+
+function renderModCard(mod) {
+  const div = document.createElement("div");
+  div.className = "mod-card";
+
+  const placeLabel = mod.place ? `#${mod.place} — ` : "";
+
+  div.innerHTML = `
+    <div class="mod-title">🥇 ${placeLabel}${escapeHtml(mod.title)}</div>
+    <div class="tags">
+      ${mod.game ? `<span class="tag game">🎮 ${escapeHtml(mod.game)}</span>` : ""}
+      ${mod.modName ? `<span class="tag modname">📦 ${escapeHtml(mod.modName)}</span>` : ""}
+      ${mod.platform ? `<span class="tag platform">💻 ${escapeHtml(mod.platform)}</span>` : ""}
+    </div>
+    <div class="tags">
+      ${mod.author ? `<span class="tag author">👤 Author: ${escapeHtml(mod.author)}</span>` : ""}
+      ${mod.verifier ? `<span class="tag verifier">✅ Verified by: ${escapeHtml(mod.verifier)}</span>` : ""}
+    </div>
+    <div class="tags">
+      ${mod.status ? `<span class="tag status">📌 ${escapeHtml(mod.status)}</span>` : ""}
+    </div>
+  `;
+  return div;
+}
+
+function escapeHtml(str) {
+  const d = document.createElement("div");
+  d.textContent = str;
+  return d.innerHTML;
+}
+
+function renderList() {
+  const app = document.getElementById("app");
+  app.innerHTML = "";
+
+  if (!Array.isArray(MODS) || MODS.length === 0) {
+    app.innerHTML = '<div class="empty-state">Список пуст — добавь моды в массив MODS.</div>';
+    return;
+  }
+
+  ["main", "extended", "lost"].forEach(cat => {
+    const items = MODS.filter(m => m.category === cat);
+    if (items.length === 0) return;
+
+    const label = SECTION_LABELS[cat];
+    const banner = document.createElement("div");
+    banner.className = `section-banner ${label.cls}`;
+    banner.innerHTML = `<span class="dot">${label.emoji}</span> ${label.name}`;
+    app.appendChild(banner);
+
+    items
+      .sort((a, b) => (a.place || 999) - (b.place || 999))
+      .forEach(mod => app.appendChild(renderModCard(mod)));
+  });
+}
+
+// Рендерим сразу, оборачивая в try/catch, чтобы одна плохая запись
+// не ломала всю страницу (это частая причина "пустого" списка).
+try {
+  renderList();
+} catch (err) {
+  document.getElementById("app").innerHTML =
+    `<div class="empty-state">Ошибка рендера списка: ${escapeHtml(err.message)}</div>`;
+  console.error(err);
+}
+</script>
+
+</body>
+</html>
