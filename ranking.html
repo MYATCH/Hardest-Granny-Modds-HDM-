@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Hardest Granny Mods — Community Tier List</title>
+<title>THGM — Tier List</title>
 
 <style>
 * {
@@ -13,33 +13,34 @@
 
 body {
     margin: 0;
-    padding: 25px 15px 60px;
+    padding: 20px 12px 50px;
     background: #111318;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1100px;
     margin: auto;
 }
 
 h1 {
     text-align: center;
+    font-size: clamp(28px, 7vw, 46px);
     margin: 10px 0 5px;
 }
 
 .subtitle {
     text-align: center;
     color: #999;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .back-button {
     display: block;
     width: fit-content;
     margin: 0 auto 25px;
-    padding: 12px 20px;
+    padding: 11px 18px;
     background: #292d35;
     color: white;
     text-decoration: none;
@@ -47,44 +48,76 @@ h1 {
     font-weight: bold;
 }
 
-.section-title {
-    padding: 12px 16px;
-    border-radius: 12px;
-    margin: 25px 0 12px;
-    font-size: 21px;
+.tier {
+    display: flex;
+    min-height: 110px;
+    margin: 12px 0;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #30343d;
+    background: #1b1e24;
+}
+
+.tier-label {
+    width: 85px;
+    min-width: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
     font-weight: bold;
+    color: #111;
 }
 
-.main-list {
-    background: #173b21;
-    border: 1px solid #2d8a45;
-    color: #65e47c;
+.tier-items {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 8px;
+    padding: 10px;
+    min-height: 110px;
 }
 
-.extended-list {
-    background: #443a0d;
-    border: 1px solid #a99521;
-    color: #ffe34d;
+.tier-s {
+    background: #ff5959;
 }
 
-.tier-list {
-    min-height: 20px;
+.tier-a {
+    background: #ff9f43;
+}
+
+.tier-b {
+    background: #ffd84d;
+}
+
+.tier-c {
+    background: #65d56f;
+}
+
+.tier-d {
+    background: #4db8ff;
+}
+
+.tier-e {
+    background: #9b7cff;
+}
+
+.tier-f {
+    background: #777;
 }
 
 .mod-card {
-    background: #1b1e24;
-    border: 1px solid #30343d;
-    border-radius: 14px;
-    padding: 16px;
-    margin: 10px 0;
+    width: 170px;
+    min-height: 75px;
+    padding: 10px;
+    background: #292d35;
+    border: 1px solid #444a55;
+    border-radius: 10px;
     cursor: grab;
     user-select: none;
-    transition: transform 0.15s, opacity 0.15s, border-color 0.15s;
-}
-
-.mod-card:hover {
-    border-color: #666;
-    background: #20242b;
+    touch-action: none;
+    transition: transform 0.15s, opacity 0.15s;
 }
 
 .mod-card:active {
@@ -92,61 +125,95 @@ h1 {
 }
 
 .mod-card.dragging {
-    opacity: 0.35;
-    transform: scale(0.98);
+    opacity: 0.45;
+    transform: scale(0.96);
 }
 
-.mod-title {
-    margin: 0 0 10px;
-    font-size: 19px;
+.mod-name {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 6px;
 }
 
-.mod-info {
+.mod-game {
+    color: #75b7ff;
+    font-size: 12px;
+}
+
+.mod-device {
+    color: #8ee79a;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.pool {
+    margin-top: 25px;
+    padding: 15px;
+    border: 1px solid #30343d;
+    border-radius: 14px;
+    background: #181b21;
+}
+
+.pool h2 {
+    margin-top: 0;
+}
+
+.pool-items {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    min-height: 100px;
 }
 
-.tag {
-    padding: 7px 10px;
-    border-radius: 8px;
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+button {
+    border: 0;
+    padding: 11px 17px;
+    border-radius: 9px;
     background: #292d35;
-    color: #ddd;
-    font-size: 14px;
-}
-
-.game-tag {
-    background: #202d42;
-    color: #75b7ff;
-}
-
-.mod-tag {
-    background: #35252f;
-    color: #ff9cc4;
-}
-
-.save-button {
-    display: block;
-    margin: 25px auto 10px;
-    padding: 13px 25px;
-    border: none;
-    border-radius: 10px;
-    background: #303640;
     color: white;
-    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
 }
 
-.save-button:hover {
-    background: #424956;
+button:hover {
+    background: #3a3f49;
 }
 
-.note {
-    text-align: center;
-    color: #777;
-    font-size: 13px;
-    margin-top: 30px;
+.info {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #1b1e24;
+    border: 1px solid #30343d;
+    color: #aaa;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+
+    .tier-label {
+        width: 60px;
+        min-width: 60px;
+        font-size: 25px;
+    }
+
+    .mod-card {
+        width: 145px;
+        min-height: 70px;
+    }
+
+    .mod-name {
+        font-size: 13px;
+    }
+
 }
 </style>
 </head>
@@ -159,414 +226,738 @@ h1 {
     ← Back to Main Page
 </a>
 
-<h1>🏆 Community Ranking</h1>
+<h1>🏆 THGM</h1>
 
 <div class="subtitle">
-    Hardest Granny Mods — Community Tier List
+    Granny Mods — Tier List
 </div>
 
-<div class="section-title main-list">
-    🟢 Main List
+
+<!-- =========================
+     TIERS
+========================= -->
+
+<div class="tier">
+
+    <div class="tier-label tier-s">
+        S
+    </div>
+
+    <div class="tier-items" data-tier="S"></div>
+
 </div>
 
-<div class="tier-list" id="mainList">
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #1 — Prime Mod Plus</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 Prime Mod Plus</span>
-</div>
-</div>
+<div class="tier">
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #2 — Unnerfed Prime</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 Mod Pack — Unnerfed Prime</span>
-</div>
+    <div class="tier-label tier-a">
+        A
+    </div>
+
+    <div class="tier-items" data-tier="A"></div>
+
 </div>
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #3 — Death Mod</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 2</span>
-<span class="tag mod-tag">📦 Death Mod</span>
-</div>
+
+<div class="tier">
+
+    <div class="tier-label tier-b">
+        B
+    </div>
+
+    <div class="tier-items" data-tier="B"></div>
+
 </div>
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #4 — Nerfed Prime</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 Mod Pack — Nerfed Prime</span>
-</div>
+
+<div class="tier">
+
+    <div class="tier-label tier-c">
+        C
+    </div>
+
+    <div class="tier-items" data-tier="C"></div>
+
 </div>
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #5 — Death Challenge</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 Death Challenge</span>
-</div>
+
+<div class="tier">
+
+    <div class="tier-label tier-d">
+        D
+    </div>
+
+    <div class="tier-items" data-tier="D"></div>
+
 </div>
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #6 — SuperFast</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 SuperFast</span>
-</div>
+
+<div class="tier">
+
+    <div class="tier-label tier-e">
+        E
+    </div>
+
+    <div class="tier-items" data-tier="E"></div>
+
 </div>
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #7 — Super Speed Challenge on Impossible Difficulty</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 Super Speed Challenge on Impossible Difficulty</span>
-</div>
+
+<div class="tier">
+
+    <div class="tier-label tier-f">
+        F
+    </div>
+
+    <div class="tier-items" data-tier="F"></div>
+
 </div>
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #8 — Insane Mod</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 Insane Mod</span>
-</div>
+
+<!-- =========================
+     UNRANKED / POOL
+========================= -->
+
+<div class="pool">
+
+    <h2>📦 Unranked Mods</h2>
+
+    <div
+        class="pool-items"
+        data-tier="POOL"
+        id="poolItems">
+    </div>
+
 </div>
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #9 — Rainy Season Extreme Difficulty</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 Rainy Season Extreme Difficulty</span>
-</div>
+
+<div class="controls">
+
+    <button onclick="saveTierList()">
+        💾 Save
+    </button>
+
+    <button onclick="resetTierList()">
+        🔄 Reset
+    </button>
+
 </div>
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #10 — Furious</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 Furious</span>
-</div>
-</div>
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #11 — Cruel Mod</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 Mod Pack — Cruel Mod</span>
-</div>
-</div>
+<div class="info">
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #12 — Madness (1.7)</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 Madness (1.7)</span>
-</div>
-</div>
+    <strong>ℹ️ Info</strong>
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #13 — Hell Mode</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 2</span>
-<span class="tag mod-tag">📦 Hell Mode</span>
-</div>
-</div>
+    <br><br>
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #14 — Impossible Difficulty</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 3</span>
-<span class="tag mod-tag">📦 Impossible Difficulty</span>
-</div>
-</div>
+    Drag the mods between tiers.
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #15 — Impossible Difficulty (Rewamp)</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 Impossible Difficulty (Rewamp)</span>
-</div>
-</div>
+    <br>
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #16 — Enhanced Impossible Difficulty</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 Enhanced Impossible Difficulty</span>
-</div>
-</div>
+    The tier list is saved automatically in your browser.
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #17 — Hollow Difficulty</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 Legacy — Hollow Difficulty</span>
-</div>
-</div>
+    <br>
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #18 — Granny's Curse</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 Granny's Curse (Extreme Difficulty)</span>
-</div>
-</div>
+    On mobile, press and hold a card and move it to another tier.
 
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #19 — Extreme Difficulty (D.V)</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 3 1.0</span>
-<span class="tag mod-tag">📦 Extreme Difficulty (D.V)</span>
-</div>
-</div>
-
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #20 — Crazy Difficulty</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 Crazy Difficulty</span>
-</div>
-</div>
-
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #21 — Wild Mod</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 Wild Mod</span>
-</div>
-</div>
-
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #22 — Extreme Difficulty</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 2 VR</span>
-<span class="tag mod-tag">📦 Extreme Difficulty</span>
-</div>
-</div>
-
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #23 — Extreme Difficulty (D.V)</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 3 Developer</span>
-<span class="tag mod-tag">📦 Extreme Difficulty (D.V)</span>
-</div>
-</div>
-
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #24 — Impossible Difficulty</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 1</span>
-<span class="tag mod-tag">📦 Legacy — Impossible Difficulty</span>
-</div>
-</div>
-
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #25 — Extreme Difficulty </h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny VR </span>
-<span class="tag mod-tag">📦 Extreme Difficulty </span>
-</div>
 </div>
 
 </div>
 
-<div class="section-title extended-list">
-    🟡 Extended List
-</div>
-
-<div class="tier-list" id="extendedList">
-
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #26 — Extreme Difficulty</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny 2 Developer</span>
-<span class="tag mod-tag">📦 Extreme Difficulty</span>
-</div>
-</div>
-
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #27 — Extreme Difficulty</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny Developer</span>
-<span class="tag mod-tag">📦 Extreme Difficulty</span>
-</div>
-</div>
-
-<div class="mod-card" draggable="true">
-<h2 class="mod-title">🏅 #28 — Extreme Difficulty</h2>
-<div class="mod-info">
-<span class="tag game-tag">🎮 Granny Legacy</span>
-<span class="tag mod-tag">📦 Extreme Difficulty</span>
-</div>
-</div>
-
-</div>
-
-<button class="save-button" onclick="saveRanking()">
-💾 Save Ranking
-</button>
-
-<div class="note">
-Drag cards to change their positions.
-</div>
-
-</div>
 
 <script>
+
+/* =========================================================
+   MODS
+=========================================================
+
+   СЮДА ДОБАВЛЯЙ НОВЫЕ МОДЫ.
+
+   Они автоматически появятся
+   в Unranked Mods.
+
+========================================================= */
+
+const mods = [
+
+    {
+        id: "prime-legend",
+        name: "Prime Legend",
+        game: "Granny 1",
+        device: "PC"
+    },
+
+    {
+        id: "prime-mod-plus",
+        name: "Prime Mod Plus",
+        game: "Granny 1",
+        device: "Every"
+    },
+
+    {
+        id: "granny-gold-mode",
+        name: "Granny Gold Mode",
+        game: "Granny 1",
+        device: "PC"
+    },
+
+    {
+        id: "unnerfed-prime",
+        name: "Unnerfed Prime",
+        game: "Granny 1",
+        device: "Every"
+    },
+
+    {
+        id: "rage-mode",
+        name: "Rage Mode",
+        game: "Granny 1",
+        device: "PC"
+    },
+
+    {
+        id: "fear-mode",
+        name: "Fear Mode",
+        game: "Granny 2",
+        device: "PC"
+    },
+
+    {
+        id: "nerfed-prime",
+        name: "Nerfed Prime",
+        game: "Granny 1",
+        device: "Every"
+    },
+
+    {
+        id: "light-speed",
+        name: "Light Speed",
+        game: "Granny 1",
+        device: "PC"
+    },
+
+    {
+        id: "madness05",
+        name: "Madness05 (Absurd Difficulty)",
+        game: "Granny 1",
+        device: "Every"
+    },
+
+    {
+        id: "death-mod",
+        name: "Death Mod",
+        game: "Granny 2",
+        device: "PC"
+    },
+
+    {
+        id: "superfast",
+        name: "SuperFast",
+        game: "Granny 1",
+        device: "Every"
+    },
+
+    {
+        id: "super-speed",
+        name: "Super Speed Challenge",
+        game: "Granny 1",
+        device: "PC"
+    },
+
+    {
+        id: "rainy-season",
+        name: "Rainy Season Extreme Difficulty",
+        game: "Granny 3",
+        device: "PC"
+    },
+
+    {
+        id: "insane-mod",
+        name: "Insane Mod",
+        game: "Granny 3",
+        device: "Mobile"
+    },
+
+    {
+        id: "cruel-mod",
+        name: "Cruel Mod",
+        game: "Granny 1",
+        device: "Every"
+    },
+
+    {
+        id: "madness-17",
+        name: "Madness (1.7)",
+        game: "Granny 1",
+        device: "Mobile"
+    },
+
+    {
+        id: "furious",
+        name: "Furious",
+        game: "Granny 1",
+        device: "Every"
+    },
+
+    {
+        id: "hell-mode",
+        name: "Hell Mode",
+        game: "Granny 2",
+        device: "PC"
+    },
+
+    {
+        id: "impossible-difficulty",
+        name: "Impossible Difficulty",
+        game: "Granny 3",
+        device: "PC"
+    },
+
+    {
+        id: "impossible-rewamp",
+        name: "Impossible Difficulty (Rewamp)",
+        game: "Granny 1",
+        device: "PC"
+    },
+
+    {
+        id: "enhanced-impossible",
+        name: "Enhanced Impossible Difficulty",
+        game: "Granny 1",
+        device: "PC"
+    },
+
+    {
+        id: "extreme-dv-granny3",
+        name: "Extreme Difficulty (D.V)",
+        game: "Granny 3 (1.0)",
+        device: "PC"
+    },
+
+    {
+        id: "desperate-death",
+        name: "Desperate Death",
+        game: "Granny Legacy",
+        device: "PC"
+    },
+
+    {
+        id: "wild-mod",
+        name: "Wild Mod",
+        game: "Granny 1",
+        device: "Every"
+    },
+
+    {
+        id: "crazy-difficulty",
+        name: "Crazy Difficulty",
+        game: "Granny 1",
+        device: "Every"
+    },
+
+    {
+        id: "hollow-difficulty",
+        name: "Hollow Difficulty",
+        game: "Granny Legacy",
+        device: "Every"
+    },
+
+    {
+        id: "chapter2-reworked",
+        name: "Granny Chapter 2 Reworked",
+        game: "Granny 2",
+        device: "PC"
+    },
+
+    {
+        id: "granny-insane",
+        name: "Granny Insane",
+        game: "Granny 1",
+        device: "Mobile"
+    },
+
+    {
+        id: "legacy-impossible",
+        name: "Legacy Impossible Difficulty",
+        game: "Granny Legacy",
+        device: "Every"
+    },
+
+    {
+        id: "extreme-vr",
+        name: "Extreme Difficulty",
+        game: "Granny 2",
+        device: "VR"
+    },
+
+    {
+        id: "grannys-curse",
+        name: "Granny's Curse",
+        game: "Granny 1",
+        device: "Every"
+    },
+
+    {
+        id: "extreme-dv-granny2",
+        name: "Extreme Difficulty (D.V)",
+        game: "Granny 2",
+        device: "PC"
+    },
+
+    {
+        id: "extreme-vr-2",
+        name: "Extreme Difficulty",
+        game: "Granny 2",
+        device: "VR"
+    },
+
+    {
+        id: "extreme-granny1",
+        name: "Extreme Difficulty",
+        game: "Granny 1",
+        device: "Every"
+    },
+
+    {
+        id: "legacy-extreme",
+        name: "Extreme Difficulty",
+        game: "Granny Legacy",
+        device: "Every"
+    },
+
+    {
+        id: "chill",
+        name: "Chill",
+        game: "Granny 1",
+        device: "Every"
+    }
+
+];
+
+
+/* =========================================================
+   CREATE CARD
+========================================================= */
+
+function createCard(mod) {
+
+    const card = document.createElement("div");
+
+    card.className = "mod-card";
+
+    card.dataset.id = mod.id;
+
+    card.innerHTML = `
+
+        <div class="mod-name">
+            ${escapeHtml(mod.name)}
+        </div>
+
+        <div class="mod-game">
+            🎮 ${escapeHtml(mod.game)}
+        </div>
+
+        <div class="mod-device">
+            💻 ${escapeHtml(mod.device)}
+        </div>
+
+    `;
+
+    addDragEvents(card);
+
+    return card;
+}
+
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function escapeHtml(value) {
+
+    return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+
+}
+
+
+/* =========================================================
+   DRAG SYSTEM
+========================================================= */
+
 let draggedCard = null;
 
-/* Сохраняем настоящие названия модов */
-document.querySelectorAll(".mod-title").forEach(title => {
-    title.dataset.modName = title.textContent
-        .replace(/^🏅\s*#\d+\s*—\s*/, "")
-        .trim();
-});
 
-/* Drag & Drop */
-document.querySelectorAll(".mod-card").forEach(card => {
+/* Desktop */
 
-    card.addEventListener("dragstart", function () {
-        draggedCard = this;
-        this.classList.add("dragging");
+function addDragEvents(card) {
+
+    card.draggable = true;
+
+    card.addEventListener("dragstart", () => {
+
+        draggedCard = card;
+
+        card.classList.add("dragging");
+
     });
 
-    card.addEventListener("dragend", function () {
-        this.classList.remove("dragging");
+    card.addEventListener("dragend", () => {
+
+        card.classList.remove("dragging");
+
         draggedCard = null;
-        updateNumbers();
+
+        saveTierList();
+
     });
 
-});
+}
 
-document.querySelectorAll(".tier-list").forEach(list => {
 
-    list.addEventListener("dragover", function(event) {
+/* =========================================================
+   DROP AREAS
+========================================================= */
+
+const dropZones =
+    document.querySelectorAll(".tier-items, .pool-items");
+
+
+dropZones.forEach(zone => {
+
+    zone.addEventListener("dragover", event => {
+
+        event.preventDefault();
+
+    });
+
+    zone.addEventListener("drop", event => {
+
         event.preventDefault();
 
         if (!draggedCard) return;
 
-        const afterElement = getDragAfterElement(
-            this,
-            event.clientY
-        );
+        zone.appendChild(draggedCard);
 
-        if (afterElement == null) {
-            this.appendChild(draggedCard);
-        } else {
-            this.insertBefore(
-                draggedCard,
-                afterElement
-            );
-        }
+        saveTierList();
+
     });
 
 });
 
-function getDragAfterElement(container, y) {
 
-    const cards = [
-        ...container.querySelectorAll(
-            ".mod-card:not(.dragging)"
-        )
-    ];
+/* =========================================================
+   MOBILE TOUCH DRAG
+========================================================= */
 
-    return cards.reduce(
-        (closest, card) => {
+let touchCard = null;
+let touchClone = null;
 
-            const box = card.getBoundingClientRect();
 
-            const offset =
-                y - box.top - box.height / 2;
+document.addEventListener("touchstart", event => {
 
-            if (
-                offset < 0 &&
-                offset > closest.offset
-            ) {
-                return {
-                    offset: offset,
-                    element: card
-                };
-            }
+    const card =
+        event.target.closest(".mod-card");
 
-            return closest;
+    if (!card) return;
 
-        },
-        {
-            offset: Number.NEGATIVE_INFINITY
-        }
-    ).element;
-}
+    touchCard = card;
 
-/* Обновление номеров */
-function updateNumbers() {
+}, { passive: true });
 
-    let number = 1;
 
-    document.querySelectorAll("#mainList .mod-card")
-        .forEach(card => {
+document.addEventListener("touchmove", event => {
 
-            const title = card.querySelector(".mod-title");
+    if (!touchCard) return;
 
-            if (!title) return;
+    const touch = event.touches[0];
 
-            title.textContent =
-                "🏅 #" +
-                number +
-                " — " +
-                title.dataset.modName;
+    const element =
+        document.elementFromPoint(
+            touch.clientX,
+            touch.clientY
+        );
 
-            number++;
-        });
+    const zone =
+        element?.closest(
+            ".tier-items, .pool-items"
+        );
 
-    document.querySelectorAll("#extendedList .mod-card")
-        .forEach(card => {
+    if (zone) {
 
-            const title = card.querySelector(".mod-title");
+        zone.appendChild(touchCard);
 
-            if (!title) return;
+    }
 
-            title.textContent =
-                "🏅 #" +
-                number +
-                " — " +
-                title.dataset.modName;
+}, { passive: true });
 
-            number++;
-        });
-}
 
-/* Сохранение */
-function saveRanking() {
+document.addEventListener("touchend", () => {
 
-    const ranking = [];
+    if (touchCard) {
 
-    document.querySelectorAll(".mod-card")
-        .forEach(card => {
+        saveTierList();
 
-            const title =
-                card.querySelector(".mod-title");
+    }
 
-            ranking.push({
-                name: title.dataset.modName,
-                game: card.querySelector(".game-tag").textContent,
-                mod: card.querySelector(".mod-tag").textContent
+    touchCard = null;
+
+});
+
+
+/* =========================================================
+   INITIAL LOAD
+========================================================= */
+
+function loadMods() {
+
+    const saved =
+        localStorage.getItem("THGM_TIER_LIST");
+
+    if (saved) {
+
+        const data =
+            JSON.parse(saved);
+
+        Object.keys(data).forEach(tier => {
+
+            const zone =
+                document.querySelector(
+                    `[data-tier="${tier}"]`
+                );
+
+            if (!zone) return;
+
+            data[tier].forEach(id => {
+
+                const mod =
+                    mods.find(
+                        item => item.id === id
+                    );
+
+                if (mod) {
+
+                    zone.appendChild(
+                        createCard(mod)
+                    );
+
+                }
+
             });
 
         });
 
-    localStorage.setItem(
-        "grannyTierListRanking",
-        JSON.stringify(ranking)
-    );
+        /*
+           Новые моды, которых ещё нет
+           в сохранённом Tier List,
+           отправляются в Pool.
+        */
 
-    alert("Ranking saved!");
+        const usedIds =
+            Object.values(data).flat();
+
+        mods.forEach(mod => {
+
+            if (!usedIds.includes(mod.id)) {
+
+                document
+                    .querySelector('[data-tier="POOL"]')
+                    .appendChild(
+                        createCard(mod)
+                    );
+
+            }
+
+        });
+
+    } else {
+
+        mods.forEach(mod => {
+
+            document
+                .querySelector('[data-tier="POOL"]')
+                .appendChild(
+                    createCard(mod)
+                );
+
+        });
+
+    }
+
 }
 
-/* Нормализация номеров */
-updateNumbers();
+
+/* =========================================================
+   SAVE
+========================================================= */
+
+function saveTierList() {
+
+    const data = {};
+
+    document
+        .querySelectorAll(
+            ".tier-items, .pool-items"
+        )
+        .forEach(zone => {
+
+            const tier =
+                zone.dataset.tier;
+
+            data[tier] = [];
+
+            zone
+                .querySelectorAll(".mod-card")
+                .forEach(card => {
+
+                    data[tier].push(
+                        card.dataset.id
+                    );
+
+                });
+
+        });
+
+    localStorage.setItem(
+        "THGM_TIER_LIST",
+        JSON.stringify(data)
+    );
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+function resetTierList() {
+
+    const confirmReset =
+        confirm(
+            "Reset the Tier List?"
+        );
+
+    if (!confirmReset) return;
+
+    localStorage.removeItem(
+        "THGM_TIER_LIST"
+    );
+
+    location.reload();
+
+}
+
+
+/* =========================================================
+   START
+========================================================= */
+
+loadMods();
+
 </script>
 
 </body>
