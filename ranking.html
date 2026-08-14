@@ -13,21 +13,21 @@
 
 body {
     margin: 0;
-    padding: 20px 12px 50px;
+    padding: 25px 12px 60px;
     background: #111318;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: auto;
 }
 
 h1 {
     text-align: center;
-    font-size: clamp(28px, 7vw, 46px);
     margin: 10px 0 5px;
+    font-size: clamp(28px, 7vw, 46px);
 }
 
 .subtitle {
@@ -40,7 +40,7 @@ h1 {
     display: block;
     width: fit-content;
     margin: 0 auto 25px;
-    padding: 11px 18px;
+    padding: 12px 20px;
     background: #292d35;
     color: white;
     text-decoration: none;
@@ -48,134 +48,139 @@ h1 {
     font-weight: bold;
 }
 
-.tier {
-    display: flex;
-    min-height: 110px;
-    margin: 12px 0;
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid #30343d;
+.description,
+.info {
     background: #1b1e24;
+    border: 1px solid #30343d;
+    border-radius: 14px;
+    padding: 17px;
+    margin: 14px 0;
+    line-height: 1.55;
 }
 
-.tier-label {
-    width: 85px;
-    min-width: 85px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
+.section-title {
+    padding: 13px 17px;
+    border-radius: 12px;
+    margin: 28px 0 12px;
+    font-size: 22px;
     font-weight: bold;
-    color: #111;
 }
 
-.tier-items {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    gap: 8px;
-    padding: 10px;
-    min-height: 110px;
+.main-title {
+    background: #173b21;
+    border: 1px solid #2d8a45;
+    color: #65e47c;
 }
 
-.tier-s {
-    background: #ff5959;
+.extended-title {
+    background: #443a0d;
+    border: 1px solid #a99521;
+    color: #ffe34d;
 }
 
-.tier-a {
-    background: #ff9f43;
+.lost-title {
+    background: #461919;
+    border: 1px solid #a83b3b;
+    color: #ff7777;
 }
 
-.tier-b {
-    background: #ffd84d;
-}
-
-.tier-c {
-    background: #65d56f;
-}
-
-.tier-d {
-    background: #4db8ff;
-}
-
-.tier-e {
-    background: #9b7cff;
-}
-
-.tier-f {
-    background: #777;
+.list {
+    min-height: 50px;
 }
 
 .mod-card {
-    width: 170px;
-    min-height: 75px;
-    padding: 10px;
-    background: #292d35;
-    border: 1px solid #444a55;
-    border-radius: 10px;
+    background: #1b1e24;
+    border: 1px solid #30343d;
+    border-radius: 14px;
+    padding: 15px;
+    margin: 10px 0;
     cursor: grab;
     user-select: none;
     touch-action: none;
-    transition: transform 0.15s, opacity 0.15s;
+    transition: opacity 0.15s, transform 0.15s, border-color 0.15s;
 }
 
-.mod-card:active {
-    cursor: grabbing;
+.mod-card:hover {
+    border-color: #555c68;
+    background: #20242b;
 }
 
 .mod-card.dragging {
     opacity: 0.45;
-    transform: scale(0.96);
+    transform: scale(0.98);
+}
+
+.mod-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rank {
+    min-width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #292d35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #aaa;
 }
 
 .mod-name {
+    font-size: clamp(17px, 4vw, 21px);
     font-weight: bold;
-    font-size: 15px;
-    margin-bottom: 6px;
 }
 
-.mod-game {
-    color: #75b7ff;
-    font-size: 12px;
-}
-
-.mod-device {
-    color: #8ee79a;
-    font-size: 12px;
-    margin-top: 3px;
-}
-
-.pool {
-    margin-top: 25px;
-    padding: 15px;
-    border: 1px solid #30343d;
-    border-radius: 14px;
-    background: #181b21;
-}
-
-.pool h2 {
-    margin-top: 0;
-}
-
-.pool-items {
+.mod-info {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    min-height: 100px;
+    gap: 7px;
+    margin-top: 10px;
+    margin-left: 54px;
+}
+
+.tag {
+    padding: 6px 9px;
+    border-radius: 8px;
+    font-size: 13px;
+    background: #292d35;
+    color: #ddd;
+}
+
+.device {
+    background: #202d42;
+    color: #75b7ff;
+}
+
+.verified {
+    background: #29352d;
+    color: #8ee79a;
+}
+
+.drop-zone {
+    min-height: 30px;
+    border-radius: 12px;
+    transition: background 0.15s;
+}
+
+.drop-zone.drag-over {
+    background: rgba(255,255,255,0.05);
 }
 
 .controls {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 8px;
-    margin: 20px 0;
+    gap: 9px;
+    margin: 25px 0;
 }
 
 button {
+    padding: 11px 18px;
     border: 0;
-    padding: 11px 17px;
     border-radius: 9px;
     background: #292d35;
     color: white;
@@ -187,31 +192,19 @@ button:hover {
     background: #3a3f49;
 }
 
-.info {
-    margin-top: 25px;
-    padding: 15px;
-    border-radius: 12px;
-    background: #1b1e24;
-    border: 1px solid #30343d;
-    color: #aaa;
-    line-height: 1.5;
-}
-
 @media (max-width: 600px) {
 
-    .tier-label {
-        width: 60px;
-        min-width: 60px;
-        font-size: 25px;
+    body {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .mod-info {
+        margin-left: 0;
     }
 
     .mod-card {
-        width: 145px;
-        min-height: 70px;
-    }
-
-    .mod-name {
-        font-size: 13px;
+        padding: 13px;
     }
 
 }
@@ -229,115 +222,68 @@ button:hover {
 <h1>🏆 THGM</h1>
 
 <div class="subtitle">
-    Granny Mods — Tier List
+    Top Hardest Granny Mods Ever Verified — Tier List
+</div>
+
+<div class="description">
+    <strong>Community-driven project.</strong><br>
+    Drag the modifications to change their positions.
+    Positions are numbered automatically.
 </div>
 
 
 <!-- =========================
-     TIERS
+     MAIN LIST
 ========================= -->
 
-<div class="tier">
-
-    <div class="tier-label tier-s">
-        S
-    </div>
-
-    <div class="tier-items" data-tier="S"></div>
-
+<div class="section-title main-title">
+    🟢 Main List
 </div>
 
-
-<div class="tier">
-
-    <div class="tier-label tier-a">
-        A
-    </div>
-
-    <div class="tier-items" data-tier="A"></div>
-
-</div>
-
-
-<div class="tier">
-
-    <div class="tier-label tier-b">
-        B
-    </div>
-
-    <div class="tier-items" data-tier="B"></div>
-
-</div>
-
-
-<div class="tier">
-
-    <div class="tier-label tier-c">
-        C
-    </div>
-
-    <div class="tier-items" data-tier="C"></div>
-
-</div>
-
-
-<div class="tier">
-
-    <div class="tier-label tier-d">
-        D
-    </div>
-
-    <div class="tier-items" data-tier="D"></div>
-
-</div>
-
-
-<div class="tier">
-
-    <div class="tier-label tier-e">
-        E
-    </div>
-
-    <div class="tier-items" data-tier="E"></div>
-
-</div>
-
-
-<div class="tier">
-
-    <div class="tier-label tier-f">
-        F
-    </div>
-
-    <div class="tier-items" data-tier="F"></div>
-
+<div
+    id="mainList"
+    class="list drop-zone"
+    data-list="main">
 </div>
 
 
 <!-- =========================
-     UNRANKED / POOL
+     EXTENDED LIST
 ========================= -->
 
-<div class="pool">
+<div class="section-title extended-title">
+    🟡 Extended List
+</div>
 
-    <h2>📦 Unranked Mods</h2>
+<div
+    id="extendedList"
+    class="list drop-zone"
+    data-list="extended">
+</div>
 
-    <div
-        class="pool-items"
-        data-tier="POOL"
-        id="poolItems">
-    </div>
 
+<!-- =========================
+     LOST MEDIA
+========================= -->
+
+<div class="section-title lost-title">
+    🔴 Lost Media
+</div>
+
+<div
+    id="lostList"
+    class="list drop-zone"
+    data-list="lost">
 </div>
 
 
 <div class="controls">
 
-    <button onclick="saveTierList()">
+    <button onclick="saveList()">
         💾 Save
     </button>
 
-    <button onclick="resetTierList()">
+    <button onclick="resetList()">
         🔄 Reset
     </button>
 
@@ -346,19 +292,11 @@ button:hover {
 
 <div class="info">
 
-    <strong>ℹ️ Info</strong>
+    <strong>Info</strong><br><br>
 
-    <br><br>
-
-    Drag the mods between tiers.
-
-    <br>
-
-    The tier list is saved automatically in your browser.
-
-    <br>
-
-    On mobile, press and hold a card and move it to another tier.
+    Drag a modification up or down to change its position.
+    You can also move modifications between Main List,
+    Extended List and Lost Media.
 
 </div>
 
@@ -368,13 +306,15 @@ button:hover {
 <script>
 
 /* =========================================================
-   MODS
-=========================================================
+   MODIFICATIONS
+   =========================================================
 
-   СЮДА ДОБАВЛЯЙ НОВЫЕ МОДЫ.
+   ДОБАВЛЯЙ НОВЫЕ МОДЫ СЮДА.
 
-   Они автоматически появятся
-   в Unranked Mods.
+   list:
+   "main"     = Main List
+   "extended" = Extended List
+   "lost"     = Lost Media
 
 ========================================================= */
 
@@ -382,254 +322,303 @@ const mods = [
 
     {
         id: "prime-legend",
-        name: "Prime Legend",
-        game: "Granny 1",
-        device: "PC"
+        name: "Prime Legend (Visitor)",
+        device: "PC",
+        verified: "Grand player",
+        list: "main"
     },
 
     {
         id: "prime-mod-plus",
         name: "Prime Mod Plus",
-        game: "Granny 1",
-        device: "Every"
+        device: "Every",
+        verified: "GGGamer",
+        list: "main"
     },
 
     {
         id: "granny-gold-mode",
         name: "Granny Gold Mode",
-        game: "Granny 1",
-        device: "PC"
+        device: "PC",
+        verified: "luspritae",
+        list: "main"
     },
 
     {
         id: "unnerfed-prime",
         name: "Unnerfed Prime",
-        game: "Granny 1",
-        device: "Every"
+        device: "Every",
+        verified: "GGGamer",
+        list: "main"
     },
 
     {
         id: "rage-mode",
         name: "Rage Mode",
-        game: "Granny 1",
-        device: "PC"
+        device: "PC",
+        verified: "Fun_Player",
+        list: "main"
     },
 
     {
         id: "fear-mode",
         name: "Fear Mode",
-        game: "Granny 2",
-        device: "PC"
+        device: "PC",
+        verified: "FUN_Player",
+        list: "main"
     },
 
     {
         id: "nerfed-prime",
         name: "Nerfed Prime",
-        game: "Granny 1",
-        device: "Every"
+        device: "Every",
+        verified: "KirillSof, REKVIN",
+        list: "main"
     },
 
     {
         id: "light-speed",
         name: "Light Speed",
-        game: "Granny 1",
-        device: "PC"
+        device: "PC",
+        verified: "Asian Battleship",
+        list: "main"
     },
 
     {
         id: "madness05",
         name: "Madness05 (Absurd Difficulty)",
-        game: "Granny 1",
-        device: "Every"
+        device: "Every",
+        verified: "MYSGMD",
+        list: "main"
     },
 
     {
         id: "death-mod",
         name: "Death Mod",
-        game: "Granny 2",
-        device: "PC"
+        device: "PC",
+        verified: "GGGammer",
+        list: "main"
     },
 
     {
         id: "superfast",
         name: "SuperFast",
-        game: "Granny 1",
-        device: "Every"
+        device: "Every",
+        verified: "RDO209K",
+        list: "main"
     },
 
     {
         id: "super-speed",
-        name: "Super Speed Challenge",
-        game: "Granny 1",
-        device: "PC"
+        name: "Super Speed Challenge (On Impossible Difficulty)",
+        device: "PC",
+        verified: "Хатет",
+        list: "main"
     },
 
     {
         id: "rainy-season",
         name: "Rainy Season Extreme Difficulty",
-        game: "Granny 3",
-        device: "PC"
+        device: "PC",
+        verified: "Dem Ro",
+        list: "main"
     },
 
     {
         id: "insane-mod",
         name: "Insane Mod",
-        game: "Granny 3",
-        device: "Mobile"
+        device: "Mobile",
+        verified: "Enormous Gamer",
+        list: "main"
     },
 
     {
         id: "cruel-mod",
         name: "Cruel Mod",
-        game: "Granny 1",
-        device: "Every"
+        device: "Every",
+        verified: "Dem Ro",
+        list: "main"
     },
 
     {
         id: "madness-17",
         name: "Madness (1.7)",
-        game: "Granny 1",
-        device: "Mobile"
+        device: "Mobile",
+        verified: "A_S_S_I_S_T_A_N_T",
+        list: "main"
     },
 
     {
         id: "furious",
         name: "Furious",
-        game: "Granny 1",
-        device: "Every"
+        device: "Every",
+        verified: "Dem Ro",
+        list: "main"
     },
 
     {
         id: "hell-mode",
         name: "Hell Mode",
-        game: "Granny 2",
-        device: "PC"
+        device: "PC",
+        verified: "Enpicqness",
+        list: "main"
     },
 
     {
         id: "impossible-difficulty",
         name: "Impossible Difficulty",
-        game: "Granny 3",
-        device: "PC"
+        device: "PC",
+        verified: "GroukSawn",
+        list: "main"
     },
 
     {
         id: "impossible-rewamp",
         name: "Impossible Difficulty (Rewamp)",
-        game: "Granny 1",
-        device: "PC"
+        device: "PC",
+        verified: "Vividplays",
+        list: "main"
     },
 
     {
         id: "enhanced-impossible",
         name: "Enhanced Impossible Difficulty",
-        game: "Granny 1",
-        device: "PC"
+        device: "PC",
+        verified: "Sly_Player",
+        list: "main"
     },
 
     {
         id: "extreme-dv-granny3",
-        name: "Extreme Difficulty (D.V)",
-        game: "Granny 3 (1.0)",
-        device: "PC"
+        name: "Extreme Difficulty (D.V) — Granny 3",
+        device: "PC",
+        verified: "TheNeptoonLP",
+        list: "main"
     },
 
     {
         id: "desperate-death",
         name: "Desperate Death",
-        game: "Granny Legacy",
-        device: "PC"
+        device: "PC",
+        verified: "Coming Soon!",
+        list: "main"
     },
 
     {
         id: "wild-mod",
         name: "Wild Mod",
-        game: "Granny 1",
-        device: "Every"
+        device: "Every",
+        verified: "A18",
+        list: "main"
     },
 
     {
         id: "crazy-difficulty",
         name: "Crazy Difficulty",
-        game: "Granny 1",
-        device: "Every"
+        device: "Every",
+        verified: "DemRo",
+        list: "main"
     },
+
+
+    /* =========================
+       EXTENDED
+    ========================= */
 
     {
         id: "hollow-difficulty",
         name: "Hollow Difficulty",
-        game: "Granny Legacy",
-        device: "Every"
+        device: "Every",
+        verified: "Wearzix",
+        list: "extended"
     },
 
     {
         id: "chapter2-reworked",
-        name: "Granny Chapter 2 Reworked",
-        game: "Granny 2",
-        device: "PC"
+        name: "Granny Chapter 2 Reworked (Extreme Difficulty)",
+        device: "PC",
+        verified: "Coming Soon!",
+        list: "extended"
+    },
+
+    {
+        id: "extreme-dv-granny3-extended",
+        name: "Extreme Difficulty (D.V) — Granny 3",
+        device: "PC",
+        verified: "TheNeptoonLP",
+        list: "extended"
     },
 
     {
         id: "granny-insane",
         name: "Granny Insane",
-        game: "Granny 1",
-        device: "Mobile"
+        device: "Mobile",
+        verified: "Coming Soon!",
+        list: "extended"
     },
 
     {
         id: "legacy-impossible",
         name: "Legacy Impossible Difficulty",
-        game: "Granny Legacy",
-        device: "Every"
+        device: "Every",
+        verified: "ZaY",
+        list: "extended"
     },
 
     {
         id: "extreme-vr",
-        name: "Extreme Difficulty",
-        game: "Granny 2",
-        device: "VR"
-    },
-
-    {
-        id: "grannys-curse",
-        name: "Granny's Curse",
-        game: "Granny 1",
-        device: "Every"
+        name: "Extreme Difficulty — Granny 2",
+        device: "VR",
+        verified: "TOPSY",
+        list: "extended"
     },
 
     {
         id: "extreme-dv-granny2",
-        name: "Extreme Difficulty (D.V)",
-        game: "Granny 2",
-        device: "PC"
+        name: "Extreme Difficulty (D.V) — Granny 2",
+        device: "PC",
+        verified: "ZaY",
+        list: "extended"
+    },
+
+    {
+        id: "grannys-curse",
+        name: "Granny's Curse (Extreme Difficulty)",
+        device: "Every",
+        verified: "Coming Soon!",
+        list: "extended"
     },
 
     {
         id: "extreme-vr-2",
-        name: "Extreme Difficulty",
-        game: "Granny 2",
-        device: "VR"
+        name: "Extreme Difficulty — Granny 2",
+        device: "VR",
+        verified: "Unknown",
+        list: "extended"
     },
 
     {
         id: "extreme-granny1",
-        name: "Extreme Difficulty",
-        game: "Granny 1",
-        device: "Every"
+        name: "Extreme Difficulty — Granny 1",
+        device: "Every",
+        verified: "Furious FPV (Mobile) / ZaY (PC)",
+        list: "extended"
     },
 
     {
         id: "legacy-extreme",
-        name: "Extreme Difficulty",
-        game: "Granny Legacy",
-        device: "Every"
+        name: "Extreme Difficulty — Granny Legacy",
+        device: "Every",
+        verified: "Unknown",
+        list: "extended"
     },
 
     {
         id: "chill",
         name: "Chill",
-        game: "Granny 1",
-        device: "Every"
+        device: "Every",
+        verified: "Boris Lub",
+        list: "extended"
     }
 
 ];
@@ -641,252 +630,408 @@ const mods = [
 
 function createCard(mod) {
 
-    const card = document.createElement("div");
+    const card =
+        document.createElement("div");
 
     card.className = "mod-card";
 
     card.dataset.id = mod.id;
 
+    card.draggable = true;
+
     card.innerHTML = `
 
-        <div class="mod-name">
-            ${escapeHtml(mod.name)}
+        <div class="mod-header">
+
+            <div class="rank"></div>
+
+            <div class="mod-name">
+                ${escapeHtml(mod.name)}
+            </div>
+
         </div>
 
-        <div class="mod-game">
-            🎮 ${escapeHtml(mod.game)}
-        </div>
+        <div class="mod-info">
 
-        <div class="mod-device">
-            💻 ${escapeHtml(mod.device)}
+            <span class="tag device">
+                💻 Device: ${escapeHtml(mod.device)}
+            </span>
+
+            <span class="tag verified">
+                ✅ Verified by: ${escapeHtml(mod.verified)}
+            </span>
+
         </div>
 
     `;
 
-    addDragEvents(card);
+
+    /* Desktop drag */
+
+    card.addEventListener(
+        "dragstart",
+        () => {
+
+            draggedCard = card;
+
+            card.classList.add("dragging");
+
+        }
+    );
+
+
+    card.addEventListener(
+        "dragend",
+        () => {
+
+            card.classList.remove(
+                "dragging"
+            );
+
+            draggedCard = null;
+
+            updateRanks();
+
+            saveList();
+
+        }
+    );
+
+
+    /* Mobile */
+
+    card.addEventListener(
+        "touchstart",
+        startTouchDrag,
+        { passive: true }
+    );
+
 
     return card;
 }
 
 
 /* =========================================================
-   ESCAPE HTML
-========================================================= */
-
-function escapeHtml(value) {
-
-    return String(value)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-
-}
-
-
-/* =========================================================
-   DRAG SYSTEM
+   DESKTOP DRAG
 ========================================================= */
 
 let draggedCard = null;
 
 
-/* Desktop */
+document
+.querySelectorAll(".drop-zone")
+.forEach(zone => {
 
-function addDragEvents(card) {
+    zone.addEventListener(
+        "dragover",
+        event => {
 
-    card.draggable = true;
+            event.preventDefault();
 
-    card.addEventListener("dragstart", () => {
+            zone.classList.add(
+                "drag-over"
+            );
 
-        draggedCard = card;
+        }
+    );
 
-        card.classList.add("dragging");
 
-    });
+    zone.addEventListener(
+        "dragleave",
+        () => {
 
-    card.addEventListener("dragend", () => {
+            zone.classList.remove(
+                "drag-over"
+            );
 
-        card.classList.remove("dragging");
+        }
+    );
 
-        draggedCard = null;
 
-        saveTierList();
+    zone.addEventListener(
+        "drop",
+        event => {
 
-    });
+            event.preventDefault();
+
+            zone.classList.remove(
+                "drag-over"
+            );
+
+            if (!draggedCard)
+                return;
+
+
+            const afterElement =
+                getDragAfterElement(
+                    zone,
+                    event.clientY
+                );
+
+
+            if (afterElement == null) {
+
+                zone.appendChild(
+                    draggedCard
+                );
+
+            } else {
+
+                zone.insertBefore(
+                    draggedCard,
+                    afterElement
+                );
+
+            }
+
+
+            updateRanks();
+
+            saveList();
+
+        }
+    );
+
+});
+
+
+function getDragAfterElement(
+    container,
+    y
+) {
+
+    const cards = [
+        ...container.querySelectorAll(
+            ".mod-card:not(.dragging)"
+        )
+    ];
+
+
+    return cards.reduce(
+        (closest, child) => {
+
+            const box =
+                child.getBoundingClientRect();
+
+            const offset =
+                y -
+                box.top -
+                box.height / 2;
+
+
+            if (
+                offset < 0 &&
+                offset > closest.offset
+            ) {
+
+                return {
+                    offset: offset,
+                    element: child
+                };
+
+            } else {
+
+                return closest;
+
+            }
+
+        },
+        {
+            offset:
+                Number.NEGATIVE_INFINITY
+        }
+    ).element;
 
 }
 
 
 /* =========================================================
-   DROP AREAS
-========================================================= */
-
-const dropZones =
-    document.querySelectorAll(".tier-items, .pool-items");
-
-
-dropZones.forEach(zone => {
-
-    zone.addEventListener("dragover", event => {
-
-        event.preventDefault();
-
-    });
-
-    zone.addEventListener("drop", event => {
-
-        event.preventDefault();
-
-        if (!draggedCard) return;
-
-        zone.appendChild(draggedCard);
-
-        saveTierList();
-
-    });
-
-});
-
-
-/* =========================================================
-   MOBILE TOUCH DRAG
+   MOBILE DRAG
 ========================================================= */
 
 let touchCard = null;
-let touchClone = null;
+
+let touchStartX = 0;
+let touchStartY = 0;
+
+let isTouchDragging = false;
 
 
-document.addEventListener("touchstart", event => {
+function startTouchDrag(event) {
 
-    const card =
-        event.target.closest(".mod-card");
-
-    if (!card) return;
+    const card = event.currentTarget;
 
     touchCard = card;
 
-}, { passive: true });
+    touchStartX =
+        event.touches[0].clientX;
+
+    touchStartY =
+        event.touches[0].clientY;
+
+    isTouchDragging = false;
+
+}
 
 
-document.addEventListener("touchmove", event => {
+document.addEventListener(
+    "touchmove",
+    event => {
 
-    if (!touchCard) return;
+        if (!touchCard)
+            return;
 
-    const touch = event.touches[0];
 
-    const element =
-        document.elementFromPoint(
-            touch.clientX,
-            touch.clientY
+        const touch =
+            event.touches[0];
+
+
+        const dx =
+            Math.abs(
+                touch.clientX -
+                touchStartX
+            );
+
+        const dy =
+            Math.abs(
+                touch.clientY -
+                touchStartY
+            );
+
+
+        if (
+            !isTouchDragging &&
+            Math.max(dx, dy) < 10
+        ) {
+
+            return;
+
+        }
+
+
+        isTouchDragging = true;
+
+        event.preventDefault();
+
+
+        touchCard.classList.add(
+            "dragging"
         );
 
-    const zone =
-        element?.closest(
-            ".tier-items, .pool-items"
+
+        const element =
+            document.elementFromPoint(
+                touch.clientX,
+                touch.clientY
+            );
+
+
+        const zone =
+            element?.closest(
+                ".drop-zone"
+            );
+
+
+        if (!zone)
+            return;
+
+
+        const afterElement =
+            getDragAfterElement(
+                zone,
+                touch.clientY
+            );
+
+
+        if (afterElement == null) {
+
+            zone.appendChild(
+                touchCard
+            );
+
+        } else {
+
+            zone.insertBefore(
+                touchCard,
+                afterElement
+            );
+
+        }
+
+
+        updateRanks();
+
+    },
+    { passive: false }
+);
+
+
+document.addEventListener(
+    "touchend",
+    () => {
+
+        if (!touchCard)
+            return;
+
+
+        touchCard.classList.remove(
+            "dragging"
         );
 
-    if (zone) {
 
-        zone.appendChild(touchCard);
+        if (isTouchDragging) {
+
+            updateRanks();
+
+            saveList();
+
+        }
+
+
+        touchCard = null;
+
+        isTouchDragging = false;
 
     }
-
-}, { passive: true });
-
-
-document.addEventListener("touchend", () => {
-
-    if (touchCard) {
-
-        saveTierList();
-
-    }
-
-    touchCard = null;
-
-});
+);
 
 
 /* =========================================================
-   INITIAL LOAD
+   AUTOMATIC POSITION NUMBERS
 ========================================================= */
 
-function loadMods() {
+function updateRanks() {
 
-    const saved =
-        localStorage.getItem("THGM_TIER_LIST");
+    document
+    .querySelectorAll(".drop-zone")
+    .forEach(zone => {
 
-    if (saved) {
+        const cards =
+            zone.querySelectorAll(
+                ".mod-card"
+            );
 
-        const data =
-            JSON.parse(saved);
 
-        Object.keys(data).forEach(tier => {
+        cards.forEach(
+            (card, index) => {
 
-            const zone =
-                document.querySelector(
-                    `[data-tier="${tier}"]`
-                );
-
-            if (!zone) return;
-
-            data[tier].forEach(id => {
-
-                const mod =
-                    mods.find(
-                        item => item.id === id
+                const rank =
+                    card.querySelector(
+                        ".rank"
                     );
 
-                if (mod) {
 
-                    zone.appendChild(
-                        createCard(mod)
-                    );
-
-                }
-
-            });
-
-        });
-
-        /*
-           Новые моды, которых ещё нет
-           в сохранённом Tier List,
-           отправляются в Pool.
-        */
-
-        const usedIds =
-            Object.values(data).flat();
-
-        mods.forEach(mod => {
-
-            if (!usedIds.includes(mod.id)) {
-
-                document
-                    .querySelector('[data-tier="POOL"]')
-                    .appendChild(
-                        createCard(mod)
-                    );
+                rank.textContent =
+                    zone.dataset.list === "main"
+                    ? `#${index + 1}`
+                    : zone.dataset.list === "extended"
+                    ? `#${index + 1}`
+                    : "—";
 
             }
+        );
 
-        });
-
-    } else {
-
-        mods.forEach(mod => {
-
-            document
-                .querySelector('[data-tier="POOL"]')
-                .appendChild(
-                    createCard(mod)
-                );
-
-        });
-
-    }
+    });
 
 }
 
@@ -895,32 +1040,24 @@ function loadMods() {
    SAVE
 ========================================================= */
 
-function saveTierList() {
+function saveList() {
 
     const data = {};
 
     document
-        .querySelectorAll(
-            ".tier-items, .pool-items"
-        )
-        .forEach(zone => {
+    .querySelectorAll(".drop-zone")
+    .forEach(zone => {
 
-            const tier =
-                zone.dataset.tier;
+        data[zone.dataset.list] = [
+            ...zone.querySelectorAll(
+                ".mod-card"
+            )
+        ].map(
+            card => card.dataset.id
+        );
 
-            data[tier] = [];
+    });
 
-            zone
-                .querySelectorAll(".mod-card")
-                .forEach(card => {
-
-                    data[tier].push(
-                        card.dataset.id
-                    );
-
-                });
-
-        });
 
     localStorage.setItem(
         "THGM_TIER_LIST",
@@ -931,34 +1068,124 @@ function saveTierList() {
 
 
 /* =========================================================
-   RESET
+   LOAD
 ========================================================= */
 
-function resetTierList() {
+function loadList() {
 
-    const confirmReset =
-        confirm(
-            "Reset the Tier List?"
+    const saved =
+        localStorage.getItem(
+            "THGM_TIER_LIST"
         );
 
-    if (!confirmReset) return;
 
-    localStorage.removeItem(
-        "THGM_TIER_LIST"
-    );
+    if (!saved) {
 
-    location.reload();
+        mods.forEach(mod => {
+
+            const zone =
+                document.querySelector(
+                    `[data-list="${mod.list}"]`
+                );
+
+
+            if (zone) {
+
+                zone.appendChild(
+                    createCard(mod)
+                );
+
+            }
+
+        });
+
+
+        updateRanks();
+
+        return;
+
+    }
+
+
+    const data =
+        JSON.parse(saved);
+
+
+    const used = new Set();
+
+
+    Object.keys(data)
+    .forEach(listName => {
+
+        const zone =
+            document.querySelector(
+                `[data-list="${listName}"]`
+            );
+
+
+        if (!zone)
+            return;
+
+
+        data[listName].forEach(id => {
+
+            const mod =
+                mods.find(
+                    item => item.id === id
+                );
+
+
+            if (!mod)
+                return;
+
+
+            zone.appendChild(
+                createCard(mod)
+            );
+
+
+            used.add(id);
+
+        });
+
+    });
+
+
+    /*
+       Если добавился новый мод,
+       которого нет в сохранении,
+       он автоматически попадёт
+       в Main List в конец.
+    */
+
+    mods.forEach(mod => {
+
+        if (!used.has(mod.id)) {
+
+            const zone =
+                document.querySelector(
+                    `[data-list="${mod.list}"]`
+                );
+
+
+            if (zone) {
+
+                zone.appendChild(
+                    createCard(mod)
+                );
+
+            }
+
+        }
+
+    });
+
+
+    updateRanks();
 
 }
 
 
 /* =========================================================
-   START
-========================================================= */
-
-loadMods();
-
-</script>
-
-</body>
-</html>
+   RESET
+=========================
