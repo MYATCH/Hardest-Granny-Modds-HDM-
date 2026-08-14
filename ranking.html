@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>THGM — Tier List</title>
+<title>THGM — Top Hardest Granny Mods Ever Verified</title>
 
 <style>
 * {
@@ -13,27 +13,47 @@
 
 body {
     margin: 0;
-    padding: 25px 12px 60px;
+    padding: 25px 15px 60px;
     background: #111318;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 900px;
     margin: auto;
 }
 
 h1 {
     text-align: center;
     margin: 10px 0 5px;
-    font-size: clamp(28px, 7vw, 46px);
+    font-size: clamp(28px, 6vw, 46px);
 }
 
 .subtitle {
     text-align: center;
     color: #999;
     margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.info,
+.rules {
+    background: #1b1e24;
+    border: 1px solid #30343d;
+    border-radius: 14px;
+    padding: 18px;
+    margin: 14px 0;
+    line-height: 1.55;
+}
+
+.info h2,
+.rules h2 {
+    margin-top: 0;
+}
+
+.rules ol {
+    margin-bottom: 0;
 }
 
 .back-button {
@@ -48,16 +68,6 @@ h1 {
     font-weight: bold;
 }
 
-.description,
-.info {
-    background: #1b1e24;
-    border: 1px solid #30343d;
-    border-radius: 14px;
-    padding: 17px;
-    margin: 14px 0;
-    line-height: 1.55;
-}
-
 .section-title {
     padding: 13px 17px;
     border-radius: 12px;
@@ -66,38 +76,37 @@ h1 {
     font-weight: bold;
 }
 
-.main-title {
+.main-list {
     background: #173b21;
     border: 1px solid #2d8a45;
     color: #65e47c;
 }
 
-.extended-title {
+.extended-list {
     background: #443a0d;
     border: 1px solid #a99521;
     color: #ffe34d;
 }
 
-.lost-title {
-    background: #461919;
-    border: 1px solid #a83b3b;
-    color: #ff7777;
-}
-
-.list {
-    min-height: 50px;
+.list-container {
+    min-height: 20px;
 }
 
 .mod-card {
     background: #1b1e24;
     border: 1px solid #30343d;
     border-radius: 14px;
-    padding: 15px;
+    padding: 17px;
     margin: 10px 0;
+
     cursor: grab;
     user-select: none;
-    touch-action: none;
-    transition: opacity 0.15s, transform 0.15s, border-color 0.15s;
+
+    transition:
+        border-color 0.15s,
+        background 0.15s,
+        opacity 0.15s,
+        transform 0.15s;
 }
 
 .mod-card:hover {
@@ -105,108 +114,107 @@ h1 {
     background: #20242b;
 }
 
+.mod-card:active {
+    cursor: grabbing;
+}
+
 .mod-card.dragging {
-    opacity: 0.45;
-    transform: scale(0.98);
+    opacity: 0.4;
 }
 
-.mod-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.mod-card.drag-over {
+    border-color: #65e47c;
+    transform: scale(1.01);
 }
 
-.rank {
-    min-width: 42px;
-    height: 42px;
-    border-radius: 10px;
-    background: #292d35;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: #aaa;
-}
-
-.mod-name {
-    font-size: clamp(17px, 4vw, 21px);
-    font-weight: bold;
+.mod-title {
+    margin: 0 0 12px;
+    font-size: clamp(18px, 4vw, 22px);
 }
 
 .mod-info {
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
-    margin-top: 10px;
-    margin-left: 54px;
+    gap: 8px;
 }
 
 .tag {
-    padding: 6px 9px;
+    padding: 7px 10px;
     border-radius: 8px;
-    font-size: 13px;
-    background: #292d35;
-    color: #ddd;
+    font-size: 14px;
 }
 
-.device {
+.game-tag {
     background: #202d42;
     color: #75b7ff;
 }
 
-.verified {
+.mod-tag {
+    background: #35252f;
+    color: #ff9cc4;
+}
+
+.device-tag {
+    background: #292d35;
+    color: #ddd;
+}
+
+.meta-tag {
     background: #29352d;
     color: #8ee79a;
 }
 
-.drop-zone {
-    min-height: 30px;
-    border-radius: 12px;
-    transition: background 0.15s;
+.status-tag {
+    background: #3a3020;
+    color: #ffd27a;
 }
 
-.drop-zone.drag-over {
-    background: rgba(255,255,255,0.05);
-}
-
-.controls {
+.buttons {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 9px;
+    gap: 14px;
     margin: 25px 0;
+    flex-wrap: wrap;
 }
 
-button {
-    padding: 11px 18px;
-    border: 0;
-    border-radius: 9px;
+.action-button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+
     background: #292d35;
     color: white;
+
+    font-size: 15px;
     font-weight: bold;
+
     cursor: pointer;
 }
 
-button:hover {
-    background: #3a3f49;
+.action-button:hover {
+    background: #353a44;
+}
+
+.footer {
+    text-align: center;
+    color: #777;
+    margin-top: 35px;
+    line-height: 1.6;
 }
 
 @media (max-width: 600px) {
 
     body {
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-
-    .mod-info {
-        margin-left: 0;
+        padding: 18px 12px 50px;
     }
 
     .mod-card {
-        padding: 13px;
+        padding: 14px;
     }
 
+    .tag {
+        font-size: 13px;
+    }
 }
 </style>
 </head>
@@ -222,68 +230,102 @@ button:hover {
 <h1>🏆 THGM</h1>
 
 <div class="subtitle">
-    Top Hardest Granny Mods Ever Verified — Tier List
+    Top Hardest Granny Mods Ever Verified
 </div>
 
-<div class="description">
-    <strong>Community-driven project.</strong><br>
-    Drag the modifications to change their positions.
-    Positions are numbered automatically.
+<div class="info">
+
+    <strong>Community-driven project.</strong>
+
+    <br>
+
+    Placements may be updated if new evidence
+    or expert consensus appears.
+
+    <hr>
+
+    I tried to make the most objective list possible
+    of the hardest Granny modifications and include
+    every mod that exists.
+
+    <br><br>
+
+    Thanks for using the list!
+
+    <br>
+
+    — Nachos 🌯
+
 </div>
 
 
-<!-- =========================
-     MAIN LIST
-========================= -->
+<div class="rules">
 
-<div class="section-title main-title">
+    <h2>Rules</h2>
+
+    <ol>
+
+        <li>
+            Levels MUST be verified legit.
+        </li>
+
+        <li>
+            Mod would be placed after a week (and more).
+        </li>
+
+        <li>
+            Mod must have an Author, real verifier,
+            verification video and working download link.
+        </li>
+
+        <li>
+            No custom presets.
+            This rule does not apply to Prime Difficulty.
+        </li>
+
+        <li>
+            No custom seed/preset and no anomaly.
+        </li>
+
+        <li>
+            Original video must be without montage.
+        </li>
+
+        <li>
+            This list uses texture packs that make
+            the game much more difficult.
+        </li>
+
+    </ol>
+
+</div>
+
+
+<div class="section-title main-list">
     🟢 Main List
 </div>
 
-<div
-    id="mainList"
-    class="list drop-zone"
-    data-list="main">
-</div>
+<div id="mainList" class="list-container"></div>
 
 
-<!-- =========================
-     EXTENDED LIST
-========================= -->
-
-<div class="section-title extended-title">
+<div class="section-title extended-list">
     🟡 Extended List
 </div>
 
-<div
-    id="extendedList"
-    class="list drop-zone"
-    data-list="extended">
-</div>
+<div id="extendedList" class="list-container"></div>
 
 
-<!-- =========================
-     LOST MEDIA
-========================= -->
+<div class="buttons">
 
-<div class="section-title lost-title">
-    🔴 Lost Media
-</div>
-
-<div
-    id="lostList"
-    class="list drop-zone"
-    data-list="lost">
-</div>
-
-
-<div class="controls">
-
-    <button onclick="saveList()">
+    <button
+        class="action-button"
+        onclick="saveList()">
         💾 Save
     </button>
 
-    <button onclick="resetList()">
+    <button
+        class="action-button"
+        onclick="resetList()">
         🔄 Reset
     </button>
 
@@ -292,11 +334,28 @@ button:hover {
 
 <div class="info">
 
-    <strong>Info</strong><br><br>
+    <h2>Info</h2>
 
-    Drag a modification up or down to change its position.
-    You can also move modifications between Main List,
-    Extended List and Lost Media.
+    <p>
+        Drag a modification to change its position.
+        Positions are numbered automatically.
+    </p>
+
+    <p>
+        You can also drag a modification between
+        Main List and Extended List.
+    </p>
+
+</div>
+
+
+<div class="footer">
+
+    THGM — Top Hardest Granny Mods Ever Verified
+
+    <br>
+
+    Community ranking
 
 </div>
 
@@ -306,375 +365,619 @@ button:hover {
 <script>
 
 /* =========================================================
-   MODIFICATIONS
-   =========================================================
+   MAIN LIST
+   ========================================================= */
 
-   ДОБАВЛЯЙ НОВЫЕ МОДЫ СЮДА.
-
-   list:
-   "main"     = Main List
-   "extended" = Extended List
-   "lost"     = Lost Media
-
-========================================================= */
-
-const mods = [
+const defaultMainMods = [
 
     {
-        id: "prime-legend",
-        name: "Prime Legend (Visitor)",
+        game: "Granny 1",
+        mod: "Prime Legend (Visitor)",
+        modType: "Mod Pack",
         device: "PC",
+        author: "Boris Lub",
         verified: "Grand player",
-        list: "main"
+        status: "Verified, Memory"
     },
 
     {
-        id: "prime-mod-plus",
-        name: "Prime Mod Plus",
+        game: "Granny 1",
+        mod: "Prime Mod Plus",
+        modType: "Mod Pack",
         device: "Every",
+        author: "Boris Lub",
         verified: "GGGamer",
-        list: "main"
+        status: "Verified, Memory"
     },
 
     {
-        id: "granny-gold-mode",
-        name: "Granny Gold Mode",
+        game: "Granny 1",
+        mod: "Granny Gold Mode",
+        modType: "1",
         device: "PC",
+        author: "Xnd79",
         verified: "luspritae",
-        list: "main"
+        status: "Verified"
     },
 
     {
-        id: "unnerfed-prime",
-        name: "Unnerfed Prime",
+        game: "Granny 1",
+        mod: "Unnerfed Prime",
+        modType: "Mod Pack",
         device: "Every",
+        author: "Boris Lub",
         verified: "GGGamer",
-        list: "main"
+        status: "Verified"
     },
 
     {
-        id: "rage-mode",
-        name: "Rage Mode",
+        game: "Granny 1",
+        mod: "Rage Mode",
+        modType: "Mod Pack (ZD)",
         device: "PC",
+        author: "Zoderdeluxe",
         verified: "Fun_Player",
-        list: "main"
+        status: "Verified"
     },
 
     {
-        id: "fear-mode",
-        name: "Fear Mode",
+        game: "Granny 2",
+        mod: "Fear Mode",
+        modType: "2",
         device: "PC",
+        author: "Zoderdeluxe",
         verified: "FUN_Player",
-        list: "main"
+        status: "Verified, Unconfirmed Placement"
     },
 
     {
-        id: "nerfed-prime",
-        name: "Nerfed Prime",
+        game: "Granny 1",
+        mod: "Nerfed Prime",
+        modType: "Mod Pack",
         device: "Every",
+        author: "Boris Lub",
         verified: "KirillSof, REKVIN",
-        list: "main"
+        status: "Verified"
     },
 
     {
-        id: "light-speed",
-        name: "Light Speed",
+        game: "Granny 1",
+        mod: "Light Speed",
+        modType: "1",
         device: "PC",
+        author: "Xnd79 (Unconfirmed)",
         verified: "Asian Battleship",
-        list: "main"
+        status: "Verified, Unconfirmed Author"
     },
 
     {
-        id: "madness05",
-        name: "Madness05 (Absurd Difficulty)",
-        device: "Every",
-        verified: "MYSGMD",
-        list: "main"
-    },
-
-    {
-        id: "death-mod",
-        name: "Death Mod",
+        game: "Granny 1",
+        mod: "Drift",
+        modType: "1",
         device: "PC",
-        verified: "GGGammer",
-        list: "main"
+        author: "",
+        verified: "",
+        status: "Verified, Author and Verifier Unknown"
     },
 
     {
-        id: "superfast",
-        name: "SuperFast",
-        device: "Every",
-        verified: "RDO209K",
-        list: "main"
-    },
-
-    {
-        id: "super-speed",
-        name: "Super Speed Challenge (On Impossible Difficulty)",
+        game: "Granny 3",
+        mod: "Impossible Difficulty",
+        modType: "3",
         device: "PC",
-        verified: "Хатет",
-        list: "main"
+        author: "OmGi",
+        verified: "GroukSawn (Needs Confirmation)",
+        status: "Verified, Needs Confirmation about verifier"
     },
 
     {
-        id: "rainy-season",
-        name: "Rainy Season Extreme Difficulty",
-        device: "PC",
-        verified: "Dem Ro",
-        list: "main"
-    },
-
-    {
-        id: "insane-mod",
-        name: "Insane Mod",
+        game: "Granny 3",
+        mod: "Insane Mod",
+        modType: "3",
         device: "Mobile",
+        author: "Desperada Channel (Partially confirmed)",
         verified: "Enormous Gamer",
-        list: "main"
+        status: "Verified"
     },
 
     {
-        id: "cruel-mod",
-        name: "Cruel Mod",
+        game: "Granny 1",
+        mod: "Madness05 (Absurd Difficulty)",
+        modType: "Mod Pack",
         device: "Every",
-        verified: "Dem Ro",
-        list: "main"
+        author: "Boris Lub",
+        verified: "MYSGMD",
+        status: "Verified, Unconfirmed Placement, Partially Lost Media"
     },
 
     {
-        id: "madness-17",
-        name: "Madness (1.7)",
-        device: "Mobile",
-        verified: "A_S_S_I_S_T_A_N_T",
-        list: "main"
-    },
-
-    {
-        id: "furious",
-        name: "Furious",
-        device: "Every",
-        verified: "Dem Ro",
-        list: "main"
-    },
-
-    {
-        id: "hell-mode",
-        name: "Hell Mode",
+        game: "Granny 2",
+        mod: "Death Mod",
+        modType: "2",
         device: "PC",
+        author: "DesperadaChannel",
+        verified: "GGGammer",
+        status: "Verified"
+    },
+
+    {
+        game: "Granny 1",
+        mod: "SuperFast",
+        modType: "1",
+        device: "Every",
+        author: "RDO209K",
+        verified: "RDO209K",
+        status: "Verified"
+    },
+
+    {
+        game: "Granny 1",
+        mod: "Super Speed Challenge (On Impossible Difficulty)",
+        modType: "1",
+        device: "PC",
+        author: "Candy_Yu_522 [Hatet]",
+        verified: "Хатет",
+        status: "Verified"
+    },
+
+    {
+        game: "Granny 3",
+        mod: "Rainy Season Extreme Difficulty",
+        modType: "3",
+        device: "PC",
+        author: "Desperada Channel",
+        verified: "Dem Ro",
+        status: "Verified"
+    },
+
+    {
+        game: "Granny 1",
+        mod: "Cruel Mod",
+        modType: "Mod Pack",
+        device: "Every",
+        author: "Boris Lub",
+        verified: "Dem Ro",
+        status: "Verified"
+    },
+
+    {
+        game: "Granny 1",
+        mod: "Madness (1.7)",
+        modType: "1",
+        device: "Mobile",
+        author: "LGP",
+        verified: "A_S_S_I_S_T_A_N_T (Unconfirmed verifier)",
+        status: "Verified, Unconfirmed Verifier"
+    },
+
+    {
+        game: "Granny 1",
+        mod: "Furious",
+        modType: "1",
+        device: "Every",
+        author: "Boris Lub",
+        verified: "Dem Ro",
+        status: "Verified"
+    },
+
+    {
+        game: "Granny 2",
+        mod: "Hell Mode",
+        modType: "2",
+        device: "PC",
+        author: "gabzin1 & LeozimGranny (needs confirmation)",
         verified: "Enpicqness",
-        list: "main"
+        status: "Verified, Partially Lost Media, Needs Confirmation"
     },
 
     {
-        id: "impossible-difficulty",
-        name: "Impossible Difficulty",
+        game: "Granny 1",
+        mod: "Impossible Difficulty (Rewamp)",
+        modType: "1",
         device: "PC",
-        verified: "GroukSawn",
-        list: "main"
-    },
-
-    {
-        id: "impossible-rewamp",
-        name: "Impossible Difficulty (Rewamp)",
-        device: "PC",
+        author: "OmGi",
         verified: "Vividplays",
-        list: "main"
+        status: "Verified"
     },
 
     {
-        id: "enhanced-impossible",
-        name: "Enhanced Impossible Difficulty",
+        game: "Granny 1",
+        mod: "Enhanced Impossible Difficulty",
+        modType: "1",
         device: "PC",
+        author: "OmGi",
         verified: "Sly_Player",
-        list: "main"
+        status: "Verified, Unconfirmed Verifier"
     },
 
     {
-        id: "extreme-dv-granny3",
-        name: "Extreme Difficulty (D.V) — Granny 3",
+        game: "Granny 3 (1.0)",
+        mod: "Extreme Difficulty (D.V)",
+        modType: "3 (1.0)",
         device: "PC",
+        author: "Developer",
         verified: "TheNeptoonLP",
-        list: "main"
+        status: "Verified — First known public completion"
     },
 
     {
-        id: "desperate-death",
-        name: "Desperate Death",
+        game: "Granny Legacy",
+        mod: "Desperate Death",
+        modType: "Legacy",
         device: "PC",
+        author: "Coming Soon!",
         verified: "Coming Soon!",
-        list: "main"
+        status: "Verified, Mod for Mod"
     },
 
     {
-        id: "wild-mod",
-        name: "Wild Mod",
+        game: "Granny 1",
+        mod: "Wild Mod",
+        modType: "1",
         device: "Every",
-        verified: "A18",
-        list: "main"
+        author: "A18",
+        verified: "A18 (UnConfirmed)",
+        status: "Verified, Lost Media, Unconfirmed verifier"
     },
 
     {
-        id: "crazy-difficulty",
-        name: "Crazy Difficulty",
+        game: "Granny 1",
+        mod: "Crazy Difficulty",
+        modType: "1",
         device: "Every",
-        verified: "DemRo",
-        list: "main"
-    },
-
-
-    /* =========================
-       EXTENDED
-    ========================= */
-
-    {
-        id: "hollow-difficulty",
-        name: "Hollow Difficulty",
-        device: "Every",
-        verified: "Wearzix",
-        list: "extended"
-    },
-
-    {
-        id: "chapter2-reworked",
-        name: "Granny Chapter 2 Reworked (Extreme Difficulty)",
-        device: "PC",
-        verified: "Coming Soon!",
-        list: "extended"
-    },
-
-    {
-        id: "extreme-dv-granny3-extended",
-        name: "Extreme Difficulty (D.V) — Granny 3",
-        device: "PC",
-        verified: "TheNeptoonLP",
-        list: "extended"
-    },
-
-    {
-        id: "granny-insane",
-        name: "Granny Insane",
-        device: "Mobile",
-        verified: "Coming Soon!",
-        list: "extended"
-    },
-
-    {
-        id: "legacy-impossible",
-        name: "Legacy Impossible Difficulty",
-        device: "Every",
-        verified: "ZaY",
-        list: "extended"
-    },
-
-    {
-        id: "extreme-vr",
-        name: "Extreme Difficulty — Granny 2",
-        device: "VR",
-        verified: "TOPSY",
-        list: "extended"
-    },
-
-    {
-        id: "extreme-dv-granny2",
-        name: "Extreme Difficulty (D.V) — Granny 2",
-        device: "PC",
-        verified: "ZaY",
-        list: "extended"
-    },
-
-    {
-        id: "grannys-curse",
-        name: "Granny's Curse (Extreme Difficulty)",
-        device: "Every",
-        verified: "Coming Soon!",
-        list: "extended"
-    },
-
-    {
-        id: "extreme-vr-2",
-        name: "Extreme Difficulty — Granny 2",
-        device: "VR",
-        verified: "Unknown",
-        list: "extended"
-    },
-
-    {
-        id: "extreme-granny1",
-        name: "Extreme Difficulty — Granny 1",
-        device: "Every",
-        verified: "Furious FPV (Mobile) / ZaY (PC)",
-        list: "extended"
-    },
-
-    {
-        id: "legacy-extreme",
-        name: "Extreme Difficulty — Granny Legacy",
-        device: "Every",
-        verified: "Unknown",
-        list: "extended"
-    },
-
-    {
-        id: "chill",
-        name: "Chill",
-        device: "Every",
-        verified: "Boris Lub",
-        list: "extended"
+        author: "Yandu17",
+        verified: "DemRo (First known public verifier)",
+        status: "Verified, Needs more information about verifier"
     }
 
 ];
 
 
 /* =========================================================
-   CREATE CARD
-========================================================= */
+   EXTENDED LIST
+   ========================================================= */
 
-function createCard(mod) {
+const defaultExtendedMods = [
+
+    {
+        game: "Granny Legacy",
+        mod: "Hollow Difficulty",
+        modType: "Legacy",
+        device: "Every",
+        author: "OmGi",
+        verified: "Wearzix (First known verifier)",
+        status: "Verified, First known verifier"
+    },
+
+    {
+        game: "Granny 2",
+        mod: "Granny Chapter 2 Reworked (Extreme Difficulty)",
+        modType: "2",
+        device: "PC",
+        author: "Coming Soon!",
+        verified: "Coming Soon!",
+        status: "Verified"
+    },
+
+    {
+        game: "Granny 3",
+        mod: "Extreme Difficulty (D.V)",
+        modType: "3",
+        device: "PC",
+        author: "Developer",
+        verified: "TheNeptoonLP",
+        status: "Verified"
+    },
+
+    {
+        game: "Granny 1",
+        mod: "Granny Insane",
+        modType: "1",
+        device: "Mobile",
+        author: "Coming Soon!",
+        verified: "Coming Soon!",
+        status: "Verified"
+    },
+
+    {
+        game: "Granny Legacy",
+        mod: "Impossible Difficulty",
+        modType: "Legacy",
+        device: "Every",
+        author: "OmGi",
+        verified: "ZaY",
+        status: "Verified"
+    },
+
+    {
+        game: "Granny 2",
+        mod: "Extreme Difficulty",
+        modType: "2",
+        device: "VR",
+        author: "Gogozooom",
+        verified: "TOPSY (First Known verifier)",
+        status: "Verified, First verifier unconfirmed"
+    },
+
+    {
+        game: "Granny 2",
+        mod: "Extreme Difficulty (D.V)",
+        modType: "2",
+        device: "PC",
+        author: "Developer",
+        verified: "ZaY",
+        status: "Verified"
+    },
+
+    {
+        game: "Granny 1",
+        mod: "Granny’s Curse (Extreme Difficulty)",
+        modType: "1",
+        device: "Every",
+        author: "Coming Soon!",
+        verified: "Coming Soon!",
+        status: "Verified, Memory, Unconfirmed Placement"
+    },
+
+    {
+        game: "Granny 1",
+        mod: "Extreme Difficulty",
+        modType: "1",
+        device: "VR",
+        author: "Gogozooom",
+        verified: "Unknown",
+        status: "Verified, Unknown verifier"
+    },
+
+    {
+        game: "Granny 1",
+        mod: "Extreme Difficulty",
+        modType: "1",
+        device: "Every",
+        author: "Developer",
+        verified: "Furious FPV (Mobile) / ZaY (PC)",
+        status: "Verified, Platform dependent"
+    },
+
+    {
+        game: "Granny Legacy",
+        mod: "Extreme Difficulty",
+        modType: "Legacy",
+        device: "Every",
+        author: "OmGi",
+        verified: "Unknown",
+        status: "Verified, Unknown verifier"
+    },
+
+    {
+        game: "Granny 1",
+        mod: "Chill",
+        modType: "Mod Pack",
+        device: "Every",
+        author: "Boris Lub",
+        verified: "Boris Lub",
+        status: "Verified"
+    }
+
+];
+
+
+/* =========================================================
+   LOAD SAVED LIST
+   ========================================================= */
+
+function loadList(key, fallback) {
+
+    try {
+
+        const saved =
+            localStorage.getItem(key);
+
+        if (saved) {
+            return JSON.parse(saved);
+        }
+
+    } catch (error) {
+
+        console.error(
+            "Could not load saved list:",
+            error
+        );
+
+    }
+
+    return JSON.parse(
+        JSON.stringify(fallback)
+    );
+}
+
+
+let mainMods = loadList(
+    "thgm_main_mods",
+    defaultMainMods
+);
+
+let extendedMods = loadList(
+    "thgm_extended_mods",
+    defaultExtendedMods
+);
+
+let dragged = null;
+
+
+/* =========================================================
+   ESCAPE HTML
+   ========================================================= */
+
+function escapeHtml(value) {
+
+    return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+}
+
+
+/* =========================================================
+   CREATE CARD
+   ========================================================= */
+
+function createCard(item, index, listName) {
 
     const card =
         document.createElement("div");
 
     card.className = "mod-card";
 
-    card.dataset.id = mod.id;
-
     card.draggable = true;
+
+    card.dataset.index = index;
+    card.dataset.list = listName;
+
+
+    let authorTag = "";
+
+    let verifierTag = "";
+
+
+    if (item.author) {
+
+        authorTag = `
+            <span class="tag meta-tag">
+                👤 Author: ${escapeHtml(item.author)}
+            </span>
+        `;
+
+    }
+
+
+    if (item.verified) {
+
+        verifierTag = `
+            <span class="tag meta-tag">
+                ✅ Verified by: ${escapeHtml(item.verified)}
+            </span>
+        `;
+
+    }
+
 
     card.innerHTML = `
 
-        <div class="mod-header">
-
-            <div class="rank"></div>
-
-            <div class="mod-name">
-                ${escapeHtml(mod.name)}
-            </div>
-
-        </div>
+        <h2 class="mod-title">
+            🏅 #${index + 1} — ${escapeHtml(item.mod)}
+        </h2>
 
         <div class="mod-info">
 
-            <span class="tag device">
-                💻 Device: ${escapeHtml(mod.device)}
+            <span class="tag game-tag">
+                🎮 ${escapeHtml(item.game)}
             </span>
 
-            <span class="tag verified">
-                ✅ Verified by: ${escapeHtml(mod.verified)}
+            <span class="tag mod-tag">
+                📦 ${escapeHtml(item.modType)}
+            </span>
+
+            <span class="tag device-tag">
+                💻 ${escapeHtml(item.device)}
+            </span>
+
+            ${authorTag}
+
+            ${verifierTag}
+
+            <span class="tag status-tag">
+                📌 ${escapeHtml(item.status)}
             </span>
 
         </div>
-
     `;
 
 
-    /* Desktop drag */
+    addDragEvents(card);
+
+    return card;
+}
+
+
+/* =========================================================
+   RENDER LISTS
+   ========================================================= */
+
+function renderLists() {
+
+    const mainList =
+        document.getElementById("mainList");
+
+    const extendedList =
+        document.getElementById("extendedList");
+
+
+    mainList.innerHTML = "";
+    extendedList.innerHTML = "";
+
+
+    mainMods.forEach(
+        (item, index) => {
+
+            mainList.appendChild(
+                createCard(
+                    item,
+                    index,
+                    "main"
+                )
+            );
+
+        }
+    );
+
+
+    extendedMods.forEach(
+        (item, index) => {
+
+            extendedList.appendChild(
+                createCard(
+                    item,
+                    index,
+                    "extended"
+                )
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   DRAG EVENTS
+   ========================================================= */
+
+function addDragEvents(card) {
+
 
     card.addEventListener(
         "dragstart",
         () => {
 
-            draggedCard = card;
+            dragged = {
 
-            card.classList.add("dragging");
+                index:
+                    Number(
+                        card.dataset.index
+                    ),
+
+                list:
+                    card.dataset.list
+
+            };
+
+
+            card.classList.add(
+                "dragging"
+            );
 
         }
     );
@@ -688,47 +991,39 @@ function createCard(mod) {
                 "dragging"
             );
 
-            draggedCard = null;
 
-            updateRanks();
+            document
+                .querySelectorAll(
+                    ".drag-over"
+                )
+                .forEach(
+                    element => {
 
-            saveList();
+                        element.classList.remove(
+                            "drag-over"
+                        );
+
+                    }
+                );
+
+
+            dragged = null;
+
+            saveSilently();
+
+            renderLists();
 
         }
     );
 
 
-    /* Mobile */
-
     card.addEventListener(
-        "touchstart",
-        startTouchDrag,
-        { passive: true }
-    );
-
-
-    return card;
-}
-
-
-/* =========================================================
-   DESKTOP DRAG
-========================================================= */
-
-let draggedCard = null;
-
-
-document
-.querySelectorAll(".drop-zone")
-.forEach(zone => {
-
-    zone.addEventListener(
         "dragover",
         event => {
 
             event.preventDefault();
 
-            zone.classList.add(
+            card.classList.add(
                 "drag-over"
             );
 
@@ -736,11 +1031,11 @@ document
     );
 
 
-    zone.addEventListener(
+    card.addEventListener(
         "dragleave",
         () => {
 
-            zone.classList.remove(
+            card.classList.remove(
                 "drag-over"
             );
 
@@ -748,444 +1043,36 @@ document
     );
 
 
-    zone.addEventListener(
+    card.addEventListener(
         "drop",
         event => {
 
             event.preventDefault();
 
-            zone.classList.remove(
+            card.classList.remove(
                 "drag-over"
             );
 
-            if (!draggedCard)
+
+            if (!dragged) {
                 return;
-
-
-            const afterElement =
-                getDragAfterElement(
-                    zone,
-                    event.clientY
-                );
-
-
-            if (afterElement == null) {
-
-                zone.appendChild(
-                    draggedCard
-                );
-
-            } else {
-
-                zone.insertBefore(
-                    draggedCard,
-                    afterElement
-                );
-
             }
 
 
-            updateRanks();
-
-            saveList();
-
-        }
-    );
-
-});
-
-
-function getDragAfterElement(
-    container,
-    y
-) {
-
-    const cards = [
-        ...container.querySelectorAll(
-            ".mod-card:not(.dragging)"
-        )
-    ];
-
-
-    return cards.reduce(
-        (closest, child) => {
-
-            const box =
-                child.getBoundingClientRect();
-
-            const offset =
-                y -
-                box.top -
-                box.height / 2;
-
-
-            if (
-                offset < 0 &&
-                offset > closest.offset
-            ) {
-
-                return {
-                    offset: offset,
-                    element: child
-                };
-
-            } else {
-
-                return closest;
-
-            }
-
-        },
-        {
-            offset:
-                Number.NEGATIVE_INFINITY
-        }
-    ).element;
-
-}
-
-
-/* =========================================================
-   MOBILE DRAG
-========================================================= */
-
-let touchCard = null;
-
-let touchStartX = 0;
-let touchStartY = 0;
-
-let isTouchDragging = false;
-
-
-function startTouchDrag(event) {
-
-    const card = event.currentTarget;
-
-    touchCard = card;
-
-    touchStartX =
-        event.touches[0].clientX;
-
-    touchStartY =
-        event.touches[0].clientY;
-
-    isTouchDragging = false;
-
-}
-
-
-document.addEventListener(
-    "touchmove",
-    event => {
-
-        if (!touchCard)
-            return;
-
-
-        const touch =
-            event.touches[0];
-
-
-        const dx =
-            Math.abs(
-                touch.clientX -
-                touchStartX
-            );
-
-        const dy =
-            Math.abs(
-                touch.clientY -
-                touchStartY
-            );
-
-
-        if (
-            !isTouchDragging &&
-            Math.max(dx, dy) < 10
-        ) {
-
-            return;
-
-        }
-
-
-        isTouchDragging = true;
-
-        event.preventDefault();
-
-
-        touchCard.classList.add(
-            "dragging"
-        );
-
-
-        const element =
-            document.elementFromPoint(
-                touch.clientX,
-                touch.clientY
-            );
-
-
-        const zone =
-            element?.closest(
-                ".drop-zone"
-            );
-
-
-        if (!zone)
-            return;
-
-
-        const afterElement =
-            getDragAfterElement(
-                zone,
-                touch.clientY
-            );
-
-
-        if (afterElement == null) {
-
-            zone.appendChild(
-                touchCard
-            );
-
-        } else {
-
-            zone.insertBefore(
-                touchCard,
-                afterElement
+            moveItem(
+                dragged,
+                card.dataset.list,
+                Number(
+                    card.dataset.index
+                )
             );
 
         }
-
-
-        updateRanks();
-
-    },
-    { passive: false }
-);
-
-
-document.addEventListener(
-    "touchend",
-    () => {
-
-        if (!touchCard)
-            return;
-
-
-        touchCard.classList.remove(
-            "dragging"
-        );
-
-
-        if (isTouchDragging) {
-
-            updateRanks();
-
-            saveList();
-
-        }
-
-
-        touchCard = null;
-
-        isTouchDragging = false;
-
-    }
-);
-
-
-/* =========================================================
-   AUTOMATIC POSITION NUMBERS
-========================================================= */
-
-function updateRanks() {
-
-    document
-    .querySelectorAll(".drop-zone")
-    .forEach(zone => {
-
-        const cards =
-            zone.querySelectorAll(
-                ".mod-card"
-            );
-
-
-        cards.forEach(
-            (card, index) => {
-
-                const rank =
-                    card.querySelector(
-                        ".rank"
-                    );
-
-
-                rank.textContent =
-                    zone.dataset.list === "main"
-                    ? `#${index + 1}`
-                    : zone.dataset.list === "extended"
-                    ? `#${index + 1}`
-                    : "—";
-
-            }
-        );
-
-    });
-
-}
-
-
-/* =========================================================
-   SAVE
-========================================================= */
-
-function saveList() {
-
-    const data = {};
-
-    document
-    .querySelectorAll(".drop-zone")
-    .forEach(zone => {
-
-        data[zone.dataset.list] = [
-            ...zone.querySelectorAll(
-                ".mod-card"
-            )
-        ].map(
-            card => card.dataset.id
-        );
-
-    });
-
-
-    localStorage.setItem(
-        "THGM_TIER_LIST",
-        JSON.stringify(data)
     );
 
 }
 
 
 /* =========================================================
-   LOAD
-========================================================= */
-
-function loadList() {
-
-    const saved =
-        localStorage.getItem(
-            "THGM_TIER_LIST"
-        );
-
-
-    if (!saved) {
-
-        mods.forEach(mod => {
-
-            const zone =
-                document.querySelector(
-                    `[data-list="${mod.list}"]`
-                );
-
-
-            if (zone) {
-
-                zone.appendChild(
-                    createCard(mod)
-                );
-
-            }
-
-        });
-
-
-        updateRanks();
-
-        return;
-
-    }
-
-
-    const data =
-        JSON.parse(saved);
-
-
-    const used = new Set();
-
-
-    Object.keys(data)
-    .forEach(listName => {
-
-        const zone =
-            document.querySelector(
-                `[data-list="${listName}"]`
-            );
-
-
-        if (!zone)
-            return;
-
-
-        data[listName].forEach(id => {
-
-            const mod =
-                mods.find(
-                    item => item.id === id
-                );
-
-
-            if (!mod)
-                return;
-
-
-            zone.appendChild(
-                createCard(mod)
-            );
-
-
-            used.add(id);
-
-        });
-
-    });
-
-
-    /*
-       Если добавился новый мод,
-       которого нет в сохранении,
-       он автоматически попадёт
-       в Main List в конец.
-    */
-
-    mods.forEach(mod => {
-
-        if (!used.has(mod.id)) {
-
-            const zone =
-                document.querySelector(
-                    `[data-list="${mod.list}"]`
-                );
-
-
-            if (zone) {
-
-                zone.appendChild(
-                    createCard(mod)
-                );
-
-            }
-
-        }
-
-    });
-
-
-    updateRanks();
-
-}
-
-
-/* =========================================================
-   RESET
-=========================
+   MOVE ITEM
+   =======================================================
