@@ -41,3 +41,7 @@ _
     🏆 Community Ranking
 </a>
 
+
+<a href="TEST.html" class="nav-button">
+    📝 TEST
+</a>
