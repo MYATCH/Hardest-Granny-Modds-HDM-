@@ -99,9 +99,6 @@ h1 {
     padding: 17px;
     margin: 10px 0;
 
-    cursor: grab;
-    user-select: none;
-
     transition:
         border-color 0.15s,
         background 0.15s,
@@ -127,9 +124,38 @@ h1 {
     transform: scale(1.01);
 }
 
+.mod-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
 .mod-title {
-    margin: 0 0 12px;
+    margin: 0;
     font-size: clamp(18px, 4vw, 22px);
+}
+
+.drag-handle {
+    flex-shrink: 0;
+    font-size: 22px;
+    line-height: 1;
+    color: #777;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+}
+
+.drag-handle:hover {
+    background: #292d35;
+    color: #ccc;
+}
+
+.mod-card.dragging .drag-handle {
+    cursor: grabbing;
 }
 
 .mod-info {
@@ -831,8 +857,6 @@ function createCard(item, index, listName) {
 
     card.className = "mod-card";
 
-    card.draggable = true;
-
     card.dataset.index = index;
     card.dataset.list = listName;
 
@@ -866,9 +890,15 @@ function createCard(item, index, listName) {
 
     card.innerHTML = `
 
-        <h2 class="mod-title">
-            🏅 #${index + 1} — ${escapeHtml(item.mod)}
-        </h2>
+        <div class="mod-card-header">
+
+            <h2 class="mod-title">
+                🏅 #${index + 1} — ${escapeHtml(item.mod)}
+            </h2>
+
+            <span class="drag-handle" title="Перетащить">⠿</span>
+
+        </div>
 
         <div class="mod-info">
 
@@ -896,7 +926,10 @@ function createCard(item, index, listName) {
     `;
 
 
-    addDragEvents(card);
+    addDragEvents(
+        card,
+        card.querySelector(".drag-handle")
+    );
 
     return card;
 }
@@ -952,15 +985,23 @@ function renderLists() {
 
 
 /* =========================================================
-   DRAG EVENTS
+   DRAG EVENTS (мышь и палец — через Pointer Events,
+   т.к. нативный HTML5 drag&drop не работает на тачскринах)
    ========================================================= */
 
-function addDragEvents(card) {
+function addDragEvents(card, handle) {
 
+    if (!handle) {
+        return;
+    }
 
-    card.addEventListener(
-        "dragstart",
-        () => {
+    handle.addEventListener(
+        "pointerdown",
+        event => {
+
+            // не даём странице скроллиться/выделяться,
+            // пока держим ручку
+            event.preventDefault();
 
             dragged = {
 
@@ -974,97 +1015,19 @@ function addDragEvents(card) {
 
             };
 
-
             card.classList.add(
                 "dragging"
             );
 
-        }
-    );
-
-
-    card.addEventListener(
-        "dragend",
-        () => {
-
-            card.classList.remove(
-                "dragging"
+            document.addEventListener(
+                "pointermove",
+                onCardPointerMove
             );
 
-
-            document
-                .querySelectorAll(
-                    ".drag-over"
-                )
-                .forEach(
-                    element => {
-
-                        element.classList.remove(
-                            "drag-over"
-                        );
-
-                    }
-                );
-
-
-            dragged = null;
-
-            saveSilently();
-
-            renderLists();
-
-        }
-    );
-
-
-    card.addEventListener(
-        "dragover",
-        event => {
-
-            event.preventDefault();
-
-            card.classList.add(
-                "drag-over"
-            );
-
-        }
-    );
-
-
-    card.addEventListener(
-        "dragleave",
-        () => {
-
-            card.classList.remove(
-                "drag-over"
-            );
-
-        }
-    );
-
-
-    card.addEventListener(
-        "drop",
-        event => {
-
-            event.preventDefault();
-
-            card.classList.remove(
-                "drag-over"
-            );
-
-
-            if (!dragged) {
-                return;
-            }
-
-
-            moveItem(
-                dragged,
-                card.dataset.list,
-                Number(
-                    card.dataset.index
-                )
+            document.addEventListener(
+                "pointerup",
+                onCardPointerUp,
+                { once: true }
             );
 
         }
@@ -1073,6 +1036,22 @@ function addDragEvents(card) {
 }
 
 
-/* =========================================================
-   MOVE ITEM
-   =======================================================
+function onCardPointerMove(event) {
+
+    if (!dragged) {
+        return;
+    }
+
+    document
+        .querySelectorAll(".drag-over")
+        .forEach(
+            element => {
+                element.classList.remove("drag-over");
+            }
+        );
+
+    const targetCard =
+        findCardUnderPointer(event);
+
+    if (targetCard) {
+        targetCard.classList.add("
