@@ -3,191 +3,191 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>LDG — List of the Hardest Developer Games</title>
 
 <style>
-    * {
-        box-sizing: border-box;
-    }
+* {
+    box-sizing: border-box;
+}
 
-    body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: #0b0d12;
-        color: #ffffff;
-    }
+body {
+    margin: 0;
+    background: #0b0e14;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    header {
-        text-align: center;
-        padding: 45px 20px 25px;
-        background: linear-gradient(180deg, #151923, #0b0d12);
-    }
+header {
+    text-align: center;
+    padding: 45px 20px 30px;
+    background: linear-gradient(180deg, #171b26, #0b0e14);
+}
 
+header h1 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+header p {
+    max-width: 850px;
+    margin: 12px auto;
+    color: #aeb6c7;
+    line-height: 1.6;
+}
+
+.container {
+    width: min(1100px, calc(100% - 30px));
+    margin: auto;
+}
+
+.info {
+    margin: 20px 0;
+    padding: 22px;
+    background: #151923;
+    border: 1px solid #292f3d;
+    border-radius: 18px;
+    line-height: 1.7;
+}
+
+.info h2 {
+    margin-top: 0;
+}
+
+.section-title {
+    margin: 42px 0 18px;
+    padding: 16px 20px;
+    border-radius: 15px;
+    background: #151923;
+    font-size: 27px;
+    font-weight: 900;
+}
+
+.main-section {
+    border-left: 6px solid #2bd96b;
+}
+
+.extended-section {
+    border-left: 6px solid #f0c419;
+}
+
+.card {
+    margin-bottom: 16px;
+    padding: 20px;
+    background: #151923;
+    border: 1px solid #292f3d;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.25);
+}
+
+.card:hover {
+    border-color: #41495a;
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.number {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+    background: #242a37;
+
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.badge {
+    padding: 9px 13px;
+    border-radius: 11px;
+    background: #222733;
+    color: #dce2ee;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.game {
+    background: #263650;
+}
+
+.type {
+    background: #3b2d4d;
+}
+
+.device {
+    background: #263b31;
+}
+
+.verifier {
+    background: #243b49;
+}
+
+.author {
+    background: #423a27;
+}
+
+.status {
+    background: #263c2d;
+    color: #8cffad;
+}
+
+.note {
+    margin-top: 13px;
+    padding: 12px 14px;
+    background: #10131a;
+    border-radius: 11px;
+    color: #aeb6c7;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+footer {
+    padding: 45px 20px;
+    text-align: center;
+    color: #70798b;
+}
+
+@media(max-width:650px) {
     header h1 {
-        margin: 0;
-        font-size: 48px;
-        font-weight: 900;
-        letter-spacing: 2px;
+        font-size: 36px;
     }
 
-    header p {
-        margin: 12px auto 0;
-        max-width: 850px;
-        color: #aeb5c5;
-        font-size: 16px;
-        line-height: 1.6;
+    .card-top {
+        align-items: flex-start;
     }
 
-    .container {
-        width: min(1100px, calc(100% - 30px));
-        margin: auto;
-    }
-
-    .info-box {
-        margin: 25px 0;
-        padding: 22px;
-        background: #141820;
-        border: 1px solid #252b38;
-        border-radius: 18px;
-        line-height: 1.7;
-    }
-
-    .info-box h2 {
-        margin-top: 0;
-    }
-
-    .section-title {
-        margin: 45px 0 18px;
-        padding: 15px 20px;
-        border-radius: 14px;
-        font-size: 27px;
-        font-weight: 900;
-        background: #151923;
-        border: 1px solid #282e3b;
-    }
-
-    .main-title {
-        border-left: 6px solid #27d96b;
-    }
-
-    .extended-title {
-        border-left: 6px solid #f1c40f;
-    }
-
-    .card {
-        background: #151923;
-        border: 1px solid #282e3b;
-        border-radius: 18px;
-        padding: 20px;
-        margin-bottom: 16px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-    }
-
-    .card:hover {
-        border-color: #3a4253;
-    }
-
-    .card-header {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 16px;
+    .name {
+        font-size: 20px;
     }
 
     .number {
-        min-width: 58px;
-        height: 58px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 14px;
-        background: #222733;
-        font-size: 21px;
-        font-weight: 900;
+        width: 48px;
+        height: 48px;
+        font-size: 17px;
     }
-
-    .mod-name {
-        font-size: 24px;
-        font-weight: 900;
-    }
-
-    .badges {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 9px;
-    }
-
-    .badge {
-        padding: 9px 13px;
-        border-radius: 11px;
-        background: #202531;
-        color: #dce1ec;
-        font-size: 14px;
-        font-weight: 700;
-    }
-
-    .badge.game {
-        background: #25334d;
-    }
-
-    .badge.type {
-        background: #3b294c;
-    }
-
-    .badge.device {
-        background: #273b31;
-    }
-
-    .badge.verifier {
-        background: #243a49;
-    }
-
-    .badge.author {
-        background: #423b27;
-    }
-
-    .badge.status {
-        background: #263c2d;
-        color: #8dffad;
-    }
-
-    .extra-info {
-        margin-top: 13px;
-        padding: 12px 14px;
-        border-radius: 11px;
-        background: #10131a;
-        color: #aeb5c5;
-        font-size: 14px;
-        line-height: 1.6;
-    }
-
-    footer {
-        text-align: center;
-        padding: 45px 20px;
-        color: #777f90;
-        font-size: 14px;
-    }
-
-    @media (max-width: 650px) {
-        header h1 {
-            font-size: 34px;
-        }
-
-        .card-header {
-            align-items: flex-start;
-        }
-
-        .mod-name {
-            font-size: 20px;
-        }
-
-        .number {
-            min-width: 48px;
-            height: 48px;
-            font-size: 17px;
-        }
-    }
+}
 </style>
 </head>
 
@@ -195,6 +195,7 @@
 
 <header>
     <h1>LDG</h1>
+
     <p>
         List of the Hardest Developer Games
     </p>
@@ -207,17 +208,19 @@
 
 <div class="container">
 
-    <div class="info-box">
+    <div class="info">
         <h2>🇷🇺 Русская версия</h2>
 
         Я старался сделать максимально объективный лист сложнейших
         модификаций для игр от девелопера, и добавить каждый мод который
         существует, Спасибо за использование листа 😊
+
         <br><br>
+
         — Nachos 🌯
     </div>
 
-    <div class="info-box">
+    <div class="info">
         <h2>📜 Rules</h2>
 
         <ol>
@@ -229,14 +232,14 @@
             <li>Texture packs would be in list if they make the game much harder (eg visually)</li>
             <li>Modification will be added after a week</li>
             <li>Modification cannot have adds (if it is on paintings, notes or as a secret then this rule will not work)</li>
-            <li>List dont including Additional options (except for the twins)</li>
+            <li>Modification must be verified legitimately</li>
             <li>Challenges will not be added to List</li>
             <li>List dont including Additional options (except for the twins)</li>
             <li>Slenderina will not be added (Idk, probably in the future yes, but not sure)</li>
         </ol>
     </div>
 
-    <div class="info-box">
+    <div class="info">
         <h2>ℹ️ Info</h2>
 
         <p>🟢 <b>Main List</b>: fully confirmed mods.</p>
@@ -251,445 +254,661 @@
         </p>
     </div>
 
-
-    <!-- ========================= -->
-    <!-- MAIN LIST -->
-    <!-- ========================= -->
-
-    <div class="section-title main-title">
+    <div class="section-title main-section">
         🟢 Main List — #1–#25
     </div>
 
+    <div id="mainList"></div>
 
-    <!-- 1 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#1</div>
-            <div class="mod-name">Prime Legend</div>
+    <div class="section-title extended-section">
+        🟡 Extended List — #26–#50
+    </div>
+
+    <div id="extendedList"></div>
+
+</div>
+
+<footer>
+    LDG — List of the Hardest Developer Games
+    <br>
+    Community-driven project.
+</footer>
+
+
+<script>
+
+const mods = [
+
+/* =========================
+   MAIN LIST
+========================= */
+
+{
+    n: 1,
+    name: "Prime Legend",
+    game: "Granny",
+    type: "Mod Pack",
+    device: "PC",
+    verifier: "Grand player",
+    author: "Boris Lub",
+    status: "Verified, Memory"
+},
+
+{
+    n: 2,
+    name: "Prime Plus",
+    game: "Granny",
+    type: "Mod Pack",
+    device: "Every",
+    verifier: "GGGamer",
+    author: "Boris Lub",
+    status: "Verified, Memory"
+},
+
+{
+    n: 3,
+    name: "Granny Gold Mode",
+    game: "Granny 1",
+    device: "PC",
+    verifier: "luspritae",
+    author: "Xnd79",
+    status: "Verified"
+},
+
+{
+    n: 4,
+    name: "Unnerfed Prime",
+    game: "Granny",
+    type: "Mod Pack",
+    device: "Every",
+    verifier: "GGGamer",
+    author: "Boris Lub",
+    status: "Verified"
+},
+
+{
+    n: 5,
+    name: "Rage Mode",
+    game: "Granny",
+    type: "Mod Pack (ZD)",
+    device: "PC",
+    verifier: "Fun_Player",
+    author: "Zoderdeluxe",
+    status: "Verified"
+},
+
+{
+    n: 6,
+    name: "Nerfed Prime",
+    game: "Granny",
+    type: "Mod Pack",
+    device: "Every",
+    verifier: "KirillSof, REKVIN",
+    author: "Boris Lub",
+    status: "Verified"
+},
+
+{
+    n: 7,
+    name: "Death Plus",
+    game: "Granny 1",
+    device: "PC",
+    verifier: "luspritae",
+    author: "Slight_Tea",
+    status: "Verified"
+},
+
+{
+    n: 8,
+    name: "Light Speed",
+    game: "Granny 1",
+    device: "PC",
+    verifier: "Asian Battleship",
+    author: "Xnd79",
+    status: "Verified"
+},
+
+{
+    n: 9,
+    name: "Death",
+    game: "Granny 1",
+    device: "PC",
+    verifier: "luspritae",
+    author: "Slight_Tea",
+    status: "Verified"
+},
+
+{
+    n: 10,
+    name: "Nerfed Rage",
+    game: "Granny",
+    type: "Mod Pack",
+    device: "PC",
+    verifier: "Unknown",
+    author: "Zoderteluxe",
+    status: "Verified"
+},
+
+{
+    n: 11,
+    name: "Nerfed Death",
+    game: "Granny 1",
+    device: "PC",
+    verifier: "luspritae",
+    author: "Slight_Tea",
+    status: "Verified"
+},
+
+{
+    n: 12,
+    name: "Death Mod",
+    game: "Granny 2",
+    device: "PC",
+    verifier: "GGGammer",
+    author: "DesperadaChannel",
+    status: "Verified"
+},
+
+{
+    n: 13,
+    name: "SuperFast",
+    game: "Granny 1",
+    device: "Every",
+    verifier: "RDO209K",
+    author: "RDO209K",
+    status: "Verified"
+},
+
+{
+    n: 14,
+    name: "Madness05 (Absurd Difficulty)",
+    game: "Granny",
+    type: "Mod Pack",
+    device: "Every",
+    verifier: "No Name / Nacho",
+    author: "Boris Lub",
+    status: "Verified"
+},
+
+{
+    n: 15,
+    name: "Suicide",
+    game: "Granny 1",
+    device: "Every",
+    verifier: "Hacuro",
+    author: "Krip",
+    status: "Verified"
+},
+
+{
+    n: 16,
+    name: "Super Speed Challenge (On Impossible Difficulty)",
+    game: "Granny 1",
+    device: "PC",
+    verifier: "Хатет",
+    author: "Candy_Yu_522 [Hatet]",
+    status: "Verified"
+},
+
+{
+    n: 17,
+    name: "Rainy Season Extreme Difficulty",
+    game: "Granny 3",
+    device: "Every",
+    verifier: "Dem Ro",
+    author: "Desperada Channel",
+    status: "Verified"
+},
+
+{
+    n: 18,
+    name: "Insane Mod",
+    game: "Granny 3",
+    device: "Mobile",
+    verifier: "Enormous Gamer",
+    author: "(Partially confirmed) Desperada Channel",
+    status: "Verified"
+},
+
+{
+    n: 19,
+    name: "Burger King Mission",
+    game: "Granny: The Twins",
+    device: "PC",
+    verifier: "GGGamer?",
+    author: "GGGamer",
+    status: "Verified, Unconfirmed Verifer",
+    note: "I know that is not Granny Game. I don't know actual position."
+},
+
+{
+    n: 20,
+    name: "Impossible Mission",
+    game: "Granny: The Twins",
+    device: "Unknown",
+    verifier: "Vividplays",
+    author: "supsup_1 and itsjessicaisreal_legit",
+    status: "Verified",
+    note: "You need play on Impossible with all Enemies. Good luck lol"
+},
+
+{
+    n: 21,
+    name: "Fear Mode",
+    game: "Granny 2",
+    device: "PC",
+    verifier: "FUN_Player",
+    author: "Zoderdeluxe",
+    status: "Verified, Unconfirmed Placement"
+},
+
+{
+    n: 22,
+    name: "Insane",
+    game: "Granny",
+    type: "Mod Pack",
+    device: "PC",
+    verifier: "Unknown",
+    author: "Mickri",
+    status: "Verified"
+},
+
+{
+    n: 23,
+    name: "Cruel Mod",
+    game: "Granny",
+    type: "Mod Pack",
+    device: "Every",
+    verifier: "Dem Ro",
+    author: "Boris Lub",
+    status: "Verified"
+},
+
+{
+    n: 24,
+    name: "Mod Pack/Bizarre",
+    game: "Granny 1",
+    type: "Mod Pack",
+    device: "PC",
+    verifier: "Fun_Player",
+    author: "Zoderteluxe",
+    status: "Verified"
+},
+
+{
+    n: 25,
+    name: "Madness (1.7)",
+    game: "Granny 1",
+    device: "Every",
+    verifier: "A_S_S_I_S_T_A_N_T",
+    author: "LGP",
+    status: "Verified, Unconfirmed Verifer"
+},
+
+
+/* =========================
+   EXTENDED LIST
+========================= */
+
+{
+    n: 26,
+    name: "Furious",
+    game: "Granny 1",
+    device: "Every",
+    verifier: "Dem Ro",
+    author: "Boris Lub",
+    status: "Verified"
+},
+
+{
+    n: 27,
+    name: "Hell Mode",
+    game: "Granny 2",
+    device: "PC",
+    verifier: "Enpicqness",
+    author: "gabzin1 & LeozimGranny",
+    status: "Verified, Partially Lost Media, Needs Confirmation"
+},
+
+{
+    n: 28,
+    name: "Impossible Difficulty",
+    game: "Granny 3",
+    device: "PC",
+    verifier: "GroukSawn",
+    author: "OmGi",
+    status: "Verified, Needs Confirmation about verifier"
+},
+
+{
+    n: 29,
+    name: "Impossible Difficulty (only)",
+    game: "Granny 1 Rewamp",
+    device: "PC",
+    verifier: "Vividplays",
+    author: "OmGi",
+    status: "Verified"
+},
+
+{
+    n: 30,
+    name: "Impossible Difficulty",
+    game: "Granny 2",
+    device: "PC",
+    verifier: "Sly_Player (Unconfirmed)",
+    author: "Buttery",
+    status: "Verified, Unconfirmed Verifer"
+},
+
+{
+    n: 31,
+    name: "Desperate Death",
+    game: "Granny Legacy",
+    device: "PC",
+    verifier: "Kolyaska-granny",
+    author: "Little_L",
+    status: "Verified, Mod for Mod"
+},
+
+{
+    n: 32,
+    name: "Despair Hardly",
+    game: "Granny 1",
+    device: "Mobile",
+    verifier: "Coming Soon!",
+    author: "BurungKapal3",
+    status: "Verified"
+},
+
+{
+    n: 33,
+    name: "Wild Mod",
+    game: "Granny 1",
+    device: "Every",
+    verifier: "A18 (UnConfirmed)",
+    author: "A18",
+    status: "Verified, Lost Media, Unconfirmed Verifer"
+},
+
+{
+    n: 34,
+    name: "Mod Pack: Tough",
+    game: "Granny 1",
+    type: "Mod Pack",
+    device: "PC",
+    verifier: "Unknown",
+    author: "Zoderteluxe",
+    status: "Verified, Unknown Verifer"
+},
+
+{
+    n: 35,
+    name: "Crazy Difficulty",
+    game: "Granny 1",
+    device: "Every",
+    verifier: "DemRo",
+    author: "Yandu17",
+    status: "Verified, Needs more information about verifier",
+    note: "DemRo is the First known public verifier."
+},
+
+{
+    n: 36,
+    name: "Madness",
+    game: "Granny Remake",
+    device: "PC",
+    verifier: "Casper",
+    author: "Candy_Yu_522",
+    status: "Verified"
+},
+
+{
+    n: 37,
+    name: "Despair Normal",
+    game: "Granny 1",
+    device: "Mobile",
+    verifier: "Coming Soon!",
+    author: "BurungKapal3",
+    status: "Verified"
+},
+
+{
+    n: 38,
+    name: "Hollow Difficulty",
+    game: "Granny Legacy",
+    device: "Every",
+    verifier: "Wearzix",
+    author: "OmGi",
+    status: "Verified, First known verifier",
+    note: "Wearzix is the First known verifier."
+},
+
+{
+    n: 39,
+    name: "Granny Chapter 2 Reworked (Extreme Difficulty)",
+    game: "Granny 2",
+    device: "PC",
+    verifier: "BlueLightningSpecter",
+    author: "Redern",
+    status: "Verified"
+},
+
+{
+    n: 40,
+    name: "Impossible Difficulty",
+    game: "Granny Legacy",
+    device: "Every",
+    verifier: "ZaY",
+    author: "OmGi",
+    status: "Verified"
+},
+
+{
+    n: 41,
+    name: "Extreme Difficulty (D.V)",
+    game: "Granny 3",
+    device: "PC",
+    verifier: "TheNeptoonLP",
+    author: "Developer",
+    status: "Verified",
+    note: "First known public completion."
+},
+
+{
+    n: 42,
+    name: "Extreme Plus",
+    game: "Granny",
+    type: "Mod Pack",
+    device: "Every",
+    verifier: "Coming Soon!",
+    author: "Boris Lub",
+    status: "Verified"
+},
+
+{
+    n: 43,
+    name: "Drift Mode",
+    game: "Granny 1",
+    device: "PC",
+    verifier: "Coming Soon! (Ah)",
+    author: "Mikrob",
+    status: "Verified"
+},
+
+{
+    n: 44,
+    name: "Granny Insane",
+    game: "Granny 1",
+    device: "Mobile",
+    verifier: "NGUYENLOC CHANNEL",
+    author: "Coming Soon",
+    status: "Verified"
+},
+
+{
+    n: 45,
+    name: "Extreme Difficulty (D.V)",
+    game: "Granny 2",
+    device: "PC",
+    verifier: "ZaY",
+    author: "Developer",
+    status: "Verified"
+},
+
+{
+    n: 46,
+    name: "Granny’s Curse (Extreme Difficulty)",
+    game: "Granny 1",
+    device: "Every",
+    verifier: "Unknown",
+    author: "Game Is Life and more",
+    status: "Verified, Memory, Unknown Verifer"
+},
+
+{
+    n: 47,
+    name: "Extreme Difficulty",
+    game: "Granny 1",
+    device: "Every",
+    verifier: "Furious FPV (Mobile) / ZaY (PC)",
+    author: "Developer",
+    status: "Verified, Platform dependent",
+    note: "Mobile and PC have separate early verifiers."
+},
+
+{
+    n: 48,
+    name: "Extreme Difficulty",
+    game: "Granny Legacy",
+    device: "Every",
+    verifier: "Unknown",
+    author: "OmGi",
+    status: "Verified, Unknown Verifer"
+},
+
+{
+    n: 49,
+    name: "Reconstructed",
+    game: "Granny 1",
+    device: "Every",
+    verifier: "Unknown",
+    author: "Unknown",
+    status: "Verified",
+    note: "Worst mod ever. I hope that this mod would be deleted."
+},
+
+{
+    n: 50,
+    name: "Chill",
+    game: "Granny",
+    type: "Mod Pack",
+    device: "Every",
+    verifier: "Unknown",
+    author: "Boris Lub",
+    status: "Verified",
+    note: "Btw Easiest Mod Ever Created :)"
+}
+
+];
+
+
+/* =========================
+   CREATE CARD
+========================= */
+
+function createCard(mod) {
+
+    const card = document.createElement("div");
+    card.className = "card";
+
+    let badges = "";
+
+    badges += `
+        <div class="badge game">
+            🎮 ${mod.game}
+        </div>
+    `;
+
+    if (mod.type) {
+        badges += `
+            <div class="badge type">
+                📦 ${mod.type}
+            </div>
+        `;
+    }
+
+    badges += `
+        <div class="badge device">
+            💻 ${mod.device}
+        </div>
+
+        <div class="badge verifier">
+            ✅ Verified by: ${mod.verifier}
+        </div>
+
+        <div class="badge author">
+            👤 Author: ${mod.author}
+        </div>
+
+        <div class="badge status">
+            📌 ${mod.status}
+        </div>
+    `;
+
+    let note = "";
+
+    if (mod.note) {
+        note = `
+            <div class="note">
+                ℹ️ ${mod.note}
+            </div>
+        `;
+    }
+
+    card.innerHTML = `
+        <div class="card-top">
+
+            <div class="number">
+                #${mod.n}
+            </div>
+
+            <div class="name">
+                ${mod.name}
+            </div>
+
         </div>
 
         <div class="badges">
-            <div class="badge game">🎮 Granny</div>
-            <div class="badge type">📦 Mod Pack</div>
-            <div class="badge device">💻 PC</div>
-            <div class="badge verifier">✅ Verified by: Grand player</div>
-            <div class="badge author">👤 Author: Boris Lub</div>
-            <div class="badge status">🟢 Verified, Memory</div>
-        </div>
-    </div>
-
-
-    <!-- 2 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#2</div>
-            <div class="mod-name">Prime Plus</div>
+            ${badges}
         </div>
 
-        <div class="badges">
-            <div class="badge game">🎮 Granny</div>
-            <div class="badge type">📦 Mod Pack</div>
-            <div class="badge device">🌐 Every</div>
-            <div class="badge verifier">✅ Verified by: GGGamer</div>
-            <div class="badge author">👤 Author: Boris Lub</div>
-            <div class="badge status">🟢 Verified, Memory</div>
-        </div>
-    </div>
+        ${note}
+    `;
 
+    return card;
+}
 
-    <!-- 3 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#3</div>
-            <div class="mod-name">Granny Gold Mode</div>
-        </div>
 
-        <div class="badges">
-            <div class="badge game">🎮 Granny 1</div>
-            <div class="badge device">💻 PC</div>
-            <div class="badge verifier">✅ Verified by: luspritae</div>
-            <div class="badge author">👤 Author: Xnd79</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
+/* =========================
+   RENDER ALL 50
+========================= */
 
+const mainList = document.getElementById("mainList");
+const extendedList = document.getElementById("extendedList");
 
-    <!-- 4 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#4</div>
-            <div class="mod-name">Unnerfed Prime</div>
-        </div>
+mods.forEach(mod => {
 
-        <div class="badges">
-            <div class="badge game">🎮 Granny</div>
-            <div class="badge type">📦 Mod Pack</div>
-            <div class="badge device">🌐 Every</div>
-            <div class="badge verifier">✅ Verified by: GGGamer</div>
-            <div class="badge author">👤 Author: Boris Lub</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
+    const card = createCard(mod);
 
+    if (mod.n <= 25) {
+        mainList.appendChild(card);
+    } else {
+        extendedList.appendChild(card);
+    }
 
-    <!-- 5 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#5</div>
-            <div class="mod-name">Rage Mode</div>
-        </div>
+});
 
-        <div class="badges">
-            <div class="badge game">🎮 Granny</div>
-            <div class="badge type">📦 Mod Pack (ZD)</div>
-            <div class="badge device">💻 PC</div>
-            <div class="badge verifier">✅ Verified by: Fun_Player</div>
-            <div class="badge author">👤 Author: Zoderdeluxe</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
+</script>
 
-
-    <!-- 6 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#6</div>
-            <div class="mod-name">Nerfed Prime</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny</div>
-            <div class="badge type">📦 Mod Pack</div>
-            <div class="badge device">🌐 Every</div>
-            <div class="badge verifier">✅ Verified by: KirillSof, REKVIN</div>
-            <div class="badge author">👤 Author: Boris Lub</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
-
-
-    <!-- 7 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#7</div>
-            <div class="mod-name">Death Plus</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny 1</div>
-            <div class="badge device">💻 PC</div>
-            <div class="badge verifier">✅ Verified by: luspritae</div>
-            <div class="badge author">👤 Author: Slight_Tea</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
-
-
-    <!-- 8 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#8</div>
-            <div class="mod-name">Light Speed</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny 1</div>
-            <div class="badge device">💻 PC</div>
-            <div class="badge verifier">✅ Verified by: Asian Battleship</div>
-            <div class="badge author">👤 Author: Xnd79</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
-
-
-    <!-- 9 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#9</div>
-            <div class="mod-name">Death</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny 1</div>
-            <div class="badge device">💻 PC</div>
-            <div class="badge verifier">✅ Verified by: luspritae</div>
-            <div class="badge author">👤 Author: Slight_Tea</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
-
-
-    <!-- 10 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#10</div>
-            <div class="mod-name">Nerfed Rage</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny</div>
-            <div class="badge type">📦 Mod Pack</div>
-            <div class="badge device">💻 PC</div>
-            <div class="badge verifier">✅ Verified by: Unknown</div>
-            <div class="badge author">👤 Author: Zoderteluxe</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
-
-
-    <!-- 11 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#11</div>
-            <div class="mod-name">Nerfed Death</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny 1</div>
-            <div class="device badge">💻 PC</div>
-            <div class="badge verifier">✅ Verified by: luspritae</div>
-            <div class="badge author">👤 Author: Slight_Tea</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
-
-
-    <!-- 12 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#12</div>
-            <div class="mod-name">Death Mod</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny 2</div>
-            <div class="badge verifier">✅ Verified by: GGGammer</div>
-            <div class="badge author">👤 Author: DesperadaChannel</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
-
-
-    <!-- 13 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#13</div>
-            <div class="mod-name">SuperFast</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny 1</div>
-            <div class="badge device">🌐 Every</div>
-            <div class="badge verifier">✅ Verified by: RDO209K</div>
-            <div class="badge author">👤 Author: RDO209K</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
-
-
-    <!-- 14 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#14</div>
-            <div class="mod-name">Madness05 (Absurd Difficulty)</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny</div>
-            <div class="badge type">📦 Mod Pack</div>
-            <div class="badge device">🌐 Every</div>
-            <div class="badge verifier">✅ Verified by: No Name / Nacho</div>
-            <div class="badge author">👤 Author: Boris Lub</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
-
-
-    <!-- 15 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#15</div>
-            <div class="mod-name">Suicide</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny 1</div>
-            <div class="badge device">🌐 Every</div>
-            <div class="badge verifier">✅ Verified by: Hacuro</div>
-            <div class="badge author">👤 Author: Krip</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
-
-
-    <!-- 16 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#16</div>
-            <div class="mod-name">Super Speed Challenge (On Impossible Difficulty)</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny 1</div>
-            <div class="badge device">💻 PC</div>
-            <div class="badge verifier">✅ Verified by: Хатет</div>
-            <div class="badge author">👤 Author: Candy_Yu_522 [Hatet]</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
-
-
-    <!-- 17 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#17</div>
-            <div class="mod-name">Rainy Season Extreme Difficulty</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny 3</div>
-            <div class="badge device">🌐 Every</div>
-            <div class="badge verifier">✅ Verified by: Dem Ro</div>
-            <div class="badge author">👤 Author: Desperada Channel</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
-
-
-    <!-- 18 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#18</div>
-            <div class="mod-name">Insane Mod</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny 3</div>
-            <div class="badge device">📱 Mobile</div>
-            <div class="badge verifier">✅ Verified by: Enormous Gamer</div>
-            <div class="badge author">👤 Author: (Partially confirmed) Desperada Channel</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
-
-
-    <!-- 19 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#19</div>
-            <div class="mod-name">Burger King Mission</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny: The Twins</div>
-            <div class="badge device">💻 PC</div>
-            <div class="badge verifier">✅ Verified by: GGGamer?</div>
-            <div class="badge author">👤 Author: GGGamer</div>
-            <div class="badge status">🟢 Verified, Unconfirmed Verifer</div>
-        </div>
-
-        <div class="extra-info">
-            Info: I know that is not Granny Game. I don't know actual position.
-        </div>
-    </div>
-
-
-    <!-- 20 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#20</div>
-            <div class="mod-name">Impossible Mission</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny: The Twins</div>
-            <div class="badge verifier">✅ Verified by: Vividplays</div>
-            <div class="badge author">👤 Authors: supsup_1 and itsjessicaisreal_legit</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-
-        <div class="extra-info">
-            Info: You need play on Impossible with all Enemies. Good luck lol
-        </div>
-    </div>
-
-
-    <!-- 21 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#21</div>
-            <div class="mod-name">Fear Mode</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny 2</div>
-            <div class="badge device">💻 PC</div>
-            <div class="badge verifier">✅ Verified by: FUN_Player</div>
-            <div class="badge author">👤 Author: Zoderdeluxe</div>
-            <div class="badge status">🟢 Verified, Unconfirmed Placement</div>
-        </div>
-    </div>
-
-
-    <!-- 22 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#22</div>
-            <div class="mod-name">Insane</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny</div>
-            <div class="badge type">📦 Mod Pack</div>
-            <div class="badge device">💻 PC</div>
-            <div class="badge verifier">✅ Verified by: Unknown</div>
-            <div class="badge author">👤 Author: Mickri</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
-
-
-    <!-- 23 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#23</div>
-            <div class="mod-name">Cruel Mod</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny</div>
-            <div class="badge type">📦 Mod Pack</div>
-            <div class="badge device">🌐 Every</div>
-            <div class="badge verifier">✅ Verified by: Dem Ro</div>
-            <div class="badge author">👤 Author: Boris Lub</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
-
-
-    <!-- 24 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#24</div>
-            <div class="mod-name">Mod Pack/Bizarre</div>
-        </div>
-
-        <div class="badges">
-            <div class="badge game">🎮 Granny 1</div>
-            <div class="badge type">📦 Mod Pack</div>
-            <div class="badge device">💻 PC</div>
-            <div class="badge verifier">✅ Verified by: Fun_Player</div>
-            <div class="badge author">👤 Author: Zoderteluxe</div>
-            <div class="badge status">🟢 Verified</div>
-        </div>
-    </div>
-
-
-    <!-- 25 -->
-    <div class="card">
-        <div class="card-header">
-            <div class="number">#25</div>
-            <div class="mod-name">Madness (1.7)</div>
-        </div>
-
- 
+</body>
+</html>
