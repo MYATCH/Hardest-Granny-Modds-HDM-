@@ -2,7 +2,7 @@ Welcome to list of the Hardest Granny Modds ever
 
 <div align="center">
 
-<a href="https://myatch.github.io/Hardest-Granny-Modds-HDM-/Lisвt.html">
+<a href="https://myatch.github.io/Hardest-Granny-Modds-HDM-/THGM_list-3.html">
   <img src="https://img.shields.io/badge/List-303030?style=for-the-badge" alt="List">
 </a>
 
